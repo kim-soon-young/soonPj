@@ -175,7 +175,12 @@
       <!-- 비디오 -->
       <div class="visual">
         <div class="visual_area">
-          <video src="images/mainVideo.mp4" type="video/mp4" autoplay loop></video>
+          <video playsinline="" muted="" poster="" autoplay loop class="video-w">
+            <source src="images/mainVideo-w.mp4" type="video/mp4" />
+          </video>
+          <video playsinline="" muted="" poster="" autoplay loop display="none" class="video-m">
+            <source src="images/mainVideo-m.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
       <!-- 우리 독도 -->
@@ -255,7 +260,210 @@
         </div>
       </div>
 
-      
+      <!-- 독도 행사 -->
+      <div class="event">
+        <div class="event-inner">
+          <div class="event-left">
+            <h2>독도 행사</h2>
+            <!-- swiper 페이지네이션 -->
+            <div class="swiper-pagination-event"></div>
+            <div class="event-morebt">
+              <a href="#">
+                <p>더보기</p>
+              </a>
+              <a href="#">
+                <img src="images/3event/more-arrow.png" alt="더보기" />
+              </a>
+            </div>
+          </div>
+          <!-- Swiper -->
+          <div class="event-right">
+            <div class="swiper sw-event">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/3event/d1.png" alt="D" />
+                  <span>독도 2행시</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/3event/o1.png" alt="O" />
+                  <span>독도 릴레이 마라톤</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/3event/k.png" alt="K" />
+                  <span>독도 손글씨 쓰기</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/3event/d2.png" alt="D" />
+                  <span>독도 골든벨</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/3event/o2.png" alt="O" />
+                  <span>독도 색칠하기</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 독도 친구들 -->
+      <div class="friends" id="page-2" style="display: none">
+        <div class="inner">
+          <div class="title">
+            <h3>독도 친구들</h3>
+            <img src="images/dokdo_icon.png" alt="독도 아이콘" />
+          </div>
+          <img src="images/4friends/bg650.jpg" alt="배경" />
+        </div>
+      </div>
+      <!-- 독도 가는길 -->
+      <div class="go" id="page-3" style="display: none">
+        <div class="title">
+          <h3>독도 가는길</h3>
+          <img src="images/dokdo_icon.png" alt="독도 아이콘" />
+        </div>
+        <div class="go-bg">
+          <div class="inner">
+            <div class="go-map">
+              <div class="go-map-top">
+                <ul class="go-map-top-list">
+                  <li>
+                    <!-- <img src="images/5way/ship1.png" alt="배" /> -->
+                    <i class="fa-solid fa-ship"></i>
+                    <p>포항 <----> 울릉</p>
+                    <button class="re-btn">예매하기</button>
+                  </li>
+                  <li>
+                    <!-- <img src="images/5way/ship1.png" alt="배" /> -->
+                    <i class="fa-solid fa-ship"></i>
+                    <p>울릉 <----> 독도</p>
+                    <button class="re-btn">예매하기</button>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-file-circle-check"></i>
+                    <p>예매 확인 / 취소</p>
+                    <button class="re-btn">예매확인</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="go-map-bottom">
+                <ul class="go-map-bottom-list">
+                  <li>
+                    <img src="images/5way/way1.png" alt="한반도" />
+                  </li>
+                  <li class="go-map-ulleung">
+                    <img src="images/5way/way2.png" alt="울릉도" />
+                    <span>울릉도</span>
+                  </li>
+                  <li class="go-map-dockdo">
+                    <a href="#">
+                      <img src="images/5way/way3.png" alt="독도" />
+                      <span class="go-map-list-dokdo">독도</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 독도 굿즈 -->
+      <div class="md" id="page-4">
+        <div class="md-inner">
+          <div class="md-left">
+            <h2>독도 MD</h2>
+            <p>수익금은 독도를 지키는데 쓰입니다.</p>
+            <!-- swiper 페이지네이션 -->
+            <div class="swiper-pagination-md"></div>
+            <div class="md-morebt">
+              <a href="#">
+                <p>더보기</p>
+              </a>
+              <a href="#">
+                <img src="images/6md/more-arrow.png" alt="더보기" />
+              </a>
+            </div>
+          </div>
+          <!-- Swiper -->
+          <div class="md-right">
+            <div class="swiper sw-md">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/6md/md1.png" alt="소주잔 세트" />
+                  <span>소주잔 세트</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+                <div class="swiper-slide sw-md2">
+                  <img src="images/6md/md2.png" alt="독도 소주" />
+                  <span>독도 소주</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/6md/md3.png" alt="코스터" />
+                  <span>코스터</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/6md/md4.png" alt="독도 뱃지" />
+                  <span>독도 뱃지</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+                <div class="swiper-slide sw-md5">
+                  <img src="images/6md/md5.png" alt="텀블러" />
+                  <span>텀블러</span>
+                  <a href="#"><p>+ MORE</p></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 이벤트 -->
+      <div class="promo" id="page-5">
+        <div class="inner">
+          <div class="title">
+            <h3>독도 이벤트</h3>
+            <img src="images/dokdo_icon.png" alt="독도 아이콘" />
+          </div>
+          <div class="promo-contents">
+            <a href="#"><img src="images/7promotion/pro1.jpg" alt="인스타 챌린지" /></a>
+            <a href="#"><img src="images/7promotion/pro2.jpg" alt="스탬프 투어" /></a>
+          </div>
+        </div>
+      </div>
+      <!-- 푸터 -->
+      <footer class="footer">
+        <div class="inner">
+          <!-- 로고 -->
+          <div class="ft-logo">
+            <a href="#">
+              <img src="images/8footer/logo-ft.png" alt="독도" />
+            </a>
+          </div>
+          <!-- 푸터 중간 -->
+          <div class="footer-middle">
+            <!-- 주소 -->
+            <address class="address">경상북도 울릉군 울릉읍 독도리 1~96번지 <span class="zip">(우)</span> 40240</address>
+            <!-- 카피라이트 -->
+            <p class="copyright">© 독도. All rights reserved. Designed by Kim & Lee</p>
+          </div>
+          <!-- 패밀리 사이트 -->
+          <div class="family">
+            <a href="#" class="dokdo-plus"> 독도 더 알아보기 <i class="fa-solid fa-angle-down"></i></a>
+            <ul>
+              <li><a href="https://dokdo.mofa.go.kr/kor/index.jsp" target="_blank">외교부 독도</a></li>
+              <li><a href="https://www.koreadokdo.or.kr/" target="_blank">독도 재단</a></li>
+              <li><a href="http://dokdo.nahf.or.kr/main.do" target="_blank">독도연구소</a></li>
+              <li><a href="https://k-dokdo.com/index.do" target="_blank">K-독도</a></li>
+              <li><a href="https://www.jbe.go.kr/dokdo/index.jsp#sect04" target="_blank">디지털 독도 체험</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

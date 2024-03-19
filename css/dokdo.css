@@ -227,21 +227,24 @@ header > .inner {
 }
 /* ***************비디오 */
 .visual {
-  width: 100%;
+  position: relative;
   height: 100vh;
 }
 .visual_area {
   width: 100%;
   height: 100%;
 }
-.visual_area video {
+.visual > .visual_area > .video-w {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+.video-m {
+  display: none;
 }
 /* 우리 독도  (역사 / 이유 )*/
 /* 이유 */
