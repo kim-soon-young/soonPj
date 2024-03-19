@@ -1,0 +1,143 @@
+@media screen and (max-width: 1500px) {
+  /* 우리독도 >> 이유 */
+  .reason-box > .inner {
+    padding: 0 10rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  /* 헤더 */
+  header > .inner {
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  /* 우리독도 >> 이유 */
+.swiper-pagination {
+    margin-right: 2rem;
+  }
+  .reason-txt > h3 {
+    font-size: 4rem;
+  }
+  .reason-txt p {
+    font-size: 1.5rem;
+  }
+  .reason-txt p {
+    margin: 30px 0 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* 헤더 */
+  nav {
+    display: none;
+  }
+  .bt-menu {
+    display: block;
+  }
+  .header-right-icon {
+    display: none;
+  }
+  .fa-chevron-down {
+    display: none;
+  }
+  .language-box {
+    display: none;
+  }
+  .header-right-m {
+    display: flex;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* 우리독도 >> 이유 */
+  .reason-img img {
+    width: 60%;
+  }
+  .reason-img {
+    text-align: right;
+  }
+  .reason-box > .inner {
+    flex-direction: column-reverse;
+    gap: 0rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* 우리독도 >> 이유 */
+  .reason-img img {
+    width: 70%;
+  }
+  .reason-txt > h3 {
+    font-size: 3.5rem;
+  }
+  .reason-img p em {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+  .reason-img p {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* 헤더 */
+  .logo img {
+    width: 110px;
+    height: auto;
+  }
+  .nav-m {
+    width: 80%;
+  }
+  .nav-m-active {
+    left: calc(100% - 80%);
+  }
+  .nav-m > .header-right-m {
+    display: flex;
+    gap: 10px;
+  }
+  /* 우리독도 >> 이유 */
+  .reason-box > .inner {
+    padding: 0 4rem;
+    gap: 5rem;
+  }
+  .reason-img {
+    text-align: left;
+  }
+  .reason-img img {
+    width: 95%;
+  }
+  .reason-txt {
+    text-align: left;
+  }
+  .reason-txt > h3 {
+    font-size: 3rem;
+  }
+  .reason-txt p {
+    margin: 3rem 0 3.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    /* 2줄 말줄임 출력 */
+    height: 4.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+.swiper-pagination {
+    margin-right: 0.7rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  /* 우리독도 >> 이유 */
+  .reason {
+    height: 52.08vw;
+    min-height: 676px;
+  }
+  .reason-txt p {
+    margin: 2rem 0 2.5rem 0;
+    line-height: 1.6;
+    /* 2줄 말줄임 출력 */
+    height: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+}

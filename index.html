@@ -1,39 +1,261 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-PNFPLZXX");
-    </script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <!-- 파비콘 -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon//apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon//apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon//apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon//apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon//apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon//apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon//apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon//apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon//android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon//favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>대한민국 영토, 독도</title>
+    <!-- seo적용 -->
+    <meta name="robots" content="ALL" />
+    <meta name="robots" content="index, follow" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta property="title" content="독도는 대한민국의 영토 입니다." />
+    <meta name="description" content="독도, 대한민국 천연기념물 336호, 독도 동영상, 독도 사진, 독도 정부 입장, 독도 영토주권, 한국 독도" />
+    <meta
+      name="keywords"
+      content="독도, 대한민국, 독도는 우리땅, 대한민국 천연기념물 336호, 독도 동영상, 독도 사진, 독도 정부 입장, 독도 영토주권, 독도 영유권, 아름다운 섬, 외교부 독도, 독도 외교부, 독도가 한국땅인 이유, 독도가 왜 한국땅인지, Dokdo, 獨島, 独島, 独岛, Докдо, Токто, 우산도, usando, usan, 석도, seokdo, 石島, stone island, 돌섬, 독섬, liancourt rocks, 독도 한국, 독도 일본, 한국 일본, 일본, 다케시마, takeshima, 竹島, 타케시마 " />
+    <meta
+      property="keyword"
+      content="독도, 대한민국, 독도는 우리땅, 대한민국 천연기념물 336호, 독도 동영상, 독도 사진, 독도 정부 입장, 독도 영토주권, 독도 영유권, 아름다운 섬, 외교부 독도, 독도 외교부, 독도가 한국땅인 이유, 독도가 왜 한국땅인지, Dokdo, 獨島, 独島, 独岛, Докдо, Токто, 우산도, usando, usan, 석도, seokdo, 石島, stone island, 돌섬, 독섬, liancourt rocks, 독도 한국, 독도 일본, 한국 일본, 일본, 다케시마, takeshima, 竹島, 타케시마" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="독도는 대한민국의 영토 입니다." />
+    <meta property="og:description" content="독도, 대한민국 천연기념물 336호, 독도 동영상, 독도 사진, 독도 정부 입장, 독도 영토주권, 한국 독도" />
+    <meta property="og:image" content="https://dokdo.mofa.go.kr/kor/img/main/snsimg_600.jpg" />
+    <meta property="og:url" content="https://dokdo-five.vercel.app/" />
+    <!-- css -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- xeicon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- AOS.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/dokdo.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/html5shiv.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <script src="js/respond.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/dokdo.js"></script>
+    <!-- js -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N040H6HXEJ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3ZDC43EPS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
-      gtag("config", "G-N040H6HXEJ");
+      gtag("config", "G-Q3ZDC43EPS");
     </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNFPLZXX" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <button>more</button>
+    <!-- 전체 레이아웃 -->
+    <div id="wrap">
+      <!-- 헤더 -->
+      <header>
+        <div class="inner">
+          <!-- 로고 -->
+          <a href="#" class="logo" alt="헤더_로고">
+            <img src="images/1header/logo_w.png" class="logo-w" alt="헤더_로고_화이트" />
+            <img src="images/1header/logo_b.png" class="logo-b" alt="헤더_로고_블루" />
+          </a>
+          <!-- 웹 주메뉴 -->
+          <nav>
+            <ul class="gnb">
+              <li><a href="#page-1">우리독도</a></li>
+              <li><a href="#page-2">독도친구들</a></li>
+              <li><a href="#page-3">독도가는길</a></li>
+              <li><a href="#page-4">굿즈</a></li>
+              <li><a href="#page-5">이벤트</a></li>
+            </ul>
+          </nav>
+          <!-- 아이콘 >> 인스타+유튜브+언어 -->
+          <div class="header-right">
+            <div class="header-right-icon">
+              <a href="https://www.instagram.com/k_dokdo/"><i class="fa-brands fa-instagram icons"></i></a>
+            </div>
+            <div class="header-right-icon">
+              <a href="https://www.youtube.com/watch?v=iNDRFPcNLns"><i class="fa-brands fa-youtube icons"></i></a>
+            </div>
+            <!-- 언어 -->
+            <div class="language-box">
+              <span class="language-word">
+                <i class="fa-solid fa-globe icons"></i>
+                <i class="fa-solid fa-chevron-down icons"></i>
+              </span>
+              <ul class="languge">
+                <li><a href="#">KOR</a></li>
+                <li><a href="#">ENG</a></li>
+                <li><a href="#">JAP</a></li>
+                <li><a href="#">RUS</a></li>
+                <li><a href="#">CHN</a></li>
+                <li><a href="#">FRA</a></li>
+              </ul>
+            </div>
+            <!-- 모바일 메뉴 버튼 -->
+            <button class="bt-menu"></button>
+          </div>
+        </div>
+      </header>
+      <!--모바일 주메뉴  -->
+      <nav class="nav-m">
+        <button class="nav-close"></button>
+        <ul class="gnb-m">
+          <li>
+            <a href="#page-1">우리독도</a>
+          </li>
+          <li>
+            <a href="#page-2">독도친구들</a>
+          </li>
+          <li>
+            <a href="#page-3">독도가는길</a>
+          </li>
+          <li>
+            <a href="#page-4">굿즈</a>
+          </li>
+          <li>
+            <a href="#page-5">이벤트</a>
+          </li>
+        </ul>
+        <!-- 아이콘 >> 인스타+유튜브+언어 -->
+        <div class="header-right-m">
+          <div class="header-right-icon-m">
+            <a href="https://www.instagram.com/k_dokdo/"><i class="fa-brands fa-instagram icons"></i></a>
+          </div>
+          <div class="header-right-icon-m">
+            <a href="https://www.youtube.com/watch?v=iNDRFPcNLns"><i class="fa-brands fa-youtube icons"></i></a>
+          </div>
+          <!-- 언어 -->
+          <div class="language-box">
+            <span class="language-word">
+              <i class="fa-solid fa-globe icons"></i>
+              <i class="fa-solid fa-chevron-down icons"></i>
+            </span>
+            <ul class="languge">
+              <li><a href="#">KOR</a></li>
+              <li><a href="#">ENG</a></li>
+              <li><a href="#">JAP</a></li>
+              <li><a href="#">RUS</a></li>
+              <li><a href="#">CHN</a></li>
+              <li><a href="#">FRA</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- 비디오 -->
+      <div class="visual">
+        <div class="visual_area">
+          <video src="images/mainVideo.mp4" type="video/mp4" autoplay loop></video>
+        </div>
+      </div>
+      <!-- 우리 독도 -->
+      <div class="we" id="page-1">
+        <!-- 공통타이틀 -->
+        <div class="title">
+          <h3>독도 연대기</h3>
+          <img src="images/dokdo_icon.png" alt="독도 아이콘" />
+        </div>
+        <!-- 우리독도 >> 역사  -->
+        <div class="history"></div>
+        <!-- 우리독도 >> 이유  -->
+        <div class="reason">
+          <div class="swiper swReason">
+            <div class="swiper-wrapper">
+              <!-- 역사적 >> 슬라이드 텍스트내용 -->
+              <div class="swiper-slide">
+                <div class="reason-box reason-img-1">
+                  <div class="inner">
+                    <div class="reason-txt">
+                      <h3>역사적</h3>
+                      <p>
+                        일본은 「태정관 지령」 (1877년) 등을 통해 <br />
+                        <strong>'울릉도 외 일도(독도)는 일본과 관계없다'</strong>고 했습니다.<br />
+                        반면, 우리나라는 「세종실록」 「지리지」(1454년), 『만기요람」(1808년) 등 여러 역사책에 독도를 우리 땅으로 기록했습니다.
+                      </p>
+                      <a href="#">VIEW MORE</a>
+                    </div>
+                    <div class="reason-img">
+                      <img src="images/2history/Taejeonggwan.png" alt="태전관 지령" title="태전관 지령" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 지리적 >> 슬라이드 텍스트내용 -->
+              <div class="swiper-slide">
+                <div class="reason-box reason-img-2">
+                  <div class="inner">
+                    <div class="reason-txt">
+                      <h3>지리적</h3>
+                      <p>
+                        독도에서 제일 가까운 섬은 울릉도이고, 맑은 날이면<br />
+                        <strong>울릉도에서 독도를 볼 수 있습니다.</strong> <br />
+                        그래서 예로부터 사람들은 독도를 울릉도의 부속섬으로 인식하고 우리나라 옛 지도에도 울릉도와 독도는 한 쌍의 섬으로 나란히 표기되어 있습니다.
+                      </p>
+                      <a href="#">VIEW MORE</a>
+                    </div>
+                    <div class="reason-img">
+                      <p><em>울릉도에서 바라 본 독도</em><br />87.4km</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 법률적 >> 슬라이드 텍스트내용 -->
+              <div class="swiper-slide">
+                <div class="reason-box reason-img-3">
+                  <div class="inner">
+                    <div class="reason-txt">
+                      <h3>법률적</h3>
+                      <p>
+                        <!-- 1900년 대한제국은 칙령 제41호를 통해 독도를 울도 군수의 관할 구역으로 규정했습니다.</strong><br> -->
+                        광복 후 연합국은 <strong>독도를 울릉도와 함께 일본의 통치영역에서 제외하였습니다.</strong><br />
+                        현재까지 우리 정부는 독도를 대한민국의 영토로 계속 관리, 이용하고 있습니다.<br />
+                        명백한 우리 고유의 영토입니다.
+                      </p>
+                      <a href="#">VIEW MORE</a>
+                    </div>
+                    <div class="reason-img">
+                      <img src="images/2history/scapin677.png" alt="연합국 최고사령관 각서 제677호" title="연합국 최고사령관 각서 제677호" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
   </body>
 </html>

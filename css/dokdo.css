@@ -1,0 +1,768 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+/* 독도체 font-family: "East Sea Dokdo", sans-serif; */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JeonjuSunR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/JeonjuSunR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #191919;
+  text-decoration: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "GmarketSansMedium", sans-serif;
+  color: #191919;
+  word-break: keep-all;
+  font-size: 10px;
+}
+/* 공통요소 */
+.wrap {
+  position: relative;
+}
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+h3 {
+  font-size: 3.2rem;
+}
+.title > img {
+  width: 100px;
+  height: 45px;
+}
+/* ***************헤더 */
+/* 상단 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.5s;
+}
+.header-active {
+  background-color: #fff;
+}
+.header-active nav .gnb a {
+  color: #191919;
+}
+.header-active i {
+  color: #191919;
+}
+.header-active .bt-menu {
+  background: url("../images/1header/toggle_navi.png");
+}
+header > .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+/* 로고 */
+.logo img {
+  width: 137px;
+  height: auto;
+}
+.logo-w {
+  display: block;
+}
+.logo-b {
+  display: none;
+}
+/* 웹 주메뉴 */
+.gnb {
+  display: flex;
+  gap: 30px;
+  font-size: 2rem;
+}
+.gnb a {
+  color: #fff;
+}
+/* 아이콘 >> 인스타+유튜브+언어 */
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 1rem;
+}
+.icons {
+  font-size: 2rem;
+  padding: 0.8rem;
+  color: #fff;
+}
+.fa-chevron-down {
+  font-size: 1rem;
+  padding: 0;
+}
+/* 언어 */
+.language-word {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.languge {
+  position: absolute;
+  /* background-color: #fff; */
+}
+.languge li {
+  opacity: 0;
+  visibility: hidden;
+}
+.languge-box-active li {
+  opacity: 1;
+  visibility: visible;
+  background-color: white;
+}
+.languge li a {
+  text-align: center;
+  display: block;
+  font-size: 1.4rem;
+  color: #191919;
+  padding: 0.8rem;
+}
+.languge li:first-child a {
+  padding-top: 2rem;
+}
+/* 모바일 메뉴 버튼 */
+.bt-menu {
+  display: none;
+  width: 37px;
+  height: 12px;
+  background: url("../images/1header/toggle_navi_w.png");
+  background-size: cover;
+  font-size: 0;
+  border: none;
+  cursor: pointer;
+}
+/* 모바일 주메뉴 */
+.nav-m {
+  font-family: "GmarketSanslighter";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 450px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.84);
+  z-index: 9999;
+  padding: 50px;
+  overflow-y: auto;
+  transition: left 0.5s ease-in-out;
+}
+.nav-m-active {
+  left: calc(100% - 450px);
+}
+.nav-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url("../images/1header/close2.png") no-repeat center;
+  border: 0;
+  cursor: pointer;
+}
+.gnb-m > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+}
+.gnb-m > li:first-child {
+  padding-top: 5rem;
+}
+.gnb-m > li > a {
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 10px;
+  color: #fff;
+}
+/* ***************비디오 */
+.visual {
+  width: 100%;
+  height: 100vh;
+}
+.visual_area {
+  width: 100%;
+  height: 100%;
+}
+.visual_area video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+/* 우리 독도  (역사 / 이유 )*/
+/* 이유 */
+.reason {
+  height: 100vh;
+  max-height: 1300px;
+}
+.swReason {
+  width: 100%;
+  height: 100%;
+}
+.reason-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.reason-txt strong {
+  font-weight: bold;
+}
+.reason-img-1 {
+  background: url("../images/2history/bg-history.png") no-repeat center;
+  background-size: cover;
+}
+.reason-img-2 {
+  background: url("../images/2history/bg-geography.png") no-repeat center;
+  background-size: cover;
+}
+.reason-img-3 {
+  background: url("../images/2history/bg-law.png") no-repeat center;
+  background-size: cover;
+}
+.reason-box > .inner {
+  /* max-width: 1300px; */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+.reason-txt {
+  color: #fff;
+  font-family: "GmarketSansLight";
+}
+.reason-txt > h3 {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: -2.5px;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.swReason .swiper-slide-active .reason-txt > h3 {
+  transition: all 1s 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.reason-txt p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 5rem 0 7rem;
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.swReason .swiper-slide-active .reason-txt p {
+  transition: all 1s 0.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.reason-txt p span {
+  margin-top: 18px;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.18px;
+  color: #e0e0e0;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.swReason .swiper-slide-active .reason-txt p span {
+  transition: all 1s 0.7s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.reason-txt {
+  flex-basis: 50%;
+}
+.reason-txt a {
+  display: inline-block;
+  position: relative;
+  padding-right: 46px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.reason-txt a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -6px;
+  width: 36px;
+  height: 25px;
+  background: url("../images/2history/more.png") no-repeat center;
+}
+.swReason .swiper-slide-active .reason-txt a {
+  transition: all 1s 0.7s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.reason-img {
+  flex-basis: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.reason-img img {
+  width: 100%;
+  height: 100%;
+}
+.swReason .swiper-slide-active .reason-img {
+  transition: all 1s 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.reason-img p {
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transform: translateY(100px);
+}
+.reason-img p em {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  letter-spacing: 0.5rem;
+}
+.swReason .swiper-slide-active .reason-img p {
+  transition: all 1s 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 페이지네이션 */
+#app {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: 0;
+  width: 18rem;
+  height: 2rem;
+  margin: 0 auto;
+
+  overflow: hidden;
+  z-index: 1;
+}
+.swiper-pagination {
+  margin-right: 5rem;
+}
+.swiper-pagination-bullet {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease height;
+}
+.swiper-pagination-bullet-active {
+  height: 40px;
+  cursor: auto;
+}
+/* 독도 행사 */
+.event {
+  overflow: hidden;
+}
+.event-inner {
+  width: 100%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+}
+/* 독도 행사 왼쪽 */
+.event-left {
+  width: 15%;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.event-left > h2 {
+  font-size: 3.2rem;
+  padding-bottom: 50px;
+  white-space: nowrap;
+}
+.event-left .event-morebt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 50px;
+}
+.event-left > .event-morebt > a > p {
+  font-family: "GmarketSansmedium";
+  font-size: 1.4rem;
+}
+/* 독도 행사 오른쪽 */
+.event-right {
+  width: 85%;
+}
+.event-right > .sw-event .swiper-slide {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin: 10px 0.2%;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+.event-right > .sw-event .swiper-slide img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin: 50px 0 40px 0;
+}
+.event-right > .sw-event .swiper-slide span {
+  font-family: "GmarketSansLight";
+  font-size: 2.4rem;
+  margin-bottom: 45px;
+}
+.event-right > .sw-event .swiper-slide p {
+  /* font-family: "GmarketSansLight"; */
+  font-family: "GmarketSansMedium";
+  font-size: 1.3rem;
+  border: 1px solid #191919;
+  border-radius: 3px;
+  padding: 0 15px;
+  line-height: 26px;
+  margin-bottom: 70px;
+}
+:root {
+  --swiper-theme-color: #0a004e;
+}
+/* 독도 친구들 */
+/* 독도 가는길 */
+.go-bg {
+  width: 100%;
+  background-color: #6283a4;
+  padding-top: 10px;
+}
+.go-bg .inner {
+  width: 100%;
+  height: auto;
+  /* background-color: #6283a4; */
+  position: relative;
+}
+/* go-map top */
+.go-map-top {
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.go-map-top-list {
+  display: flex;
+  justify-content: space-around;
+}
+.go-map-top .go-map-top-list li {
+  display: block;
+  text-align: center;
+}
+.go-map-top .go-map-top-list li i {
+  font-size: 3rem;
+  padding: 20px 0;
+  color: #154370;
+  color: #0a004e;
+}
+.go-map-top .go-map-top-list li p {
+  font-size: 2rem;
+  font-family: "GmarketSansLight";
+}
+.go-map-top .go-map-top-list li button {
+  margin-top: 15px;
+  padding: 5px 10px;
+  /* background-color: #0a004e; */
+  background-color: #154370;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "GmarketSansLight";
+}
+/* go-map bottom */
+.go-map-bottom {
+  height: auto;
+}
+.go-map-bottom-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.go-map-ulleung {
+  position: relative;
+  display: inline-block;
+}
+.go-map-ulleung > span {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* 독도 굿즈 */
+.md {
+  overflow: hidden;
+}
+.md-inner {
+  width: 100%;
+  margin-left: 8%;
+  display: flex;
+  flex-direction: row;
+}
+/* 독도 MD 왼쪽 */
+.md-left {
+  width: 15%;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.md-left > h2 {
+  font-size: 3.2rem;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+.md-left > p {
+  font-family: "GmarketSansLight";
+  font-size: 1.3rem;
+  white-space: nowrap;
+  padding-bottom: 50px;
+}
+.md-left .md-morebt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 50px;
+}
+.md-left > .md-morebt > a > p {
+  /* font-family: "GmarketSansLight"; */
+  font-family: "GmarketSansMedium";
+  font-size: 1.4rem;
+}
+/* 독도 MD 오른쪽 */
+.md-right {
+  width: 85%;
+}
+.md-right > .sw-md .swiper-slide {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin: 10px 0.2%;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+.md-right > .sw-md .swiper-slide img {
+  /* width: 70%; */
+  /* height: auto; */
+  width: auto;
+  height: 35%;
+  display: block;
+  margin: 0 auto;
+  margin: 100px 0 50px 0;
+}
+/* .md-right > .sw-md .sw-md2 img {
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin: 50px 0 40px 0;
+}
+.md-right > .sw-md .sw-md5 img {
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin: 50px 0 40px 0;
+} */
+.md-right > .sw-md .swiper-slide span {
+  font-family: "GmarketSansLight";
+  font-size: 2.4rem;
+  margin-bottom: 45px;
+}
+.md-right > .sw-md .swiper-slide p {
+  /* font-family: "GmarketSansLight"; */
+  font-family: "GmarketSansMedium";
+  font-size: 1.3rem;
+  border: 1px solid #191919;
+  border-radius: 3px;
+  padding: 0 15px;
+  line-height: 26px;
+  margin-bottom: 70px;
+}
+:root {
+  --swiper-theme-color: #0a004e;
+}
+/* 이벤트 */
+.promo > .inner {
+  margin-bottom: 200px;
+}
+.promo > .inner > .promo-contents {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.promo > .inner > .promo-contents > a > img {
+  width: 100%;
+  height: auto;
+}
+/* 푸터 */
+.footer {
+  background-color: #223055;
+  position: relative;
+}
+.footer > .inner {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  /* background-color: bisque; */
+}
+.ft-logo {
+  display: flex;
+  align-items: center;
+}
+/* 푸터 중간 */
+.footer-middle {
+  position: absolute;
+  bottom: 30px;
+  right: 250px;
+}
+.footer-middle > .address {
+  font-family: "GmarketSansLight";
+  font-size: 1.3rem;
+  color: #fff;
+}
+.footer-middle > .address > span {
+  font-size: 1rem;
+}
+.footer-middle > .copyright {
+  font-family: "GmarketSansLight";
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 15px 0 0 0;
+}
+/* 패밀리 사이트 */
+.family {
+  position: absolute;
+  vertical-align: middle;
+  bottom: 30px;
+  width: 200px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  right: 0;
+  border-radius: 10px;
+}
+.family > a {
+  display: block;
+  position: relative;
+  z-index: 10;
+  height: 29px;
+  padding-left: 30px;
+  font-family: "GmarketSansLight";
+  font-size: 1.3rem;
+  color: #fff;
+  text-align: left;
+  line-height: 40px;
+  transition: all 0.2s;
+}
+.family > a > i {
+  margin-left: 15px;
+}
+.family ul {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 27px;
+  margin-bottom: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px 10px 0 0;
+  border-bottom: 0;
+  display: none;
+}
+.family ul li a {
+  display: block;
+  position: relative;
+  padding: 5px 0;
+  font-family: "GmarketSansLight";
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 16px;
+}
+.family ul li a:hover {
+  color: #2879fe;
+}
+.family ul.show {
+  display: block;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
