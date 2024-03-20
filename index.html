@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PM46ZZZS");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 파비콘 -->
@@ -68,17 +82,20 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3ZDC43EPS"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B99GBE5KR1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-Q3ZDC43EPS");
+      gtag("config", "G-B99GBE5KR1");
     </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM46ZZZS" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- 전체 레이아웃 -->
     <div id="wrap">
       <!-- 헤더 -->
@@ -182,7 +199,31 @@
             <source src="images/mainVideo-m.mp4" type="video/mp4" />
           </video>
         </div>
+        <!-- 날씨 -->
+        <div class="weather">
+        <div class="weather_area">
+          <ul class="weather_info">
+            <li>
+              <div class="weather_icon"><i class="xi-clock" style="color: #3333;" ;></i></div>
+              <div id="clock" class="weather_txt" style="color: gray">00:00</div></li>
+            <li>
+                <span class="weather_icon"><i class="xi-brightness" style="font-size: 2.5rem;"></i></span>
+                </span class="weather_txt">맑음 <br> 3&#8451</span>
+            </li>
+            <li>
+              <div class="weather_icon"><i class="xi-sun"></i>
+              </div> <div class="weather_txt">06:48</div>
+            </li>
+            <li>
+              <div class="weather_icon"><i class="xi-sunset-down"></i></div>
+              <div class="weather_txt">18:04</div>
+            </li>
+          </ul>
+        </div>
       </div>
+
+      </div>
+
       <!-- 우리 독도 -->
       <div class="we" id="page-1">
         <!-- 공통타이틀 -->
@@ -259,7 +300,6 @@
           </div>
         </div>
       </div>
-
       <!-- 독도 행사 -->
       <div class="event">
         <div class="event-inner">
@@ -282,7 +322,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="images/3event/d1.png" alt="D" />
-                  <span>독도 2행시</span>
+                  <div>독도 2행시</div>
                   <a href="#"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide">
@@ -311,17 +351,19 @@
         </div>
       </div>
       <!-- 독도 친구들 -->
-      <div class="friends" id="page-2" style="display: none">
+      <div class="friends" id="page-2">
         <div class="inner">
           <div class="title">
             <h3>독도 친구들</h3>
             <img src="images/dokdo_icon.png" alt="독도 아이콘" />
           </div>
-          <img src="images/4friends/bg650.jpg" alt="배경" />
+          <div class="friends-contents">
+            <img src="images/4friends/bg650.jpg" alt="배경" />
+          </div>
         </div>
       </div>
       <!-- 독도 가는길 -->
-      <div class="go" id="page-3" style="display: none">
+      <div class="go" id="page-3">
         <div class="title">
           <h3>독도 가는길</h3>
           <img src="images/dokdo_icon.png" alt="독도 아이콘" />
@@ -335,18 +377,18 @@
                     <!-- <img src="images/5way/ship1.png" alt="배" /> -->
                     <i class="fa-solid fa-ship"></i>
                     <p>포항 <----> 울릉</p>
-                    <button class="re-btn">예매하기</button>
+                    <button class="re-btn" id="go-ulleung">예매하기</button>
                   </li>
                   <li>
                     <!-- <img src="images/5way/ship1.png" alt="배" /> -->
                     <i class="fa-solid fa-ship"></i>
                     <p>울릉 <----> 독도</p>
-                    <button class="re-btn">예매하기</button>
+                    <button class="re-btn" id="go-dokdo">예매하기</button>
                   </li>
                   <li>
                     <i class="fa-solid fa-file-circle-check"></i>
                     <p>예매 확인 / 취소</p>
-                    <button class="re-btn">예매확인</button>
+                    <button class="re-btn" id="go-reserved">예매확인</button>
                   </li>
                 </ul>
               </div>
@@ -362,8 +404,14 @@
                   <li class="go-map-dockdo">
                     <a href="#">
                       <img src="images/5way/way3.png" alt="독도" />
-                      <span class="go-map-list-dokdo">독도</span>
+                      <span class="dong">동도</span>
+                      <span class="seo">서도</span>
                     </a>
+                    <div class="go-map-list-dokdo">
+                      <span></span>
+                      <p>독도</p>
+                      <img src="images/5way/flag.jpg" alt="태극기" />
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -408,8 +456,8 @@
                   <a href="#"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="images/6md/md4.png" alt="독도 뱃지" />
-                  <span>독도 뱃지</span>
+                  <img src="images/6md/md4.png" alt="티셔츠" />
+                  <span>티셔츠</span>
                   <a href="#"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide sw-md5">

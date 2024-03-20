@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/dokdo.css" /> -->
+    <link rel="stylesheet" href="css/ship_reservation.css" />
+    <title>예약 페이지</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.js"></script>
+    <script src="js/ship_reservation.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <!-- 로고 -->
+        <div class="hd-logo">
+          <a href="#" class="logo" alt="헤더_로고">
+            <img src="images/1header/logo_b.png" class="logo-b" alt="헤더_로고_블루" />
+          </a>
+        </div>
+        <div class="reserved">
+          <a href="#"><p>승선권 예매</p></a>
+          <a href="#"><p>결제조회 및 취소</p></a>
+        </div>
+      </div>
+    </header>
+    <div class="go-contents">
+      <div class="inner">
+            <form>
+              <div class="title">
+                <span>출발지</span>
+                <span>도착지</span>
+              </div>
+              <div class="how">
+                <label> <input type="checkbox" name="reservation_go" value="pohang" />포항 --- 울릉_도동 </label>
+                <label> <input type="checkbox" name="reservation_go" value="ulleung" />울릉_도동 --- 포항 </label>
+                <label> <input type="checkbox" name="reservation_go" value="dokdo" />울릉도 --- 독도 </label>
+                <div class="howlong">
+                  <p>여행기간</p>
+                  <form></form>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

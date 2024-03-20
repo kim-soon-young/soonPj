@@ -10,6 +10,12 @@
     padding: 0 2rem;
   }
 }
+@media screen and (max-width: 1390px) {
+  /* 독도가는길 */
+  .go > .go-bg > .inner {
+    padding: 0 25px 0 25px;
+  }
+}
 @media screen and (max-width: 1300px) {
   /* 우리독도 >> 이유 */
   .swiper-pagination {
@@ -57,30 +63,9 @@
     max-width: 960px;
     height: auto;
   }
-  /* .visual {
-    position: relative;
-    display: block;
-    width: 100%;
-    max-width: 1080px;
-    height: 200vw;
-    max-height: 1920px;
+  .visual {
+    height: auto;
   }
-  .visual_area {
-    position: relative;
-    display: block;
-    height: 100%;
-  }
-  .visual_area .video-m {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  } */
-
   /* 우리독도 >> 이유 */
   .reason-img img {
     width: 60%;
@@ -91,6 +76,56 @@
   .reason-box > .inner {
     flex-direction: column-reverse;
     gap: 0rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .go > .go-bg > .inner {
+    padding: 0 20px;
+  }
+  .go-map-bottom-list > li > img {
+    width: 90%;
+    height: auto;
+  }
+  .go-map-bottom-list > li > a > img {
+    width: 90%;
+  }
+  .go-map-ulleung > span {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translateX(-50%);
+  }
+  .go-map-dockdo > a > .dong {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 19%;
+    left: 25%;
+  }
+  .go-map-dockdo > a > .seo {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 42%;
+    left: 58%;
+  }
+  .go-map-list-dokdo > span {
+    content: "";
+    padding: 35px;
+    top: 0;
+    right: 20px;
+  }
+  .go-map-list-dokdo > p {
+    position: absolute;
+    top: 33px;
+    right: 40px;
+    font-size: 1.7rem;
+  }
+  .go-map-list-dokdo > img {
+    width: 45px;
+    height: auto;
+    position: absolute;
+    top: -15px;
+    right: -5px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -107,6 +142,76 @@
   }
   .reason-img p {
     font-size: 5rem;
+  }
+  /* 독도가는길 */
+  .go > .go-bg > .inner {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* 독도가는길 */
+  .go > .go-bg > .inner {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* 독도가는길 */
+  .go-map-list-dokdo > span {
+    content: "";
+    padding: 30px;
+    top: 0;
+    right: 25px;
+  }
+  .go-map-list-dokdo > p {
+    position: absolute;
+    top: 27px;
+    right: 40px;
+    font-size: 1.5rem;
+  }
+  .go-map-list-dokdo > img {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: -17px;
+    right: 10px;
+  }
+  /* 독도가는길 예매 */
+  .go-map-top {
+    height: 130px;
+  }
+  .go-map-top .go-map-top-list li i {
+    font-size: 2.5rem;
+    padding: 15px 0;
+  }
+  .go-map-top .go-map-top-list li p {
+    font-size: 1.6rem;
+    font-family: "GmarketSansMiddle";
+  }
+  .go-map-top .go-map-top-list li button {
+    margin-top: 15px;
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  /* 독도가는길 */
+  .go-map-list-dokdo > span {
+    content: "";
+    padding: 25px;
+    top: 0;
+    right: 27px;
+  }
+  .go-map-list-dokdo > p {
+    position: absolute;
+    top: 23px;
+    right: 38px;
+    font-size: 1.3rem;
+  }
+  .go-map-list-dokdo > img {
+    width: 38px;
+    height: auto;
+    position: absolute;
+    top: -20px;
+    right: 10px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -156,6 +261,94 @@
   .swiper-pagination {
     margin-right: 0.7rem;
   }
+  /* 독도가는길 */
+  .go-map-list-dokdo > span {
+    content: "";
+    padding: 25px;
+    top: 0;
+    right: 20px;
+  }
+  .go-map-list-dokdo > p {
+    position: absolute;
+    top: 23px;
+    right: 33px;
+    font-size: 1.3rem;
+  }
+  .go-map-ulleung > span {
+    font-size: 1.5rem;
+    top: 38%;
+    left: 45;
+    transform: translateX(-50%);
+  }
+  .go-map-dockdo > a > .dong {
+    font-size: 1.4rem;
+    top: 18%;
+    left: 25%;
+  }
+  .go-map-dockdo > a > .seo {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 42%;
+    left: 59%;
+  }
+  /* 독도가는길 예매 */
+  .go-map-top {
+    height: 100px;
+  }
+  .go-map-top .go-map-top-list li i {
+    font-size: 2.3rem;
+    padding: 10px 0;
+  }
+  .go-map-top .go-map-top-list li p {
+    font-size: 1.4rem;
+    font-family: "GmarketSansMiddle";
+  }
+  .go-map-top .go-map-top-list li button {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* 독도가는길 */
+  .go-map-list-dokdo > span {
+    content: "";
+    padding: 20px;
+    top: 0;
+    right: 20px;
+  }
+  .go-map-list-dokdo > p {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    font-size: 1.2rem;
+  }
+  .go-map-dockdo > a > .seo {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 42%;
+    left: 57%;
+  }
+  .go-map-list-dokdo > img {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+  }
+  /* 독도가는길 예매 */
+  .go-map-top .go-map-top-list li i {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+  .go-map-top .go-map-top-list li p {
+    font-size: 1.4rem;
+    font-family: "GmarketSansMiddle";
+  }
+  .go-map-top .go-map-top-list li button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 450px) {
   /* 우리독도 >> 이유 */
@@ -173,5 +366,129 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     display: -webkit-box;
+  }
+  /* 독도가는길 */
+  .go-map-list-dokdo > span {
+    content: "";
+    padding: 20px;
+    top: 0;
+    right: 10px;
+  }
+  .go-map-list-dokdo > p {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+  .go-map-list-dokdo > img {
+    width: 32px;
+    height: auto;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+  }
+  .go-map-dockdo > a > .dong {
+    font-size: 1.3rem;
+    top: 18%;
+    left: 25%;
+  }
+  /* 독도가는길 예매 */
+  .go-map-top .go-map-top-list li i {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+  .go-map-top .go-map-top-list li p {
+    font-size: 1.3rem;
+    font-family: "GmarketSansMiddle";
+  }
+  .go-map-top .go-map-top-list li button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* 독도 가는길 */
+  .go-map-list-dokdo > span {
+    content: "";
+    padding: 20px;
+    top: -7px;
+    right: 5px;
+  }
+  .go-map-list-dokdo > img {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    top: -23px;
+    right: 0px;
+  }
+  .go-map-list-dokdo > p {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    font-size: 1.2rem;
+  }
+  .go-map-ulleung > span {
+    font-size: 1.3rem;
+    top: 38%;
+    left: 45;
+    transform: translateX(-50%);
+  }
+  .go-map-dockdo > a > .dong {
+    font-size: 1.2rem;
+    top: 18%;
+    left: 23%;
+  }
+  .go-map-dockdo > a > .seo {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 42%;
+    left: 57%;
+  }
+  /* 독도가는길 예매 */
+  .go-map-top .go-map-top-list li i {
+    font-size: 1.8rem;
+    padding: 10px 0;
+  }
+  .go-map-top .go-map-top-list li p {
+    font-size: 1.1rem;
+  }
+  .go-map-top .go-map-top-list li button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  /* 독도가는길 예매 */
+  .go-map-list-dokdo > span {
+    top: -7px;
+    right: 0px;
+  }
+  .go-map-list-dokdo > p {
+    top: 12px;
+    right: 10px;
+    font-size: 1.1rem;
+  }
+  .go-map-list-dokdo > img {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    top: -23px;
+    right: -5px;
+  }
+  .go-map-dockdo > a > .dong {
+    font-size: 1.2rem;
+    top: 18%;
+    left: 23%;
+  }
+  .go-map-dockdo > a > .seo {
+    font-size: 1.1rem;
+    position: absolute;
+    top: 42%;
+    left: 56%;
+  }
+  /* 독도 가는길 */
+  .go-map-top .go-map-top-list li p {
+    font-size: 1rem;
   }
 }

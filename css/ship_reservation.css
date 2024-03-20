@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+/* 독도체 font-family: "East Sea Dokdo", sans-serif; */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JeonjuSunR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/JeonjuSunR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #191919;
+  text-decoration: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "GmarketSansMedium", sans-serif;
+  color: #191919;
+  word-break: keep-all;
+  font-size: 10px;
+}
+/* 공통요소 */
+.wrap {
+  position: relative;
+}
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 50px;
+}
+/* 헤더 */
+header > .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hd-logo > .logo > img {
+  width: 200px;
+  height: auto;
+}
+.reserved {
+  display: flex;
+  gap: 50px;
+}
+.reserved > a p {
+  font-size: 2rem;
+}
