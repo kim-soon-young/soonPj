@@ -1,0 +1,195 @@
+@charset "utf-8";
+@import url("https://dangkko.github.io/dangkko.github.com/NotoKR_v7/css/noto-sans-kr.css");
+@import url("arita_buri.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,500,700&display=swap");
+
+/* 
+ * base CSS Document
+ */
+
+/* reset */
+body,
+p,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+}
+*[lang="ko"] body,
+*[lang="ko"] input,
+*[lang="ko"] textarea,
+*[lang="ko"] button,
+*[lang="ko"] select {
+  font-family: "Montserrat", "GmarketSansMedium", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Sans-serif;
+  color: #444;
+}
+*[lang="en"] body,
+*[lang="en"] input,
+*[lang="en"] textarea,
+*[lang="en"] button,
+*[lang="en"] select {
+  font-family: "Montserrat", "Noto Sans KR", "맑은 고딕", "돋움", Dotum, "굴림", Gulim, Sans-serif;
+  color: #444;
+}
+*[lang="jp"] body,
+*[lang="jp"] input,
+*[lang="jp"] textarea,
+*[lang="jp"] button,
+*[lang="jp"] select {
+  font-family: "Montserrat", "Noto Sans JP", "Yu Gothic", "ＭＳ ゴシック", Sans-serif;
+  color: #444;
+}
+*[lang="zh-cn"] body,
+*[lang="zh-cn"] input,
+*[lang="zh-cn"] textarea,
+*[lang="zh-cn"] button,
+*[lang="zh-cn"] select {
+  font-family: "Montserrat", "Noto Sans SC", "microsoft yahei ui", "microsoft yahei", simsun, Sans-serif;
+  color: #444;
+}
+body {
+  font-size: 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+button,
+select,
+table {
+  font-size: 1em;
+}
+img,
+fieldset,
+button {
+  border: 0;
+}
+textarea {
+  overflow: auto;
+}
+input[type="submit"],
+input[type="button"],
+button {
+  cursor: pointer;
+}
+img {
+  vertical-align: top;
+}
+address,
+em {
+  font-style: normal;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: none;
+}
+caption {
+  overflow: hidden;
+  line-height: 0;
+  text-indent: -2000em;
+}
+legend,
+.hidden {
+  padding: 0;
+  margin: 0;
+  overflow: hidden !important;
+  text-indent: 100%;
+  white-space: nowrap;
+  font-size: 0;
+}
+i {
+  font-style: normal;
+}
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  -webkit-border-radius: 1px;
+  -webkit-appearance: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+figure {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* 링크 기본값 */
+/* a:link {
+  text-decoration: none;
+  color: #444;
+}
+a:visited {
+  text-decoration: none;
+  color: #444;
+}
+a:hover {
+  text-decoration: none;
+  color: #444;
+}
+a:active {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+} */
+
+/* 리스트 스타일 제거 */
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* mobile */
+body {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}

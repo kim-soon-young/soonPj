@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+/* 독도체 font-family: "East Sea Dokdo", sans-serif; */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JeonjuSunR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/JeonjuSunR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #191919;
+  text-decoration: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "GmarketSansMedium", sans-serif;
+  color: #191919;
+  word-break: keep-all;
+  font-size: 10px;
+  position: relative;
+}
+.inner {
+  position: relative;
+  display: block;
+  padding: 25px;
+}
+h2 {
+  display: block;
+  font-size: 2.5rem;
+  font-family: GmarketSansBold;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.eximg {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  gap: 0 50px;
+}
+.contents {
+  text-align: center;
+}
+.contents > span {
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+.contents2 {
+  display: block;
+  margin-bottom: 30px;
+}
+.contents3 {
+  display: block;
+  margin-bottom: 15px;
+}
+.contents4 {
+  display: block;
+  margin-top: 15px;
+}
+.contents > p {
+  font-size: 2rem;
+  line-height: 35px;
+  color: #1c60a0;
+}
+.ex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  padding: 50px 0;
+}
+.ex1 {
+  display: flex;
+  gap: 0 20px;
+}
+.ex2 {
+  display: flex;
+  gap: 0 20px;
+}
+.ex1 > li > img {
+  width: 100%;
+}
+.ex2 > li > img {
+  width: 100%;
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 20px;
+}
+.bottom > span {
+  font-size: 2rem;
+}
+.bottom > a > img {
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 파비콘 -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon//apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon//apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon//apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon//apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon//apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon//apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon//apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon//apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon//android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon//favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/ship_reservation_check.css" />
+    <link rel="stylesheet" href="css/ship_reservation_responsive_check.css" />
+    <title>결제내역 조회 및 취소</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="inner">
+        <header>
+          <!-- 로고 -->
+          <div class="hd-logo">
+            <a href="index.html" class="logo" alt="헤더_로고">
+              <img src="images/1header/logo_b.png" class="logo-b" alt="헤더_로고_블루" />
+            </a>
+          </div>
+          <div class="reserved">
+            <a href="ship_reservation.html"><p>승선권 예매</p></a>
+            <a href="#"><p>결제조회 및 취소</p></a>
+          </div>
+        </header>
+        <fieldset>
+          <h2>결제내역 조회 및 취소</h2>
+          <p>일정변경은 불가하며, 취소 후 예매를 다시 진행해 주십시요.</p>
+          <p class="day90">조회 기간은 <span>90일 전</span>부터 입니다.</p>
+          <p>예매건 중 한건의 비밀번호만 일치하여도 모두 조회됩니다.</p>
+          <p class="password_red">비밀번호를 등록하지 않은 기존 결제내역의 경우</p>
+          <p class="password_red_setting"><span>비밀번호 재설정</span>을 클릭하여 신규 등록 할 수 있습니다.</p>
+          <fieldset class="reservation_check">
+            <div class="reservation_check_top">
+              <div class="payment">
+                <span>결제 조건</span>
+                <div class="payment_check">
+                  <label><input type="radio" name="payment" value="all" checked="checked" />전체 </label>
+                  <label><input type="radio" name="payment" value="waiting" />결제대기(예약)</label>
+                  <label><input type="radio" name="payment" value="complete" />결제완료</label>
+                </div>
+              </div>
+            </div>
+            <div class="reservation_check_bottom">
+              <div class="check">
+                <span>조회 조건</span>
+                <div class="check_check">
+                  <label><input type="radio" checked="checked" />인적정보</label>
+                  <div class="check_info">
+                    <label><input type="text" placeholder="이름" /></label>
+                    <label><input type="text" placeholder="연락처" /></label>
+                    <div class="password">
+                      <label><input type="text" placeholder="비밀번호 4~8자리 숫자" /></label>
+                      <span>비밀번호 재설정<i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <button>조회하기</button>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>

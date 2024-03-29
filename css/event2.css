@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+/* 독도체 font-family: "East Sea Dokdo", sans-serif; */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JeonjuSunR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/JeonjuSunR.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #191919;
+  text-decoration: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "GmarketSansMedium", sans-serif;
+  color: #191919;
+  word-break: keep-all;
+  font-size: 10px;
+  position: relative;
+}
+.inner {
+  position: relative;
+  display: block;
+  padding: 25px;
+}
+header > img {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  margin-bottom: 50px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 30px;
+}
+.top img {
+  width: 50%;
+  height: 100%;
+}
+.top_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px 0;
+}
+.stemp_txt1 {
+  font-size: 2rem;
+  line-height: 30px;
+}
+.stemp_txt1 span {
+  font-size: 1.6rem;
+  line-height: 30px;
+  color: #2e3c7e;
+}
+.stemp_txt2 li {
+  font-size: 1.6rem;
+  padding: 5px 0;
+}
+.contents_txt {
+  position: relative;
+  display: block;
+  margin: 50px 0;
+}
+.contents_txt p {
+  font-size: 1.8rem;
+  line-height: 30px;
+}
+.application {
+  position: relative;
+  display: block;
+}
+h3 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+.stemp_guide {
+  border: 1px solid #191919;
+  border-radius: 10px;
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.stemp_guide li img {
+  padding-bottom: 15px;
+}
+.stemp_guide li p {
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+.stemp_guide li i {
+  color: #2e3c7e;
+  font-size: 2rem;
+  padding: 25px 0;
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.bottom > span {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 20px;
+}
+.bottom_bt {
+  display: flex;
+  gap: 0 15px;
+}
+.bottom_bt a {
+  display: inline-block;
+  width: 100%;
+}
+.bottom_bt img {
+  width: 100%;
+}

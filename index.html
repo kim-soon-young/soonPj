@@ -67,6 +67,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/dokdo.css" />
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
@@ -77,10 +78,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Anime.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/dokdo.js"></script>
-    <!-- js -->
+    <!-- waypoint -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script src="js/dokdo.js"></script>
+    <script src="js/top.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B99GBE5KR1"></script>
     <script>
@@ -91,13 +97,27 @@
       gtag("js", new Date());
       gtag("config", "G-B99GBE5KR1");
     </script>
+    <style></style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM46ZZZS" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <!-- go top -->
+    <div class="top-button">
+      <a href="#" id="go_up_down_bt">
+        <img src="images/topbt/go_bottom.png" alt="go_bottom" id="go-bottom-btn-img" />
+        <img src="images/topbt/go_top.png" alt="go_top" id="go-top-btn-img" />
+      </a>
+      <div class="gogo_dokdo-list">
+        <a href="ship_reservation.html" target="_blank" class="gogo_dokdo">
+          <img src="images/topbt/go_dokdo.png" alt="gogo_dokdo" />
+          <!-- <span>승선권 예매</span> -->
+        </a>
+      </div>
+    </div>
     <!-- 전체 레이아웃 -->
-    <div id="wrap">
+    <div id="wrapAll">
       <!-- 헤더 -->
       <header>
         <div class="inner">
@@ -112,7 +132,7 @@
               <li><a href="#page-1">우리독도</a></li>
               <li><a href="#page-2">독도친구들</a></li>
               <li><a href="#page-3">독도가는길</a></li>
-              <li><a href="#page-4">굿즈</a></li>
+              <li><a href="#page-4">독도MD</a></li>
               <li><a href="#page-5">이벤트</a></li>
             </ul>
           </nav>
@@ -128,7 +148,7 @@
             <div class="language-box">
               <span class="language-word">
                 <i class="fa-solid fa-globe icons"></i>
-                <i class="fa-solid fa-chevron-down icons"></i>
+                <!-- <i class="fa-solid fa-chevron-down icons"></i> -->
               </span>
               <ul class="languge">
                 <li><a href="#">KOR</a></li>
@@ -158,7 +178,7 @@
             <a href="#page-3">독도가는길</a>
           </li>
           <li>
-            <a href="#page-4">굿즈</a>
+            <a href="#page-4">독도MD</a>
           </li>
           <li>
             <a href="#page-5">이벤트</a>
@@ -172,23 +192,23 @@
           <div class="header-right-icon-m">
             <a href="https://www.youtube.com/watch?v=iNDRFPcNLns"><i class="fa-brands fa-youtube icons"></i></a>
           </div>
-          <!-- 언어 -->
-          <div class="language-box">
-            <span class="language-word">
-              <i class="fa-solid fa-globe icons"></i>
-              <i class="fa-solid fa-chevron-down icons"></i>
-            </span>
-            <ul class="languge">
-              <li><a href="#">KOR</a></li>
-              <li><a href="#">ENG</a></li>
-              <li><a href="#">JAP</a></li>
-              <li><a href="#">RUS</a></li>
-              <li><a href="#">CHN</a></li>
-              <li><a href="#">FRA</a></li>
-            </ul>
-          </div>
         </div>
       </nav>
+      <script>
+        //메뉴
+        let nav = this.document.querySelector(".nav-m");
+        let btMenu = this.document.querySelector(".bt-menu");
+        let navClose = this.document.querySelector(".nav-close");
+        btMenu.addEventListener("click", () => {
+          nav.classList.add("nav-m-active");
+        });
+        navClose.addEventListener("click", function () {
+          nav.classList.remove("nav-m-active");
+        });
+        nav.addEventListener("mouseleave", () => {
+          nav.classList.remove("nav-m-active");
+        });
+      </script>
       <!-- 비디오 -->
       <div class="visual">
         <div class="visual_area">
@@ -201,38 +221,348 @@
         </div>
         <!-- 날씨 -->
         <div class="weather">
-        <div class="weather_area">
-          <ul class="weather_info">
-            <li>
-              <div class="weather_icon"><i class="xi-clock" style="color: #3333;" ;></i></div>
-              <div id="clock" class="weather_txt" style="color: gray">00:00</div></li>
-            <li>
-                <span class="weather_icon"><i class="xi-brightness" style="font-size: 2.5rem;"></i></span>
-                </span class="weather_txt">맑음 <br> 3&#8451</span>
-            </li>
-            <li>
-              <div class="weather_icon"><i class="xi-sun"></i>
-              </div> <div class="weather_txt">06:48</div>
-            </li>
-            <li>
-              <div class="weather_icon"><i class="xi-sunset-down"></i></div>
-              <div class="weather_txt">18:04</div>
-            </li>
-          </ul>
+          <div class="weather_area">
+            <ul class="weather_info">
+              <li class="now-clock">
+                <div class="weather_icon"><i class="xi-clock" style="color: #3333"></i></div>
+                <div id="clock" class="weather_txt" style="color: gray">00:00</div>
+              </li>
+              <li>
+                <div class="weather_icon">
+                  <i class="xi-brightness" style="font-size: 2.5rem"></i>
+                </div>
+                <div class="weather_txt">
+                  맑음 <br />
+                  3&#8451;
+                </div>
+                <div class="weather_txt">
+                  <div class="temperature"></div>
+                </div>
+              </li>
+              <li>
+                <div class="weather_icon"><i class="xi-sun"></i></div>
+                <div class="weather_txt">06:48</div>
+              </li>
+              <li>
+                <div class="weather_icon"><i class="xi-sunset-down"></i></div>
+                <div class="weather_txt">18:04</div>
+              </li>
+            </ul>
+          </div>
         </div>
+        <!-- 하단 아이콘 -->
+        <section id="section05" class="demo">
+          <a href="#page-1"><span></span></a>
+        </section>
       </div>
-
-      </div>
-
       <!-- 우리 독도 -->
       <div class="we" id="page-1">
         <!-- 공통타이틀 -->
         <div class="title">
-          <h3>독도 연대기</h3>
+          <p class="page-title2">독도 연대기</p>
           <img src="images/dokdo_icon.png" alt="독도 아이콘" />
         </div>
         <!-- 우리독도 >> 역사  -->
-        <div class="history"></div>
+        <div id="wrap">
+          <section id="container">
+            <!-- lnb/ snb 노출 -->
+            <div class="area_lnb">
+              <div class="inr">
+                <script type="text/javascript">
+                  if (!$("div .snb").find("ul").length) {
+                    $("div .snb").hide();
+                  }
+                </script>
+              </div>
+            </div>
+            <!-- 본문 -->
+            <div id="content">
+              <script type="text/javascript" src="../../js/jquery.timelinr-0.9.7.js"></script>
+              <script type="text/javascript">
+                function timeLink() {
+                  $("#timeline").timelinr({
+                    arrowKeys: "true",
+                  });
+                }
+                $(window).resize(function () {
+                  if (this.resizeTO) {
+                    clearTimeout(this.resizeTO);
+                  }
+
+                  this.resizeTO = setTimeout(function () {
+                    $(this).trigger("resizeEnd");
+                  }, 500);
+                });
+
+                $(window).on("resizeEnd", function () {
+                  var cachedWidth = $(window).width();
+                  $(window).resize(function () {
+                    var newWidth = $(window).width();
+                    if (newWidth !== cachedWidth) {
+                      //DO RESIZE HERE
+                      cachedWidth = newWidth;
+                      timeLink();
+                    }
+                  });
+                });
+                $(window).load(function () {
+                  timeLink();
+                  $(".area_timeline").addClass("loaded");
+                });
+              </script>
+              <div class="inr">
+                <div id="timeline" class="area_timeline">
+                  <div class="time_top">
+                    <div class="time_tab_wrap">
+                      <span class="line"></span>
+                      <div class="time_tab">
+                        <ol id="dates">
+                          <li><a href="#512" class="selected">512</a></li>
+                          <li><a href="#1454">1454</a></li>
+                          <li><a href="#1625">1625</a></li>
+                          <li><a href="#1693">1693</a></li>
+                          <li><a href="#1694">1694</a></li>
+                          <li><a href="#1695">1695</a></li>
+                          <li><a href="#169601">1696</a></li>
+                          <li><a href="#169602">1696</a></li>
+                          <li><a href="#1770">1770</a></li>
+                          <li><a href="#1870">1870</a></li>
+                          <li><a href="#1877">1877</a></li>
+                          <li><a href="#1900">1900</a></li>
+                          <li><a href="#1905">1905</a></li>
+                          <li><a href="#1906">1906</a></li>
+                          <li><a href="#1946">1946</a></li>
+                          <li><a href="#1951">1951</a></li>
+                        </ol>
+                      </div>
+                    </div>
+                    <ul class="time_navigation">
+                      <li><a href="#0" class="prev" id="prev">Prev</a></li>
+                      <li><a href="#0" class="next" id="next">Next</a></li>
+                    </ul>
+                  </div>
+                  <div class="time_txt">
+                    <ol id="issues">
+                      <li id="512">
+                        <div>
+                          <em>512</em>
+                          <h6 class="tit02"><br />우산국 복속</h6>
+                          <div class="time_img">
+                            <div class="time_summary">삼국사기</div>
+                            <img alt="참고사진" src="images/content/img_chronicle01.jpg" />
+                          </div>
+                          <p>신라 이찬(伊飡) 이사부(異斯夫)가 우산국을 정벌하여 신라가 우산국을 복속합니다. 이로써 울릉도와 독도는 우리 역사와 함께 하기 시작합니다. 『동국문헌비고』 (1770년)에는 "울릉(울릉도)과 우산(독도)은 모두 우산국의 땅"이라고 기술했습니다.</p>
+                        </div>
+                      </li>
+                      <li id="1454">
+                        <div>
+                          <em>1454</em>
+                          <h6 class="tit02"><br />『세종실록』「지리지」</h6>
+                          <div class="time_img">
+                            <div class="time_summary">세종실록 지리지</div>
+                            <img alt="참고사진" src="images/content/img_chronicle02.jpg" />
+                          </div>
+                          <p>
+                            조선 초기 관찬서인 『세종실록』「지리지」(1454년)는 울릉도와 독도가 강원도 울진현에 속한 두 섬이라고 기록하고 있습니다. 특히 "우산(독도) 무릉(울릉도)… 두 섬은 서로 멀리 떨어져 있지 않아 날씨가 맑으면 바라볼 수 있다."라고 기록하고 있는데, 울릉도에서 날씨가 맑은 날 육안으로
+                            보이는 섬은 독도가 유일합니다.
+                          </p>
+                        </div>
+                      </li>
+                      <li id="1625">
+                        <div>
+                          <em>1625</em>
+                          <h6 class="tit02">
+                            다케시마(竹島, 울릉도)<br />
+                            도해(渡海) 면허
+                          </h6>
+                          <div class="time_img">
+                            <div class="time_summary">울릉도 전경<br /><span>자료제공 : 울릉군청</span></div>
+                            <img alt="참고사진" src="images/content/img_chronicle03.jpg" />
+                          </div>
+                          <p>일본 막부가 돗토리번(지금의 돗토리현)에 살고 있는 오야·무라카와(大谷·村川) 양가에 다케시마(竹島, 울릉도) 도해(渡海)를 면허한 것입니다. 면허를 내린 시기는 1618년, 또는 1625년이라고도 합니다.</p>
+                        </div>
+                      </li>
+                      <li id="1693">
+                        <div>
+                          <em>1693</em>
+                          <h6 class="tit02"><br />안용복(安龍福) 일본 납치</h6>
+                          <div class="time_img">
+                            <div class="time_summary">숙종실록</div>
+                            <img alt="참고사진" src="images/content/img_chronicle04.jpg" />
+                          </div>
+                          <p>안용복(安龍福), 박어둔(朴於屯) 두 사람이 울릉도에서 어업을 하다가 울릉도에 온 일본 오야·무라카와(大谷·村川) 양가의 선원들에게 잡혀서 일본으로 끌려간 사건입니다. 이 사건으로 인해 조선과 일본 간의 울릉도 영유권에 대한 분쟁(울릉도 쟁계)이 발생합니다.</p>
+                        </div>
+                      </li>
+                      <li id="1694">
+                        <div>
+                          <em>1694</em>
+                          <h6 class="tit02"><br />울릉도 수토제도 시행결정</h6>
+                          <div class="time_img">
+                            <div class="time_summary">울릉도 전경<br /><span>자료제공 : 울릉군청</span></div>
+                            <img alt="참고사진" src="images/content/img_chronicle05.jpg" />
+                          </div>
+                          <p>
+                            안용복 사건으로 인해 일본과 울릉도 영유권에 대한 분쟁(울릉도 쟁계)이 발생하자, 조선 정부는 삼척첨사 장한상(張漢相)을 울릉도에 파견하여 울릉도의 현황을 조사합니다. 그 이후 영의정 남구만의 건의에 따라 2년 걸러 한 번씩 관원을 울릉도에 파견하여 수토*를 하기로 결정합니다.<br />
+                            <span>* 수토 : 무엇을 알아내거나 찾기 위해서 조사하거나 살핌</span>
+                          </p>
+                        </div>
+                      </li>
+                      <li id="1695">
+                        <div>
+                          <em>1695</em>
+                          <h6 class="tit02"><br />일본 돗토리번 답변</h6>
+                          <div class="time_img">
+                            <div class="time_summary">돗토리번 답변서 <br />(복제본)</div>
+                            <img alt="참고사진" src="images/content/img_chronicle06.jpg" />
+                          </div>
+                          <p>
+                            일본 막부는 울릉도 영유권에 대해 알아보기 위해 돗토리번에 울릉도의 소속을 질문(12월 24일)했습니다. 이에 대해 돗토리번이 막부에 다케시마(울릉도)와 마쓰시마(독도)가 돗토리번의 소속이 아니라고 답변(12월 25일)함에 따라 막부는 울릉도와 독도가 일본령이 아님을 공식적으로
+                            확인합니다.
+                          </p>
+                        </div>
+                      </li>
+                      <li id="169601">
+                        <div>
+                          <em>1696</em>
+                          <h6 class="tit02">1월. 다케시마(울릉도) <br />도해금지령</h6>
+                          <div class="time_img">
+                            <div class="time_summary">다케시마(울릉도)<br />도해금지령(복제본)<br /><span>자료제공 : 독도박물관</span></div>
+                            <img alt="참고사진" src="images/content/img_chronicle07.jpg" />
+                          </div>
+                          <p>일본 막부는 돗토리번을 통해 울릉도와 독도가 일본령이 아님을 확인하고 다케시마(울릉도) 도해금지령을 내렸습니다. (1696년 1월 28일) 이후 조선과의 외교문서를 통해 울릉도가 조선령임을 공식 확인하였습니다. (1699년)</p>
+                        </div>
+                      </li>
+                      <li id="169605">
+                        <div>
+                          <em>1696</em>
+                          <h6 class="tit02"><br />5월. 안용복(安龍福) 일본 도해</h6>
+                          <div class="time_img">
+                            <div class="time_summary">원록구병자년<br />조선주착<br />안일권지각서</div>
+                            <img alt="참고사진" src="images/content/img_chronicle08.jpg" />
+                          </div>
+                          <p>안용복(安龍福)이 울릉도에 어업 온 일본 어선을 추격하여 독도(자산도)에서 쫓아버리고, 일본에까지 다녀온 사건입니다. 이때 안용복이 오키섬 관리에게 울릉도와 독도가 조선령이라고 진술한 기록이 「원록9병자년조선주착안일권지각서」에 실려 있습니다.</p>
+                        </div>
+                      </li>
+                      <li id="1770">
+                        <div>
+                          <em>1770</em>
+                          <h6 class="tit02"><br />『동국문헌비고』「여지고」</h6>
+                          <div class="time_img">
+                            <div class="time_summary">동국문헌비고</div>
+                            <img alt="참고사진" src="images/content/img_chronicle09.jpg" />
+                          </div>
+                          <p>국왕 영조의 명에 의해 조선의 문물제도를 기록한 관찬서입니다. 이 책에는 "우산도(독도)와 울릉도… 두 섬으로 하나가 바로 우산이다... 「여지지」에 이르기를, 울릉과 우산은 모두 우산국의 땅인데, 우산은 일본이 말하는 송도(松島)다."라고 하였습니다.</p>
+                        </div>
+                      </li>
+                      <li id="1870">
+                        <div>
+                          <em>1870</em>
+                          <h6 class="tit02">
+                            일 외무성<br />
+                            『조선국교제시말내탐서』
+                          </h6>
+                          <div class="time_img">
+                            <div class="time_summary">조선국교제<br />시말내탐서(복제본)<br /><span>자료제공 : 독도박물관</span></div>
+                            <img alt="참고사진" src="images/content/img_chronicle10.jpg" />
+                          </div>
+                          <p>1870년 외무성 관리인 사다 하쿠보(佐田白茅) 등이 조선을 시찰한 후 외무성에 제출한 보고서입니다. 이 보고서에는 "다케시마(울릉도)와 마쓰시마(독도)가 조선 부속이 된 사정"이 언급되어 있어, 당시 일본 외무성이 두 섬을 조선 영토로 인식했다는 것을 알 수 있습니다.</p>
+                        </div>
+                      </li>
+                      <li id="1877">
+                        <div>
+                          <em>1877</em>
+                          <h6 class="tit02"><br />「태정관(太政官)지령」</h6>
+                          <div class="time_img">
+                            <div class="time_summary">태정관지령</div>
+                            <img alt="참고사진" src="images/content/img_chronicle11.jpg" />
+                          </div>
+                          <p>
+                            1877년 3월 일본 최고 행정기구인 태정관이 내무성에 울릉도와 독도가 일본령이 아니라고 내린 지령입니다. 태정관은 17세기 에도 막부와 조선 정부 간 교섭(울릉도쟁계) 결과 울릉도와 독도가 일본 소속이 아님이 확인되었다고 판단하고, "다케시마(울릉도) 외 일도(一嶋, 독도)의 건에 대해
+                            본방(本邦, 일본)과는 관계가 없음을 명심할 것"이라는 지시를 내무성에 내렸던 것입니다.
+                          </p>
+                        </div>
+                      </li>
+                      <li id="1900">
+                        <div>
+                          <em>1900</em>
+                          <h6 class="tit02"><br />칙령(勅令) 제41호 반포</h6>
+                          <div class="time_img">
+                            <div class="time_summary">칙령 제41호</div>
+                            <img alt="참고사진" src="images/content/img_chronicle12.jpg" />
+                          </div>
+                          <p>
+                            고종 황제는 칙령으로 '울릉도(欝陵島)를 울도(欝島)로 개칭(改稱)하고 도감(島監)을 군수(郡守)로 개정(改正)한 건(件)'을 제정 반포했습니다. 이 칙령 제2조에 울도군(欝島郡)의 관할 구역으로 울릉전도(欝陵全島), 죽도(竹島)와 함께 석도(石島, 독도)를 규정하여 독도가 울도군의 관할임을
+                            명확히 했습니다.
+                          </p>
+                        </div>
+                      </li>
+                      <li id="1905">
+                        <div>
+                          <em>1905</em>
+                          <h6 class="tit02">시마네현고시 <br />(島根縣告示) 제40호</h6>
+                          <div class="time_img">
+                            <div class="time_summary">시마네현고시<br />제40호(복제본)<br /><span>자료제공 : 독도박물관</span></div>
+                            <img alt="참고사진" src="images/content/img_chronicle13.jpg" />
+                          </div>
+                          <p>
+                            일본의 독도 영토 편입을 알리는 지방 고시입니다. 일본은 1904년 이래 만주와 한반도에 대한 이권을 두고 러시아와 전쟁 과정에서 동해에서의 해전을 위한 군사적 필요성에 의해 1905년 독도를 무주지라 주장하면서 영토편입을 시도하고 시마네현에 고시했습니다. 그러나 시마네현고시
+                            제40호는 일본의 우리나라 국권에 대한 단계적 침탈 과정의 일환이었으며, 우리나라가 오랜 기간에 걸쳐 확고히 확립하여 온 독도 영유권을 침해한 불법행위이므로 국제법적 효력을 가질 수 없습니다.
+                          </p>
+                        </div>
+                      </li>
+                      <li id="1906">
+                        <div>
+                          <em>1906</em>
+                          <h6 class="tit02"><br />3월. 울도군수 심흥택 보고서</h6>
+                          <div class="time_img">
+                            <div class="time_summary">보고서 호외 및 지령 제3호</div>
+                            <img alt="참고사진" src="images/content/img_chronicle14.jpg" />
+                          </div>
+                          <p>
+                            울도군수 심흥택이 울릉도를 방문한 일본 시마네현 관민 조사단으로부터 일본이 독도를 영토 편입했다는 소식을 듣고, 다음 날 강원도 관찰사와 내부(內部, 현재의 안전행정부에 해당)에 보고한 문서입니다. 이 보고서에는 "본군 소속 독도"라고 하여 독도가 울도군의 관할임을 분명히
+                            했습니다.<br />
+                            <u>5월.</u> 의정부 참정대신 지령 제3호 대한제국 최고의 행정기구인 의정부에서 일본의 독도 영토 편입을 부인하는 지령을 내린 것입니다. 의정부는 강원도 관찰사로부터 일본이 독도를 영토 편입했다는 보고를 접하고, 일본의 독도 편입을 부인하는 참정대신(지금의 부총리격)의 지령을
+                            내립니다.
+                          </p>
+                        </div>
+                      </li>
+                      <li id="1946">
+                        <div>
+                          <em>1946</em>
+                          <h6 class="tit02">1월 29일. 연합국최고사령관 <br />각서(SCAPIN) 제677호</h6>
+                          <div class="time_img">
+                            <div class="time_summary">SCAPIN 제677호<br />관련 지도(복제본)<br /><span>자료제공 : 독도박물관</span></div>
+                            <img alt="참고사진" src="images/content/img_chronicle15.jpg" />
+                          </div>
+                          <p>
+                            제2차 세계대전 종전 후 일본의 통치 행정 범위에서 독도를 제외한 각서입니다. 연합국 최고사령관은 일본의 영역에서 "울릉도, 리앙쿠르암(독도)과 제주도는 제외된다."라고 규정하였습니다.
+                            <u>6월 22일.</u>
+                            연합국최고사령관 각서(SCAPIN) 제1033호 연합국 최고사령관이 SCAPIN 제677호에 이어 일본의 선박 및 국민이 독도 또는 독도 주변 12해리 이내에 접근하는 것을 금지한 각서입니다.
+                          </p>
+                        </div>
+                      </li>
+                      <li id="1951">
+                        <div>
+                          <em>1951</em>
+                          <h6 class="tit02"><br />샌프란시스코 강화조약 체결</h6>
+                          <div class="time_img">
+                            <div class="time_summary">샌프란시스코<br />강화조약 체결<br /><span>자료제공 : 미국국립문서기록관리청</span></div>
+                            <img alt="참고사진" src="images/content/img_chronicle16.jpg" />
+                          </div>
+                          <p>
+                            샌프란시스코 강화조약은 제2차 세계대전을 종결하면서 연합국과 일본이 체결한 조약입니다. 이 조약 제2조(a)에서 "일본은 한국의 독립을 인정하고, 제주도, 거문도 및 울릉도를 포함한 한국에 대한 모든 권리, 권원 및 청구권을 포기한다."라고 규정했습니다. 이는 한국의 3천여 개의 도서
+                            가운데 예시에 불과하며, 독도가 직접적으로 명시되지 않았다고 하여 독도가 한국의 영토에 포함되지 않는다고 볼 수 없습니다.
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //본문 -->
+          </section>
+        </div>
         <!-- 우리독도 >> 이유  -->
         <div class="reason">
           <div class="swiper swReason">
@@ -242,17 +572,21 @@
                 <div class="reason-box reason-img-1">
                   <div class="inner">
                     <div class="reason-txt">
-                      <h3>역사적</h3>
-                      <p>
+                      <p class="page-title2">역사적</p>
+                      <p class="page-des">
                         일본은 「태정관 지령」 (1877년) 등을 통해 <br />
                         <strong>'울릉도 외 일도(독도)는 일본과 관계없다'</strong>고 했습니다.<br />
                         반면, 우리나라는 「세종실록」 「지리지」(1454년), 『만기요람」(1808년) 등 여러 역사책에 독도를 우리 땅으로 기록했습니다.
                       </p>
-                      <a href="#">VIEW MORE</a>
+                      <a href="https://www.dokdofoundation.or.kr/our-dokdo/government-position" class="morebtn">VIEW MORE</a>
                     </div>
                     <div class="reason-img">
                       <img src="images/2history/Taejeonggwan.png" alt="태전관 지령" title="태전관 지령" />
                     </div>
+                    <!-- 하단 아이콘 -->
+                    <section id="section05" class="demo">
+                      <a href="#page-6"><span></span></a>
+                    </section>
                   </div>
                 </div>
               </div>
@@ -261,17 +595,21 @@
                 <div class="reason-box reason-img-2">
                   <div class="inner">
                     <div class="reason-txt">
-                      <h3>지리적</h3>
-                      <p>
+                      <p class="page-title2">지리적</p>
+                      <p class="page-des">
                         독도에서 제일 가까운 섬은 울릉도이고, 맑은 날이면<br />
                         <strong>울릉도에서 독도를 볼 수 있습니다.</strong> <br />
                         그래서 예로부터 사람들은 독도를 울릉도의 부속섬으로 인식하고 우리나라 옛 지도에도 울릉도와 독도는 한 쌍의 섬으로 나란히 표기되어 있습니다.
                       </p>
-                      <a href="#">VIEW MORE</a>
+                      <a href="https://www.dokdofoundation.or.kr/our-dokdo/government-position" class="morebtn">VIEW MORE</a>
                     </div>
                     <div class="reason-img">
-                      <p><em>울릉도에서 바라 본 독도</em><br />87.4km</p>
+                      <img src="images/2history/ulleungdoSee.jpg" alt="울릉도에서 바라본 독도" title="울릉도에서 바라본 독도" />
                     </div>
+                    <!-- 하단 아이콘 -->
+                    <section id="section05" class="demo">
+                      <a href="#page-6"><span></span></a>
+                    </section>
                   </div>
                 </div>
               </div>
@@ -280,18 +618,20 @@
                 <div class="reason-box reason-img-3">
                   <div class="inner">
                     <div class="reason-txt">
-                      <h3>법률적</h3>
-                      <p>
-                        <!-- 1900년 대한제국은 칙령 제41호를 통해 독도를 울도 군수의 관할 구역으로 규정했습니다.</strong><br> -->
+                      <p class="page-title2">법률적</p>
+                      <p class="page-des">
                         광복 후 연합국은 <strong>독도를 울릉도와 함께 일본의 통치영역에서 제외하였습니다.</strong><br />
-                        현재까지 우리 정부는 독도를 대한민국의 영토로 계속 관리, 이용하고 있습니다.<br />
-                        명백한 우리 고유의 영토입니다.
+                        현재까지 우리 정부는 독도를 대한민국의 영토로 계속 관리, 이용하고 있습니다. 명백한 우리 고유의 영토입니다.
                       </p>
-                      <a href="#">VIEW MORE</a>
+                      <a href="https://www.dokdofoundation.or.kr/our-dokdo/government-position" class="morebtn">VIEW MORE</a>
                     </div>
                     <div class="reason-img">
                       <img src="images/2history/scapin677.png" alt="연합국 최고사령관 각서 제677호" title="연합국 최고사령관 각서 제677호" />
                     </div>
+                    <!-- 하단 아이콘 -->
+                    <section id="section05" class="demo">
+                      <a href="#page-6"><span></span></a>
+                    </section>
                   </div>
                 </div>
               </div>
@@ -301,10 +641,10 @@
         </div>
       </div>
       <!-- 독도 행사 -->
-      <div class="event">
+      <div class="event" id="page-6">
         <div class="event-inner">
           <div class="event-left">
-            <h2>독도 행사</h2>
+            <p class="page-title1">독도 행사</p>
             <!-- swiper 페이지네이션 -->
             <div class="swiper-pagination-event"></div>
             <div class="event-morebt">
@@ -322,28 +662,28 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="images/3event/d1.png" alt="D" />
-                  <div>독도 2행시</div>
-                  <a href="#"><p>+ MORE</p></a>
+                  <span>독도 2행시</span>
+                  <a href="https://www.kypa.co.kr/notice/?idx=7330469&bmode=view" target="_blank"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide">
                   <img src="images/3event/o1.png" alt="O" />
                   <span>독도 릴레이 마라톤</span>
-                  <a href="#"><p>+ MORE</p></a>
+                  <a href="http://dokdoschool.gyo6.net/kor/na/ntt/selectNttList.do?mi=1345&bbsId=1148" target="_blank"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide">
                   <img src="images/3event/k.png" alt="K" />
                   <span>독도 손글씨 쓰기</span>
-                  <a href="#"><p>+ MORE</p></a>
+                  <a href="http://dokdoschool.gyo6.net/kor/na/ntt/selectNttList.do?mi=1364&bbsId=1156" target="_blank"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide">
                   <img src="images/3event/d2.png" alt="D" />
                   <span>독도 골든벨</span>
-                  <a href="#"><p>+ MORE</p></a>
+                  <a href="https://quizlet.com/855470628/%EB%8F%85%EB%8F%84-%EB%8F%99%ED%95%B4-%EA%B3%A8%EB%93%A0%EB%B2%A8-%ED%80%B4%EC%A6%88%EB%8C%80%ED%9A%8C-%EC%A0%81%EC%A4%91%EB%AC%B8%EC%A0%9C-%EB%8B%A8%EB%8B%B5%ED%98%95-%EB%AC%B8%EC%A0%9C-49%EA%B0%9C-flash-cards/" target="_blank"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide">
                   <img src="images/3event/o2.png" alt="O" />
                   <span>독도 색칠하기</span>
-                  <a href="#"><p>+ MORE</p></a>
+                  <a href="https://blog.naver.com/studyingmuz2/222908061315" target="_blank"><p>+ MORE</p></a>
                 </div>
               </div>
             </div>
@@ -354,18 +694,185 @@
       <div class="friends" id="page-2">
         <div class="inner">
           <div class="title">
-            <h3>독도 친구들</h3>
+            <p class="page-title2">독도 친구들</p>
             <img src="images/dokdo_icon.png" alt="독도 아이콘" />
           </div>
           <div class="friends-contents">
-            <img src="images/4friends/bg650.jpg" alt="배경" />
+            <div class="friends-contents-bg">
+              <img src="images/4friends/friendbg-1300.jpg" alt="배경" class="friendbg-w" />
+              <img src="images/4friends/friendbg-960.jpg" alt="배경" class="friendbg-m" />
+              <img src="images/4friends/friendbg-600.jpg" alt="배경" class="friendbg-m2" />
+            </div>
+            <div class="friends-contents-list">
+              <div class="btn_open"><img src="images/4friends/galmegi.png" alt="괭이갈매기" class="fds1" /></div>
+              <div class="btn_open"><img src="images/4friends/hwangro.png" alt="황로" class="fds2" /></div>
+              <div class="btn_open"><img src="images/4friends/gangchi.png" alt="강치" class="fds3" /></div>
+              <div class="btn_open"><img src="images/4friends/heagook.png" alt="해국" class="fds4" /></div>
+              <div class="btn_open"><img src="images/4friends/sacheolnamu.png" alt="사철나무" class="fds5" /></div>
+              <div class="btn_open"><img src="images/4friends/semgirincho.png" alt="섬기린초" class="fds6" /></div>
+              <div class="btn_open"><img src="images/4friends/bucheabbulsanho.png" alt="부채뿔산호" class="fds7" /></div>
+              <div class="btn_open"><img src="images/4friends/dalpeng.png" alt="흰갯민숭달팽이" class="fds8" /></div>
+              <div class="btn_open"><img src="images/4friends/dohwasaewoo.png" alt="도화새우" class="fds9" /></div>
+              <div class="btn_open"><img src="images/4friends/hockdom.png" alt="혹돔" class="fds10" /></div>
+              <div id="pop_info_1" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">괭이갈매기</p>
+                    <p class="dsc">갈매기과에 속하며 울음소리가 마치 고양이 울음소리와 비슷하다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/galmegi-click.png" alt="괭이갈매기" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_2" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">황로</p>
+                    <p class="dsc">백로의 일종으로 몸길이는 약 51cm로 목초지 습지 주변의 숲 등에 서식 한다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/hwangro-click.png" alt="황로" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_3" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">강치</p>
+                    <p class="dsc">현재는 멸종한 바다사자류의 일종으로 체구는 수컷 2.5m, 암컷 1.64m 정도로 크다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/gangchi-click.png" alt="강치" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_4" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">해국</p>
+                    <p class="dsc">꽃은 연한 보라색으로 가지 끝에 하나씩 달리며 키는 30~60cm이다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/heagook-click.png" alt="해국" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_5" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">사철나무</p>
+                    <p class="dsc">사계절 늘푸른 나무로 독도 천장굴 주변에 100년 이상 독도를 지키고 있다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/sacheolnamu-click.png" alt="사철나무" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_6" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">섬기린초</p>
+                    <p class="dsc">울릉도, 독도에 분포하는 한국 고유종으로 관상용으로 많이 심는다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/semgirincho-click.png" alt="섬기린초" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_7" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">부채뿔산호</p>
+                    <p class="dsc">색은 전반적으로 붉은색이고 수심 5-30m 되는 곳에서 암반에 부착한다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/bucheabbulsanho-click.png" alt="부채뿔산호" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_8" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">흰갯민숭달팽이</p>
+                    <p class="dsc">체색은 흰색으로 검은색 반점이 등 쪽 전반에 분포하고 타원형이며 납작하다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/dalpeng-click.png" alt="흰갯민숭달팽이" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_9" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">도화새우</p>
+                    <p class="dsc">울릉도에서는 참새우라고 불리는 도화새우는 이름은 도화, 곧 복숭아꽃에서 따왔다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/dohwasaewoo-click.png" alt="도화새우" />
+                  </div>
+                </div>
+              </div>
+              <div id="pop_info_10" class="pop_wrap" style="display: none">
+                <div class="pop_inner">
+                  <button type="button" class="btn_close">
+                    <img src="images/4friends/close2.png" alt="닫기" />
+                  </button>
+                  <div class="freinds_txt">
+                    <p class="tit">혹돔</p>
+                    <p class="dsc">이름처럼 두상이 혹 난 것처럼 툭 튀어나와 있고 물고기계의 주걱턱이다.</p>
+                  </div>
+                  <div class="freinds_img">
+                    <img src="images/4friends/hockdom-click.png" alt="혹돔" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <script>
+        $(document).ready(function () {
+          $(".btn_open").click(function () {
+            var popupId = $(this).index() + 1;
+            $("#pop_info_" + popupId).show();
+          });
+          $(".btn_close").click(function () {
+            $(this).closest(".pop_wrap").hide();
+          });
+        });
+      </script>
       <!-- 독도 가는길 -->
       <div class="go" id="page-3">
         <div class="title">
-          <h3>독도 가는길</h3>
+          <p class="page-title2">독도 가는길</p>
           <img src="images/dokdo_icon.png" alt="독도 아이콘" />
         </div>
         <div class="go-bg">
@@ -377,18 +884,18 @@
                     <!-- <img src="images/5way/ship1.png" alt="배" /> -->
                     <i class="fa-solid fa-ship"></i>
                     <p>포항 <----> 울릉</p>
-                    <button class="re-btn" id="go-ulleung">예매하기</button>
+                    <a href="ship_reservation.html" target="_blank"><button class="re-btn" id="go-ulleung">예매하기</button></a>
                   </li>
                   <li>
                     <!-- <img src="images/5way/ship1.png" alt="배" /> -->
                     <i class="fa-solid fa-ship"></i>
                     <p>울릉 <----> 독도</p>
-                    <button class="re-btn" id="go-dokdo">예매하기</button>
+                    <a href="ship_reservation.html" target="_blank"><button class="re-btn" id="go-dokdo">예매하기</button></a>
                   </li>
                   <li>
                     <i class="fa-solid fa-file-circle-check"></i>
                     <p>예매 확인 / 취소</p>
-                    <button class="re-btn" id="go-reserved">예매확인</button>
+                    <a href="ship_reservation_check.html" target="_blank"><button class="re-btn" id="go-reserved">예매확인</button></a>
                   </li>
                 </ul>
               </div>
@@ -402,7 +909,7 @@
                     <span>울릉도</span>
                   </li>
                   <li class="go-map-dockdo">
-                    <a href="#">
+                    <a href="ship_reservation.html" target="_blank">
                       <img src="images/5way/way3.png" alt="독도" />
                       <span class="dong">동도</span>
                       <span class="seo">서도</span>
@@ -410,6 +917,7 @@
                     <div class="go-map-list-dokdo">
                       <span></span>
                       <p>독도</p>
+                      <p class="click_dokdo">클릭<i class="fa-regular fa-hand-point-down"></i></p>
                       <img src="images/5way/flag.jpg" alt="태극기" />
                     </div>
                   </li>
@@ -423,8 +931,12 @@
       <div class="md" id="page-4">
         <div class="md-inner">
           <div class="md-left">
-            <h2>독도 MD</h2>
-            <p>수익금은 독도를 지키는데 쓰입니다.</p>
+            <p class="page-title1">독도 MD</p>
+            <div class="md-money">
+              <p class="md-money1">수익금은 독도를</p>
+              &nbsp;
+              <p class="md-money2">지키는데 쓰입니다.</p>
+            </div>
             <!-- swiper 페이지네이션 -->
             <div class="swiper-pagination-md"></div>
             <div class="md-morebt">
@@ -451,8 +963,8 @@
                   <a href="#"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="images/6md/md3.png" alt="코스터" />
-                  <span>코스터</span>
+                  <img src="images/6md/md3.png" alt="마그넷" />
+                  <span>마그넷</span>
                   <a href="#"><p>+ MORE</p></a>
                 </div>
                 <div class="swiper-slide">
@@ -474,17 +986,17 @@
       <div class="promo" id="page-5">
         <div class="inner">
           <div class="title">
-            <h3>독도 이벤트</h3>
+            <p class="page-title2">독도 이벤트</p>
             <img src="images/dokdo_icon.png" alt="독도 아이콘" />
           </div>
           <div class="promo-contents">
-            <a href="#"><img src="images/7promotion/pro1.jpg" alt="인스타 챌린지" /></a>
-            <a href="#"><img src="images/7promotion/pro2.jpg" alt="스탬프 투어" /></a>
+            <a href="javascript:void(0);" id="openSnsPopup"><img src="images/7promotion/pro1.jpg" alt="인스타 챌린지" /></a>
+            <a href="javascript:void(0);" id="openStempPopup"><img src="images/7promotion/pro2.jpg" alt="스탬프 투어" /></a>
           </div>
         </div>
       </div>
       <!-- 푸터 -->
-      <footer class="footer">
+      <div class="footer">
         <div class="inner">
           <!-- 로고 -->
           <div class="ft-logo">
@@ -511,7 +1023,7 @@
             </ul>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   </body>
 </html>

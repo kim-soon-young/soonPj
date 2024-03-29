@@ -7,7 +7,11 @@
 @media screen and (max-width: 1400px) {
   /* 헤더 */
   header > .inner {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+  }
+  /* 독도 행사 *
+  .event-inner {
+    margin-left: 8%;
   }
 }
 @media screen and (max-width: 1390px) {
@@ -16,19 +20,35 @@
     padding: 0 25px 0 25px;
   }
 }
+@media screen and (max-width: 1370px) {
+  /* 독도 굿즈 */
+  .md-right {
+    width: 80%;
+  }
+  .md-right > .sw-md .swiper-slide {
+    height: 350px;
+  }
+}
 @media screen and (max-width: 1300px) {
   /* 우리독도 >> 이유 */
   .swiper-pagination {
     margin-right: 2rem;
   }
-  .reason-txt > h3 {
-    font-size: 4rem;
+}
+@media screen and (max-width: 1200px) {
+  /* 독도 행사 */
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2.2rem;
   }
-  .reason-txt p {
-    font-size: 1.5rem;
+  /* 독도 굿즈 */
+  .md-right {
+    width: 75%;
   }
-  .reason-txt p {
-    margin: 30px 0 50px;
+}
+@media screen and (max-width: 1030px) {
+  /* 독도 행사 */
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -45,15 +65,35 @@
   .fa-chevron-down {
     display: none;
   }
-  .language-box {
-    display: none;
+  .languge {
+    margin-top: 0.8rem;
+  }
+  .languge li a {
+    font-size: 1.2rem;
+    padding: 1rem;
   }
   .header-right-m {
     display: flex;
   }
 }
+@media screen and (max-width: 1000px) {
+  /* 독도 행사 */
+  .event-right {
+    width: 80%;
+  }
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2.4rem;
+  }
+  /* top 버튼 */
+  .top-button {
+    right: 10px;
+  }
+}
 @media screen and (max-width: 960px) {
   /* 비쥬얼 */
+  .visual {
+    height: auto;
+  }
   .video-w {
     display: none;
   }
@@ -63,22 +103,52 @@
     max-width: 960px;
     height: auto;
   }
-  .visual {
-    height: auto;
-  }
   /* 우리독도 >> 이유 */
+  .reason-box > .inner {
+    padding: 0 9% 0 8%;
+    flex-direction: column-reverse;
+    gap: 0rem;
+  }
   .reason-img img {
     width: 60%;
   }
   .reason-img {
     text-align: right;
   }
-  .reason-box > .inner {
-    flex-direction: column-reverse;
-    gap: 0rem;
-  }
 }
+
 @media screen and (max-width: 900px) {
+  /* 이유 */
+  .reason-txt > .page-des {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin: 4rem 0 3.5rem 0;
+  }
+  .reason-txt a {
+    font-size: 12px;
+  }
+  /* 독도친구들 */
+  .friendbg-w {
+    display: none;
+  }
+  .friendbg-m {
+    display: block;
+  }
+  .friends-contents-list .fds2 {
+    top: 32%;
+    right: 10%;
+  }
+  .friends-contents-list .fds3 {
+    top: 30%;
+  }
+  .friends-contents-list .fds10 {
+    bottom: 30%;
+    width: 10%;
+  }
+  .friends-contents-list .fds9 {
+    width: 15%;
+  }
+  /* 독도 가는길 */
   .go > .go-bg > .inner {
     padding: 0 20px;
   }
@@ -93,7 +163,7 @@
     font-size: 1.8rem;
     position: absolute;
     top: 40%;
-    left: 45%;
+    left: 40%;
     transform: translateX(-50%);
   }
   .go-map-dockdo > a > .dong {
@@ -127,13 +197,29 @@
     top: -15px;
     right: -5px;
   }
+  /* 독도 행사 */
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  /* 독도 굿즈 */
+  .md-money {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 820px) {
+  /* 독도 행사 */
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 800px) {
   /* 우리독도 >> 이유 */
   .reason-img img {
     width: 70%;
   }
-  .reason-txt > h3 {
+  .reason-txt > .page-title1 {
     font-size: 3.5rem;
   }
   .reason-img p em {
@@ -147,14 +233,164 @@
   .go > .go-bg > .inner {
     padding: 0 15px;
   }
+  /* top 버튼 */
+  .top-button .gogo_dokdo img {
+    width: 90%;
+  }
+  #go-top-btn-img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 780px) {
+  /* 독도 굿즈 */
+  .md-left > h2 {
+    font-size: 2.8rem;
+  }
+  .md-left > p {
+    font-size: 1.3rem;
+    white-space: wrap;
+  }
+  .md-inner {
+    margin-left: 10px;
+  }
+  .md-left > .md-morebt > a > p {
+    font-size: 1.2rem;
+  }
+  .md-left > .md-morebt > a > img {
+    width: 90%;
+  }
+  .md-right > .sw-md .swiper-slide {
+    height: 400px;
+  }
+  .md-right > .sw-md .swiper-slide img {
+    height: 35%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* 헤더 */
+  header {
+    height: 70px;
+  }
+  .logo img {
+    width: 90px;
+    height: auto;
+  }
+  /* 독도친구들 */
+  .tit {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 750px) {
   /* 독도가는길 */
   .go > .go-bg > .inner {
     padding: 0 10px;
   }
+  /* 푸터 */
+  .footer-middle {
+    right: 230px;
+  }
+  /* 독도 행사 */
+  .event-inner {
+    margin-left: 10px;
+  }
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2.4rem;
+  }
+  /* .event-right {
+      width: 75%;
+    } */
+  .event-left > h2 {
+    font-size: 2.5rem;
+  }
+  .event-left > .event-morebt > a > p {
+    font-size: 1.2rem;
+  }
+  .event-left > .event-morebt > a > img {
+    width: 90%;
+  }
+  .event-right > .sw-event .swiper-slide p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 730px) {
+  .md-left > p {
+    font-size: 1.2rem;
+  }
+  /* 푸터 */
+  .family {
+    width: 170px;
+  }
+  .footer-middle {
+    right: 200px;
+  }
 }
 @media screen and (max-width: 700px) {
+  /* 비디오 */
+  .weather {
+    display: none;
+  }
+  /* 하단 스크롤 */
+  .demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font: normal 400 20px/1 "Josefin Sans", sans-serif;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  .demo a:hover {
+    opacity: 0.5;
+  }
+  .visual > #section05 a {
+    padding-top: 70px;
+  }
+  #section05 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb05 {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes sdb05 {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
   /* 독도가는길 */
   .go-map-list-dokdo > span {
     content: "";
@@ -191,6 +427,37 @@
     margin-top: 15px;
     padding: 5px 10px;
   }
+  /* 푸터 */
+  .footer > .inner {
+    height: 200px;
+  }
+  .family {
+    top: 70px;
+    right: 10px;
+  }
+  .footer-middle {
+    right: 10px;
+  }
+  /* 독도 굿즈 */
+  .md-right > .sw-md .swiper-slide img {
+    height: 30%;
+  }
+  .md-right > .sw-md .swiper-slide {
+    height: 350px;
+  }
+  /* top 버튼 */
+  .top-button .gogo_dokdo img {
+    width: 80%;
+  }
+  #go-top-btn-img {
+    width: 80%;
+  }
+  .top-button {
+    right: 0px;
+  }
+  .top-button.on {
+    bottom: 300px;
+  }
 }
 @media screen and (max-width: 650px) {
   /* 독도가는길 */
@@ -213,28 +480,25 @@
     top: -20px;
     right: 10px;
   }
+  /* 독도 이벤트 */
+  .promo > .inner > .promo-contents {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 600px) {
-  /* 헤더 */
-  .logo img {
-    width: 110px;
-    height: auto;
-  }
+  /* 네비 */
   .nav-m {
-    width: 80%;
+    width: 50%;
   }
   .nav-m-active {
-    left: calc(100% - 80%);
+    left: calc(100% - 50%);
   }
   .nav-m > .header-right-m {
     display: flex;
     gap: 10px;
   }
-  /* 우리독도 >> 이유 */
-  .reason-box > .inner {
-    padding: 0 4rem;
-    gap: 5rem;
-  }
+  /* 이유 */
   .reason-img {
     text-align: left;
   }
@@ -244,11 +508,11 @@
   .reason-txt {
     text-align: left;
   }
-  .reason-txt > h3 {
-    font-size: 3rem;
+  .reason-txt > .page-title2 {
+    margin: 3rem 0 1.5rem;
+    font-size: 4rem;
   }
-  .reason-txt p {
-    margin: 3rem 0 3.5rem 0;
+  .reason-txt > .page-des {
     font-size: 1.5rem;
     line-height: 1.5;
     /* 2줄 말줄임 출력 */
@@ -261,6 +525,62 @@
   .swiper-pagination {
     margin-right: 0.7rem;
   }
+  /* 독도친구들 */
+  .friendbg-m {
+    display: none;
+  }
+  .friendbg-m2 {
+    display: block;
+  }
+  .friends-contents-list .fds1 {
+    left: 65%;
+    width: 20%;
+  }
+  .friends-contents-list .fds2 {
+    top: 31%;
+    right: 5%;
+    width: 6%;
+  }
+  .friends-contents-list .fds3 {
+    top: 38%;
+    left: 15%;
+    width: 15%;
+  }
+  .friends-contents-list .fds4 {
+    top: 38%;
+    right: 35%;
+    width: 9%;
+  }
+  .friends-contents-list .fds5 {
+    top: 28%;
+    width: 9%;
+  }
+  .friends-contents-list .fds6 {
+    top: 22%;
+    left: 35%;
+    width: 9%;
+  }
+  .friends-contents-list .fds7 {
+    bottom: 10%;
+    right: 50%;
+    width: 9%;
+  }
+  .friends-contents-list .fds8 {
+    bottom: 10%;
+    left: 20%;
+    width: 10%;
+  }
+  .friends-contents-list .fds9 {
+    bottom: 25%;
+    right: 40%;
+    width: 18%;
+  }
+  .friends-contents-list .fds10 {
+    bottom: 30%;
+    left: 15%;
+    width: 15%;
+  }
+
   /* 독도가는길 */
   .go-map-list-dokdo > span {
     content: "";
@@ -291,6 +611,16 @@
     top: 42%;
     left: 59%;
   }
+  /* 독도친구들 */
+  .friendbg-m {
+    display: none;
+  }
+  .friendbg-m2 {
+    display: block;
+  }
+  .friends-contents-list .fds2 {
+    top: 33%;
+  }
   /* 독도가는길 예매 */
   .go-map-top {
     height: 100px;
@@ -307,8 +637,65 @@
     margin-top: 10px;
     padding: 5px 10px;
   }
+  /* 독도 행사 */
+  .event-right {
+    width: 75%;
+  }
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 569px) {
+  /* 독도 이벤트 */
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2.4rem;
+  }
+  .event-right {
+    width: 70%;
+  }
+  /* 독도 굿즈 */
+  .md-right > .sw-md .swiper-slide {
+    height: 400px;
+  }
+  .md-right > .sw-md .swiper-slide img {
+    height: 40%;
+  }
+  .md-right {
+    width: 70%;
+  }
 }
 @media screen and (max-width: 500px) {
+  /* 이유 */
+  .reason {
+    height: 90vh;
+  }
+  .reason-txt {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .reason-txt > .page-title2,
+  .morebtn {
+    order: 1;
+  }
+  .page-des {
+    order: 2;
+  }
+  .reason-txt > .page-des {
+    margin: 0;
+  }
+  .reason-txt a {
+    margin: 3rem 0 1.5rem;
+    padding-left: 1.5rem;
+    line-height: 3rem;
+    font-weight: lighter;
+  }
+  .reason-txt a::after {
+    top: 1px;
+  }
+  .swReason .swiper-slide-active .reason-txt a {
+    transition: all 1s 0.5s;
+  }
+
   /* 독도가는길 */
   .go-map-list-dokdo > span {
     content: "";
@@ -349,14 +736,42 @@
     padding: 5px 10px;
     font-size: 1.2rem;
   }
+  /* 독도 굿즈 */
+  .md-left > p {
+    font-size: 1.1rem;
+  }
+  /* 푸터 */
+  .ft-logo {
+    position: absolute;
+    top: 30px;
+  }
+  .family {
+    top: 60px;
+  }
 }
 @media screen and (max-width: 450px) {
-  /* 우리독도 >> 이유 */
-  .reason {
-    height: 52.08vw;
-    min-height: 676px;
+  /* 헤더 */
+  header {
+    height: 50px;
   }
-  .reason-txt p {
+  .logo img {
+    width: 70px;
+  }
+  .bt-menu {
+    width: 30px;
+  }
+  .nav-m {
+    width: 80%;
+  }
+  .nav-m-active {
+    left: calc(100% - 80%);
+  }
+  .nav-m > .header-right-m {
+    display: flex;
+    gap: 10px;
+  }
+  /* 우리독도 >> 이유 */
+  .reason-txt > .page-des {
     margin: 2rem 0 2.5rem 0;
     line-height: 1.6;
     /* 2줄 말줄임 출력 */
@@ -367,6 +782,18 @@
     -webkit-box-orient: vertical;
     display: -webkit-box;
   }
+  /* 독도친구들 */
+  .pop_wrap .pop_inner {
+    padding: 20px;
+    max-width: 300px;
+    max-height: 350px;
+    font-size: 1.3rem;
+  }
+  .freinds_img {
+    max-width: 200px;
+    height: auto;
+  }
+
   /* 독도가는길 */
   .go-map-list-dokdo > span {
     content: "";
@@ -405,8 +832,38 @@
     padding: 5px 10px;
     font-size: 1.2rem;
   }
+  /* 독도 굿즈 */
+  .md-right > .sw-md .swiper-slide {
+    height: 350px;
+  }
+  .md-right > .sw-md .swiper-slide img {
+    height: 35%;
+  }
+  .md-right {
+    width: 65%;
+  }
+  .md-left > h2 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  /* 독도 행사 */
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2.2rem;
+  }
+  .event-right > .sw-event .swiper-slide p {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 400px) {
+  /* 이유*/
+  .reason-txt > .page-title2 {
+    font-size: 3.5rem;
+  }
+  .swReason .swiper-pagination {
+    margin-right: 1rem;
+  }
+
   /* 독도 가는길 */
   .go-map-list-dokdo > span {
     content: "";
@@ -423,7 +880,7 @@
   }
   .go-map-list-dokdo > p {
     position: absolute;
-    top: 13px;
+    top: 10px;
     right: 15px;
     font-size: 1.2rem;
   }
@@ -457,8 +914,64 @@
     padding: 5px 10px;
     font-size: 1.1rem;
   }
+  /* 독도 행사 */
+  .event-right {
+    width: 60%;
+  }
+  /* 독도 굿즈 */
+  .md-right {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* 독도 행사 */
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 2rem;
+  }
+  .event-right > .sw-event .swiper-slide p {
+    font-size: 1rem;
+    padding: 0 10px;
+    line-height: 22px;
+  }
+  /* 푸터 */
+  .footer-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+  }
+  .footer-middle > .address {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .footer-middle > .address > span {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .footer-middle > .copyright {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .family {
+    width: 140px;
+  }
+  .family > a {
+    font-size: 1.1rem;
+    padding-left: 13px;
+  }
+  .family ul {
+    padding: 5px 13px;
+  }
+  .family ul li a {
+    font-size: 1.1rem;
+  }
 }
 @media screen and (max-width: 350px) {
+  /* 독도친구들 */
+  .pop_wrap .pop_inner {
+    max-width: 280px;
+    height: 320px;
+  }
   /* 독도가는길 예매 */
   .go-map-list-dokdo > span {
     top: -7px;
@@ -490,5 +1003,17 @@
   /* 독도 가는길 */
   .go-map-top .go-map-top-list li p {
     font-size: 1rem;
+  }
+  /* 독도 굿즈 */
+  .md-right > .sw-md .swiper-slide img {
+    height: 30%;
+  }
+  /* 독도 굿즈 */
+  .md-right {
+    width: 55%;
+  }
+  /* 독도 행사 */
+  .event-right > .sw-event .swiper-slide span {
+    font-size: 1.8rem;
   }
 }

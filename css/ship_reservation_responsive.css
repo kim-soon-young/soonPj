@@ -1,0 +1,21 @@
+@media screen and (max-width: 480px) {
+  .hd-logo > .logo > img {
+    width: 100px;
+  }
+  .reserved {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .reserved > a p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .reserved {
+    gap: 10px;
+  }
+  .reserved > a p {
+    font-size: 1.2rem;
+  }
+}

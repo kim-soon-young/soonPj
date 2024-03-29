@@ -1,0 +1,154 @@
+@media screen and (max-width: 870px) {
+  .top_txt {
+    gap: 20px 0;
+  }
+  .stemp_txt1 {
+    font-size: 1.8rem;
+    line-height: 25px;
+  }
+  .stemp_txt1 span {
+    font-size: 1.5rem;
+    line-height: 25px;
+  }
+  .stemp_txt2 li {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 830px) {
+  .contents_txt p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  header > img {
+    width: 35%;
+  }
+  .top {
+    gap: 30px 66px;
+    justify-content: center;
+  }
+  .top_txt {
+    gap: 30px 0;
+  }
+  .stemp_txt1 {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .stemp_txt1 span {
+    font-size: 1.6rem;
+    line-height: 30px;
+  }
+  .stemp_txt2 li {
+    font-size: 1.6rem;
+  }
+  .top img {
+    width: 70%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  header > img {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 600px){
+  .bottom_bt {
+    display: flex;
+    gap: 0 10px;
+  }
+  .bottom_bt a{
+    width: 80px;
+  }
+}
+@media screen and (max-width: 570px) {
+  header > img {
+    width: 45%;
+  }
+  .top_txt {
+    gap: 20px 0;
+  }
+  .stemp_txt1 {
+    font-size: 1.8rem;
+    line-height: 25px;
+  }
+  .stemp_txt1 span {
+    font-size: 1.4rem;
+    line-height: 25px;
+  }
+  .stemp_txt2 li {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 540px){
+  .bottom > span {
+    font-size: 1.6rem;
+  }
+  /* .bottom_bt a{
+    width: 60px;
+  } */
+}
+@media screen and (max-width: 500px) {
+  header > img {
+    width: 55%;
+  }
+  .top img {
+    width: 90%;
+  }
+  .stemp_txt1 {
+    font-size: 2.0rem;
+    line-height: 30px;
+  }
+  .stemp_txt1 span {
+    font-size: 1.6rem;
+    line-height: 30px;
+  }
+  .stemp_txt2 li {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 440px){
+.contents_txt p {
+  font-size: 1.4rem;
+}
+}
+@media screen and (max-width: 430px){
+  header > img {
+    width: 60%;
+  }
+  .top img {
+    width: 100%;
+  }
+  .stemp_txt1 {
+    font-size: 1.8rem;
+    line-height: 25px;
+  }
+  .stemp_txt1 span {
+    font-size: 1.4rem;
+    line-height: 25px;
+  }
+  .stemp_txt2 li {
+    font-size: 1.4rem;
+  }
+    .bottom > span {
+      font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 360px){
+  header > img {
+    width: 70%;
+  }
+  .top img {
+    width: 100%;
+  }
+  .stemp_txt1 {
+    font-size: 1.5rem;
+    line-height: 25px;
+  }
+  .stemp_txt1 span {
+    font-size: 1.1rem;
+    line-height: 25px;
+  }
+  .stemp_txt2 li {
+    font-size: 1.1rem;
+  }
+}

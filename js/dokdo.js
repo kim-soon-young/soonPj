@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   function smoothScroll(targetId) {
     var targetSection = document.querySelector(targetId);
     var targetTop = targetSection.offsetTop;
@@ -12,20 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".gnb a, .gnb-m a").forEach(function (menuLink) {
     menuLink.addEventListener("click", function (e) {
       e.preventDefault();
+      // 모든 링크에서 active 클래스 제거
+      document.querySelectorAll(".gnb a.active, .gnb-m a.active").forEach(function (link) {
+        link.classList.remove("active");
+      });
+      // 클릭된 링크에 active 클래스 추가
+      this.classList.add("active");
       smoothScroll(this.getAttribute("href"));
     });
   });
-});
-window.addEventListener("load", function () {
   // AOS적용
   AOS.init();
-  //언어 펼침 기능
-  const langWord = document.querySelector(".language-word");
-  const Languge = document.querySelector(".languge");
-  const langli = document.querySelector(".language li");
-  langWord.addEventListener("click", function () {
-    Languge.classList.toggle("languge-box-active");
-  });
   // 헤더
   let scy = 0;
   let scActive = 50;
@@ -33,7 +30,6 @@ window.addEventListener("load", function () {
   let header = document.querySelector("header");
   let logoW = document.querySelector(".logo-w");
   let logoB = document.querySelector(".logo-b");
-
   window.addEventListener("scroll", () => {
     scy = window.document.documentElement.scrollTop;
     if (scy > scActive) {
@@ -46,6 +42,34 @@ window.addEventListener("load", function () {
       logoB.style.display = "none";
     }
   });
+  //언어
+  const languageWord = document.querySelector(".language-word");
+  const languageList = document.querySelector(".languge");
+  let isLanguageActive = false;
+
+  languageWord.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    if (isLanguageActive) {
+      closeLanguageList();
+    } else {
+      openLanguageList();
+    }
+    isLanguageActive = !isLanguageActive;
+  });
+  document.addEventListener("click", function () {
+    if (isLanguageActive) {
+      closeLanguageList();
+      isLanguageActive = false;
+    }
+  });
+  function openLanguageList() {
+    languageList.style.maxHeight = "250px";
+  }
+  function closeLanguageList() {
+    languageList.style.maxHeight = "0";
+  }
+
   // 시간
   var clockTarget = document.getElementById("clock");
   function clock() {
@@ -64,41 +88,42 @@ window.addEventListener("load", function () {
     setInterval(clock, 1000);
   }
   init();
+  // 다운버튼
+  const downButton = document.querySelector(".demo");
+  downButton.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 이벤트 동작 방지
+    scrollToSection("#page-1");
+  });
 
-  //메뉴
-  let nav = this.document.querySelector(".nav-m");
-  let btMenu = this.document.querySelector(".bt-menu");
-  let navClose = this.document.querySelector(".nav-close");
-  btMenu.addEventListener("click", () => {
-    nav.classList.add("nav-m-active");
-  });
-  navClose.addEventListener("click", function () {
-    nav.classList.remove("nav-m-active");
-  });
-  nav.addEventListener("mouseleave", () => {
-    nav.classList.remove("nav-m-active");
-  });
+  function scrollToSection(sectionId) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      const yOffset = -50;
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }
   // 이유
   const swReason = new Swiper(".swReason", {
     direction: "vertical",
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swReason .swiper-pagination",
       clickable: true,
     },
     loop: true,
     speed: 500,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
   });
   // 독도 가는길 예매페이지
-  this.document.getElementById("go-ulleung").addEventListener("click", function () {
-    // 새로운 페이지 URL
-    var goUlleung = "ship_reservation.html";
-    // 새로운 페이지로 이동
-    window.location.href = goUlleung;
-  });
+  // this.document.getElementById("go-ulleung").addEventListener("click", function () {
+  //   // 새로운 페이지 URL
+  //   var goUlleung = "https://www.daezer.com/main/main.html";
+  //   // 새로운 페이지로 이동
+  //   window.location.href = goUlleung;
+  // });
   //__________________________________________________________________________________________
   // 독도 행사 swiper
   var swiper = new Swiper(".sw-event", {
@@ -111,29 +136,43 @@ window.addEventListener("load", function () {
       clickable: true,
     },
     breakpoints: {
-      1375: {
-        spaceBetween: 25,
+      1000: {
+        spaceBetween: 15,
         slidesPerView: 4,
       },
-      1040: {
-        spaceBetween: 25,
+      750: {
+        spaceBetween: 15,
         slidesPerView: 3,
       },
-      690: {
-        spaceBetween: 25,
+      570: {
+        spaceBetween: 15,
         slidesPerView: 2,
       },
     },
   });
   // 독도 md swiper
   var swiper = new Swiper(".sw-md", {
-    slidesPerView: 4,
+    slidesPerView: 1,
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 20,
     freeMode: true,
     pagination: {
       el: ".swiper-pagination-md",
       clickable: true,
+    },
+    breakpoints: {
+      1200: {
+        spaceBetween: 15,
+        slidesPerView: 4,
+      },
+      780: {
+        spaceBetween: 15,
+        slidesPerView: 3,
+      },
+      570: {
+        spaceBetween: 15,
+        slidesPerView: 2,
+      },
     },
   });
   // ============= footer family-site
@@ -156,4 +195,44 @@ window.addEventListener("load", function () {
       familyDiv.style.borderRadius = ""; // 클릭되지 않은 경우 테두리 모양 원래대로
     }
   });
+  // ==================== promotion 이벤트
+  // 인스타 챌린지 팝업 열기
+  document.getElementById("openSnsPopup").addEventListener("click", function () {
+    // 팝업 창을 열고 이미지를 표시
+    window.open("event1.html", "", "width=1000,height=1300");
+  });
+  // 스탬프 투어 팝업 열기
+  document.getElementById("openStempPopup").addEventListener("click", function () {
+    // 팝업 창을 열고 이미지를 표시
+    window.open("event2.html", "", "width=1000,height=1300");
+  });
+  // function openSnsPopup() {
+  //   // 팝업 창을 열고 크기 조절을 비활성화
+  //   var snsPopup = window.open("event1.html", "", "width=1000,height=3136, resizable=no");
+  //   // 팝업 창을 포커스
+  //   snsPopup.focus();
+  // }
+  // function openStempPopup() {
+  //   // 팝업 창을 열고 크기 조절을 비활성화
+  //   var stempPopup = window.open("event2.html", "", "width=1000,height=3136, resizable=no");
+  //   // 팝업 창을 포커스
+  //   stempPopup.focus();
+  // }
+  // ==============================================
+  function openSnsPopup() {
+    var popupURL = "event1.html";
+    var popupWidth = 1000;
+    var popupHeight = 1300;
+    var leftPosition = (window.screen.width - popupWidth) / 2;
+    var topPosition = (window.screen.height - popupHeight) / 2;
+    window.open(popupURL, "popup", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
+  }
+  function openStempPopup() {
+    var popupURL = "event2.html";
+    var popupWidth = 1000;
+    var popupHeight = 1300;
+    var leftPosition = (window.screen.width - popupWidth) / 2;
+    var topPosition = (window.screen.height - popupHeight) / 2;
+    window.open(popupURL, "popup", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
+  }
 });

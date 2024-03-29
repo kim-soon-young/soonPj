@@ -1,0 +1,90 @@
+@media screen and (max-width: 920px) {
+  .check_info input {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .check_info input {
+    width: 600px;
+  }
+  .check_info {
+    gap: 10px 0;
+  }
+}
+@media screen and (max-width: 740px) {
+  .check_info input {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .check_info input {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .check_info input {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 530px) {
+  h2 {
+    font-size: 1.8rem;
+    padding: 0 0 30px 0;
+  }
+  fieldset > p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hd-logo > .logo > img {
+    width: 100px;
+  }
+  .reserved {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .payment_check {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .payment_check > label:nth-child(2) {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  .check_info input {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .reserved > a p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .reserved {
+    gap: 10px;
+  }
+  .reserved > a p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .check_info input {
+    width: 150px;
+  }
+  .check_info > label > input::placeholder {
+    font-size: 1.4rem;
+  }
+  .password > label > input::placeholder {
+    font-size: 1.4rem;
+  }
+  .password > span {
+    font-size: 1.2rem;
+    width: 70%;
+  }
+  .password > span i {
+    font-size: 1.2rem;
+  }
+}

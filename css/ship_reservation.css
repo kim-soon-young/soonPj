@@ -52,24 +52,26 @@ body {
   font-size: 10px;
 }
 /* 공통요소 */
-.wrap {
+#wrap {
   position: relative;
+  display: block;
 }
 .inner {
   position: relative;
+  display: block;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 30px 50px;
+  padding: 30px 20px;
 }
 /* 헤더 */
-header > .inner {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .hd-logo > .logo > img {
-  width: 200px;
+  width: 150px;
   height: auto;
 }
 .reserved {
@@ -77,5 +79,134 @@ header > .inner {
   gap: 50px;
 }
 .reserved > a p {
+  font-size: 1.6rem;
+}
+.go-contents {
+  /* width: 50%; */
+  max-width: 700px;
+  margin: 0 auto;
+  /* background-color: antiquewhite; */
+}
+.go-contents > form {
+  margin: 0 auto;
+  text-align: center;
+}
+.place_select_list {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 50px 0 30px 0;
+}
+.place_select_list .title {
+  font-size: 1.8rem;
+  color: #223055
+}
+.how {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.how2 {
+  padding: 20px 0;
+}
+.how1 > label {
+  display: flex;
+  justify-content: space-between;
+}
+.how1 .start {
+  display: flex;
+}
+.how1 > label > .start > span {
   font-size: 2rem;
+}
+.how1 > label > .center::after {
+  content: "-----";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.how1 > label > .end > span {
+  font-size: 2rem;
+}
+.how2 > label {
+  display: flex;
+  justify-content: space-between;
+}
+.how2 .start {
+  display: flex;
+}
+.how2 > label > .start > span {
+  font-size: 2rem;
+}
+.how2 > label > .center::after {
+  content: "-----";
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.how2 > label > .end > span {
+  font-size: 2rem;
+}
+.how3 > label {
+  display: flex;
+  justify-content: space-between;
+}
+.how3 .start {
+  display: flex;
+}
+.how3 > label > .start > span {
+  font-size: 2rem;
+}
+.how3 > label > .center::after {
+  content: "-----";
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.how3 > label > .end > span {
+  font-size: 2rem;
+}
+.how3 > label > .end > span::after {
+  content: "순환";
+  font-size: 1.3rem;
+  margin-left: 10px;
+  color: #ec9923;
+  border: 1px solid #ec9923;
+  border-radius: 5px;
+  padding: 5px;
+}
+.howlong {
+  padding: 30px 0;
+}
+.howlong p {
+  text-align: left;
+  font-size: 1.6rem;
+  color: #223055;
+}
+.calendar {
+  width: 100%;
+  text-align: left;
+}
+.calendar input {
+  margin-top: 10px;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #191919;
+}
+.daterange::placeholder {
+  font-size: 1.8rem;
+  padding-top: 10px;
+}
+button {
+  font-size: 1.5rem;
+  padding: 5px 10px 5px 10px;
+  background-color: #223055;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
 }
