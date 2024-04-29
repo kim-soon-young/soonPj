@@ -1,0 +1,635 @@
+@charset "utf-8";
+@import "style.css";
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+/* 비주얼 시작 ********************************************** *********************************************/
+.s_vistual {
+  position: relative;
+}
+.s_vistual > .sw-vistual {
+  width: 100%;
+  height: 100%;
+}
+.s_vistual > .sw-vistual > .swiper-wrapper > .swiper-slide {
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s_vistual > .sw-vistual > .swiper-wrapper > .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 페이지 네이션 */
+.swiper-scrollbar {
+  width: 50%;
+}
+/*  브랜드 소개 ********************************************** *********************************************/
+.s_brandAbout {
+  position: relative;
+  user-select: none;
+}
+.s_brandAbout_logodes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  position: relative;
+}
+/* 브랜드 소개 둥근 이미지 */
+.s_brandAbout_logodes .inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 100px 0;
+}
+.s_brandAbout_left {
+  color: var(--side-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.s_brandAbout_left_tit {
+  font-family: "UhBeeSe_hyun";
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.s_brandAbout_left_tit span {
+  top: 20px;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  animation: bounce 5s infinite;  ; /* 바운스 애니메이션 적용 */
+}
+.s_brandAbout_left_txt {
+  font-family: "UhBeeSe_hyun";
+  font-size: 3rem;
+  line-height: 3;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.s_brandAbout_right {
+  /* background-color: lightblue; */
+}
+.s_brandAbout_right > img {
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+}
+/* 프로그램 시작 ********************************************** *********************************************/
+.s_program {
+  position: relative;
+  padding-bottom: 3rem;
+  margin-bottom: 100px;
+}
+.s_program > .sw-program {
+  width: 100%;
+  height: 100%;
+  padding: 0px 5%;
+  position: relative;
+}
+.s_program > .sw-program > .swiper-wrapper > .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+}
+.s_program_bg {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.s_program_bg_img {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.s_program_bg_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.s_program > .sw-program > .swiper-wrapper > .swiper-slide:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease; /* 선택적으로 부드러운 전환 효과를 추가할 수 있습니다. */
+}
+
+.s_program_des {
+  text-align: left;
+  padding: 2rem;
+  font-family: var(--main-ko-font);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.s_program_tag {
+  display: flex;
+  font-family: var(--main-en-font);
+}
+.s_program_tag span{
+  display: flex;
+  gap: 5px;
+  font-family: var(--main-en-font);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.s_program_tit {
+  font-weight: bold;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.s_program_txt {
+  margin-left: 2px;
+  font-size: 1.8rem;
+  width: 100%;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 배너 */
+.s_banner_ch3 {
+  width: 100%;
+  /* background-color: #005baa; */
+  background-color: var(--main-color);
+}
+.s_banner_ch3 > .inner {
+  /* width: 100%;
+  border-radius: 30px; */
+}
+.s_banner_ch3 .inner {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  justify-content: space-evenly;
+}
+.s_banner_ch3_img {
+  width: 300px;
+  max-width: 300px;
+}
+.s_banner_ch3_img img {
+  width: 100%;
+}
+.s_banner_ch3_tit {
+  font-family: "UhBeeSe_hyun";
+  font-size: 4rem;
+  color: #fff;
+  line-height: 1.52;
+}
+/* for you */
+.s_foryou {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+.s_foryou_area {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 50px 50px 100px;
+}
+
+.s_foryou_area .s_foryou_card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 300px;
+  background: white;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.s_foryou_area .s_foryou_card:hover {
+  height: 400px;
+  cursor: pointer;
+}
+
+.s_foryou_area .s_foryou_card .s_foryou_card_imgBox {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  background:var(--side-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.s_foryou_area .s_foryou_card:hover .s_foryou_card_imgBox {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.s_foryou_area .s_foryou_card .s_foryou_card_imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s_foryou_area .s_foryou_card .s_foryou_card_textBox {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 35px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.s_foryou_area .s_foryou_card:hover .s_foryou_card_textBox {
+  top: 130px;
+  height: 250px;
+}
+
+.s_foryou_area .s_foryou_card .s_foryou_card_textBox h2 {
+  font-size: 1.8rem;
+  line-height: 2;
+  font-weight: 700;
+  color: var(--clr);
+}
+
+.s_foryou_area .s_foryou_card .s_foryou_card_textBox p {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  padding: 10px;
+  color: #333;
+}
+
+.s_foryou_area .s_foryou_card .s_foryou_card_textBox a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  background: var(--clr);
+  color: white;
+  font-weight: 500;
+}
+
+.s_foryou_area .s_foryou_card .s_foryou_card_textBox a:hover {
+  opacity: 0.8;
+}
+@media (max-width: 480px) {
+  .s_foryou{
+    height: 100%;
+  }
+  .s_foryou_area .s_foryou_card {
+      width: 230px;
+      border-radius: 15px;
+  }
+
+  .s_foryou_area .s_foryou_card .s_foryou_card_imgBox {
+      width: 185px;
+      border-radius: 10px;
+  }
+  .s_foryou_area .s_foryou_card .s_foryou_card_textBox h2{
+    font-size: 2rem;
+  }
+  .s_foryou_area .s_foryou_card .s_foryou_card_textBox p {
+      font-size: 1.8rem;
+  }
+
+  .s_foryou_area .s_foryou_card .s_foryou_card_textBox a {
+      font-size: 0.9rem;
+  }
+}
+
+/* 추천 ********************************************** *********************************************/
+.s_recommend {
+  position: relative;
+  width: calc(min(90rem, 90%));
+  margin: 0 auto;
+  min-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+}
+
+.bg {
+  position: fixed;
+  top: -4rem;
+  left: -12rem;
+  z-index: -1;
+  opacity: 0;
+}
+
+.bg2 {
+  position: fixed;
+  bottom: -2rem;
+  right: -3rem;
+  z-index: -1;
+  width: 9.375rem;
+  opacity: 0;
+}
+
+.s_recommend > .s_recommend_txt span {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  color: #717171;
+}
+
+.s_recommend > .s_recommend_txt h1 {
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+  background-color: #005baa;
+  background-image: linear-gradient(45deg, #005baa, #000000);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.s_recommend > .s_recommend_txt p {
+  line-height: 1.6;
+}
+
+.s_recommend a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #717171;
+  font-weight: 500;
+  background: #fff;
+  border-radius: 3.125rem;
+  transition: 0.3s ease-in-out;
+}
+
+.s_recommend > div > a {
+  border: 2px solid #c2c2c2;
+  margin-top: 2.188rem;
+  padding: 0.625rem 1.875rem;
+}
+
+.s_recommend > div > a:hover {
+  border: 0.125rem solid #005baa;
+  color: #005baa;
+}
+
+.sw-recommend {
+  width: 100%;
+  padding-top: 3.125rem;
+}
+
+.sw-recommend .swiper-pagination-bullet,
+.sw-recommend .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.sw-recommend .swiper-pagination {
+  bottom: 1.25rem !important;
+}
+
+.sw-recommend .swiper-slide {
+  width: 18.75rem;
+  height: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+}
+
+.sw-recommend .swiper-slide h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 0.625rem;
+  padding: 0 0 0 1.563rem;
+  text-transform: uppercase;
+}
+
+.sw-recommend .swiper-slide p {
+  color: #dadada;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 0 1.563rem;
+  line-height: 1.6;
+  font-size: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sw-recommend .swiper-slide a {
+  margin: 1.25rem 1.563rem 1.5rem 1.563rem;
+  padding: 0.438em 1.875rem;
+  font-size: 0.9rem;
+}
+
+.sw-recommend .swiper-slide a:hover {
+  color: #005baa;
+}
+
+.sw-recommend .swiper-slide div {
+  display: none;
+  opacity: 0;
+  padding-bottom: 0.625rem;
+}
+
+.sw-recommend .swiper-slide-active div {
+  display: block;
+  opacity: 1;
+  padding-bottom: 2rem;
+}
+
+.swiper-slide--one {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../images/soon/meditation.webp") no-repeat 50% 50%/cover;
+}
+
+.swiper-slide--two {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../images/soon/playlist.webp") no-repeat 50% 50%/cover;
+}
+
+.swiper-slide--three {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../images/soon/mecheerup.webp") no-repeat 50% 50%/cover;
+}
+
+.swiper-slide--four {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../images/soon/run.webp") no-repeat 50% 50%/cover;
+}
+
+.swiper-slide--five {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../images/soon/question.webp") no-repeat 50% 50%/cover;
+}
+
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .s_recommend {
+    display: flex;
+    align-items: center;
+  }
+
+  .bg,
+.bg2 {
+    opacity: 0.1;
+  }
+}
+@media screen and (min-width: 93.75rem) {
+  .sw-recommend {
+    width: 85%;
+  }
+}
+/* 이달의 영상 시작 ********************************************** *********************************************/
+.s_Mentor {
+  font-family: var(--main-ko-font);
+  background-color: #fffcf6;
+}
+.s_Mentor .inner {
+  /* background-color: pink; */
+}
+.s_Mentor_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+
+.s_Mentor_des .tit {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+.s_Mentor_des .name {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.s_Mentor_des .name > span {
+  font-size: 1.8rem;
+}
+.s_Mentor_des .tit2 {
+  font-size: 1.8rem;
+  padding: 3rem 0 0.5rem;
+}
+.s_Mentor_des > .s_btn {
+  margin-top: 10%;
+}
+.s_Mentor_area_right {
+  width: 330px;/
+}
+.s_Mentor_area_right img {
+  width: 100%;
+}
+
+/* 편지 시작 ********************************************** *********************************************/
+
+.s_letter > .inner {
+  background-color: var(--bg-color);
+  display: flex;
+}
+.s_letter_box {
+  flex-basis: 50%;
+}
+.s_letter_box > .s_btn {
+  margin: 8% auto 0;
+}
+.s_letter_left {
+  background-color: var(--side-color);
+}
+.s_letter_left img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 2% 2% 0 2%;
+}
+.s_letter_right {
+  margin: auto;
+  font-family: var(--main-ko-font);
+}
+.s_letter_right .tit2 {
+  font-size: 1.8rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_letter_right .tit {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5%;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_letter_right .s_btn {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_letter_right.active .tit2 {
+  transition: all 1s 0.2s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.s_letter_right.active .tit {
+  transition: all 1s 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.s_letter_right.active .s_btn {
+  transition: all 1s 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 인스타그램 시작 ********************************************** *********************************************/
+.s_instagram {
+  width: 100%;
+  padding-bottom: 100px;
+}
+.s_instagram_img_wrap {
+  padding: 3rem 0;
+  display: flex;
+  gap: 1%;
+}
+.s_instagram a img {
+  width: 100%;
+  height: 100%;
+}
+.s_instagram .s_btn {
+  margin: 30px auto;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/taehun.css">
+    <title>로그인</title>
+</head>
+<body>
+    <div class="t_login-container">
+        <h1 class="t_login-logo">내마음 봄</h1>
+        <form id="t_login-form">
+          <input type="text" id="t_login-username" name="username" required placeholder="아이디를 입력해 주세요"/>
+          <input type="password" id="t_login-password" name="password" required placeholder="비밀번호를 입력해 주세요"/>
+          <div class="t_login-check"><input type="checkbox" name="login-ck" id="t_login-ck">로그인 상태 유지</div>
+          <button type="submit">로그인</button>
+          <ul>
+            <li class="t_login-li-txt"><a href="#">아이디 찾기</a></li>
+            <li class="t_login-li-txt"><a href="#">비밀번호 찾기</a></li>
+            <li class="t_login-li-txt"><a href="signup.html" target="_blank">회원 가입</a></li>
+          </ul>
+          <div class="t_login-hr-sect"><p>SNS 계정으로 로그인</p></div>
+          <ul class="t_login-ul-sns">
+            <li class="t_login-li-sns"><img src="images/taehun/kakaotalk.png" alt="카카오"></li>
+            <li class="t_login-li-sns"><img src="images/taehun/NAVER.png" alt="네이버"></li>
+            <li class="t_login-li-sns"><img src="images/taehun/Facebook.png" alt="페북"></li>
+            <li class="t_login-li-sns"><img src="images/taehun/Google.png" alt="구글"></li>
+          </ul>
+        </form>
+      </div>
+      <script>
+        // 로그인 폼 제출 이벤트 리스너
+const loginForm = document.getElementById("t_login-form");
+loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const userName = document.getElementById("t_username").value;
+    const userPassword = document.getElementById("t_password").value;
+    // 실제 서버에서 사용자 데이터를 가져와야 한다
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const loginUser = users.find((user) => {
+        return user.username === userName && user.password === userPassword;
+    });
+    if (loginUser) {
+        localStorage.setItem("loginUser", JSON.stringify(loginUser));
+        alert(`${userName}님, 로그인 성공하였습니다.`);
+        window.location.href = "index.html?userName=" + encodeURIComponent(userName);
+    } else {
+        // 인증이 실패하면 메시지를 표시
+        alert("로그인 정보가 올바르지 않습니다. 다시 시도하세요.");
+        loginForm.reset();
+    }
+});
+        //   loginForm.addEventListener("submit", function (e) {
+        //     e.preventDefault();
+        //     var userName = document.getElementById("username").value;
+        //     if (userName) {
+        //         // 사용자 이름을 쿼리 문자열로 메인페이지에 전달하고 이동합니다.
+        //         window.location.href = "index.html?사용자이름=" + encodeURIComponent(userName)
+        //     }
+        //   });
+      </script>
+</body>
+</html>

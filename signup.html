@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원 가입</title>
+    <link rel="stylesheet" href="css/taehun.css" />
+  </head>
+  <body>
+    <div class="t_wrap">
+      <div class="t_signup-container">
+        <h1 class="t_signup-h1">회원가입</h1>
+        <form id="t_signup-form">
+          <ul class="t_signup-ul">
+            <li class="t_signup-li">
+              <p>아이디 <button id="checkDuplicate" class="t_signup-bt">중복 확인</button></p>
+              <input type="text" class="t_signup-input-box" id="t_signup-username" name="t_signup-username" required placeholder="아이디" />
+            </li>
+            
+            <li class="t_signup-li">
+              <p>비밀번호</p>
+              <input type="password" class="t_signup-input-box" id="t_signup-password" name="t_signup-password" required placeholder="비밀번호" />
+            </li>
+            <li class="t_signup-li">
+              <p>비밀번호 확인</p>
+              <input type="password" class="t_signup-input-box" id="t_signup-password" name="t_signup-password" required placeholder="비밀번호 확인" />
+            </li>
+            <li class="t_signup-li">
+              <p>이메일</p>
+              <input type="text" class="t_signup-input-box" id="t_signup-email" name="t_signup-email" required placeholder="이메일 주소" />
+            </li>
+            <li class="t_signup-li">
+              <p>휴대폰 번호 <button id="sendVerification" class="t_signup-bt">인증번호 전송</button></p>
+              <input type="tel" class="t_signup-input-box" id="t_tel" name="t_tel" required placeholder="'-' 구분 없이 입력" />
+            </li>
+            <li class="t_signup-li">
+              <p>인증번호</p>
+              <input type="text" class="t_signup-input-box" id="t_signup-code" name="t_signup-code" required placeholder="인증번호 입력" />
+            </li>
+            <li class="t_signup-li">
+              <p>성별</p>
+              <a class="gender"><input type="radio" name="gender" value="man" />남성</a>
+              <a class="gender"><input type="radio" name="gender" value="woman" />여성</a>
+            </li>
+          </ul>
+          <div class="agree-box">
+            <label for="agree_all">
+              <input type="radio" name="agree_all" id="agree_all" class="agree-all" />
+              <span>모두 동의합니다</span>
+            </label>
+            <label for="agree">
+              <input type="radio" name="agree1" value="1" class="agree" />
+              <span>이용약관 동의<strong> (필수)</strong></span>
+            </label>
+            <label for="agree">
+              <input type="radio" name="agree2" value="2" class="agree" />
+              <span>개인정보 수집, 이용 동의<strong>(필수)</strong></span>
+            </label>
+            <label for="agree">
+              <input type="radio" name="agree3" value="3" class="agree" />
+              <span>개인정보 이용 동의<strong> (필수)</strong></span>
+            </label>
+            <label for="agree">
+              <input type="radio" name="agree4" value="4" class="agree" />
+              <span>이벤트, 혜택정보 수신동의<strong class="select_disable"> (선택)</strong></span>
+            </label>
+          </div>
+
+          <button type="submit" class="t_submit-bt"><a href="login.html" target="_blank">내마음 봄 시작하기</a></button>
+        </form>
+      </div>
+    </div>
+    <script>
+  // 회원가입 폼 제출 이벤트 리스너
+const singupForm = document.getElementById("t_signup-form");
+singupForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    // 사용자가 입력한 사용자명과 비밀번호를 가져온다
+    const usernameInput = document.getElementById("t_signup-username");
+    const passwordInput = document.getElementById("t_signup-password");
+    const userName = usernameInput.value.trim();
+    const userPassword = passwordInput.value.trim();
+    // 사용자명과 비밀번호의 유효성을 정규 표현식을 사용하여 확인합니다.
+    const usernameRegex = /^[a-zA-Z0-9]+$/;
+    const passwordRegex = /.{6,}/;
+
+    if (!usernameRegex.test(userName)) {
+        alert("사용자명은 영문자와 숫자로만 이루어져야 합니다.");
+        return;
+    }
+
+    if (!passwordRegex.test(userPassword)) {
+        alert("비밀번호는 최소 6자 이상이어야 합니다.");
+        return;
+    }
+    const newUser = {
+        username: userName,
+        password: userPassword,
+    };
+
+    // 사용자 정보를 저장하고 페이지를 리디렉션하는 코드를 추가합니다.
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("가입 완료! 로그인 페이지로 이동합니다.");
+    window.location.href = "login.html";
+});
+// 아이디 중복 확인 버튼 이벤트 리스너
+document.getElementById('checkDuplicate').addEventListener('click', function() {
+    var id = document.getElementById('t_signup-username').value;
+    // 여기에 이메일 중복 확인하는 코드를 추가할 수 있습니다.
+    // 이 예시에서는 알림창에 중복 확인을 시뮬레이트합니다.
+    if (id) {
+        alert('입력하신 ' + id + ' 아이디는 사용 가능합니다.');
+    } else {
+        alert('아이디를 입력해주세요.');
+    }
+});
+
+
+// 휴대폰 번호 인증 버튼 이벤트 리스너
+document.getElementById("sendVerification").addEventListener("click", function () {
+    var phoneNumber = document.getElementById("t_tel").value;
+    // 여기에 실제로 인증번호를 전송하는 코드를 추가할 수 있습니다.
+    // 이 예시에서는 알림창에 인증번호 전송을 시뮬레이트합니다.
+    if (phoneNumber) {
+        alert("휴대폰 번호 " + phoneNumber + " 로 인증번호가 전송되었습니다.");
+    } else {
+        alert("휴대폰 번호를 입력해주세요.");
+    }
+});
+
+// 동의 모두선택 / 해제 버튼 이벤트 리스너
+document.getElementById("agree_all").addEventListener("click", function () {
+    var checkboxes = document.querySelectorAll(".agree");
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = this.checked;
+    }
+});
+    </script>
+  </body>
+</html>

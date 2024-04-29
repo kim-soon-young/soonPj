@@ -1,0 +1,293 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url("style.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 
+피치 : #FFBE98
+베이지 : #FFF8E9;
+그린  : #589856;
+회색 : #3A3C3B;
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 프로그램 소개 ================= */
+.j_banner_wrap {
+  padding-top: 100px;
+  width: 100%;
+  height: 450px;
+  background-color: rgb(255, 190, 152);
+  text-align: center;
+  padding-top: 100px;
+}
+.j_banner {
+  display: flex;
+  flex-direction: column;
+  /* gap: 30px; */
+}
+.j_banner h1 {
+  /* font-family: 'S-CoreDream-3Light'; */
+  font-size: 50px;
+  font-weight: 700;
+}
+.j_banner h1::after {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #3a3c3ba1;
+  margin: 40px auto;
+}
+.j_banner p {
+  font-family: "S-CoreDream-3Light";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 28px;
+}
+.j_banner p:nth-child(2) {
+  margin-bottom: 20px;
+}
+/* 프로그램 ================= */
+.J_container {
+  font-family: "S-CoreDream-3Light";
+}
+.J_container > .inner {
+  /* background-color: rgb(255, 205, 255); */
+}
+.j_program {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  padding-top: 80px;
+}
+.j_left {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.j_title {
+  font-size: 18px;
+  font-weight: bold;
+  width: 145px;
+  line-height: 50px;
+  text-align: center;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.j_left > p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  margin-left: 10px;
+  line-height: 25px;
+}
+.j_right {
+  width: 800px;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+.j_box {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.j_box .j_top {
+  width: 100%;
+  height: 210px;
+}
+.j_top img {
+  width: 100%;
+  height: 100%;
+}
+.j_bottom {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--bg-color);
+}
+/* 참여후기 ================= */
+.j_review {
+  padding-top: 100px;
+  width: 100%;
+  font-family: "S-CoreDream-3Light";
+}
+.j_rv_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.j_rv_top > .j_title {
+  margin-bottom: 0px;
+}
+  .fa-circle-plus{
+    font-size: 40px;
+    color: rgb(146, 146, 146);
+    cursor: pointer;
+  }
+.j_rv_bt{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.j_rv_box{
+    width: calc(100% / 4 - 20px);
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.j_rv_box_top{
+    width: 100%;
+    height: 280px;
+}
+.j_rv_box_top img{
+    width: 100%;
+    height: 100%;
+}
+.j_rv_box_bt{
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 170px;
+    padding: 20px;
+}
+.j_rv_box_bt h3{
+    font-size: 10px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.j_rv_box_bt p{
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.4;
+    overflow: hidden; /* 넘치는 텍스트는 숨김 */
+    text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 표시 */
+}
+/* 이달의 강의 배너 =================*/
+.j_banner > .inner > img{
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* =================상세페이지================== */
+.j_product{
+  font-family: "S-CoreDream-3Light";
+  margin-top: 80px;
+}
+.j_product_wrap{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 400px;
+}
+.j_pd_left{
+  width: 400px;
+  height: 100%;
+}
+.j_pd_left img{
+  width: 100%;
+  height: 100%;
+}
+.j_pd_right{
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.j_pd_title{
+  margin-bottom: 30px;
+}
+.j_cate{
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--side-color);
+  margin-bottom: 30px;
+}
+.j_pd_title h2{
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.j_pd_title p{
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.j_teacher_wrap{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.j_teacher_wrap img{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.j_teacher_wrap p{
+  font-size: 12px;
+  font-weight: bold;
+}
+.j_schedule{
+  margin-bottom: 50px;
+}
+.j_date{
+  display: flex;
+  margin-bottom: 15px;
+}
+.j_date .p1{
+  width: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  border-right: 2px solid #dadada;
+  margin-right: 20px;
+}
+.j_date .p2{
+  font-size: 14px;
+  font-weight: bold;
+}
+.j_bt_wrap{
+  width: 100%;
+  display: flex;
+  /* justify-content: space-evenly; */
+  gap: 30px;
+}
+.j_bt{
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid var(--side-color);
+  text-align: center;
+}
+.j_bt1{
+  line-height: 56px;
+  width: 50px;
+}
+.j_bt1 .fas{
+  font-size: 24px;
+  color: var(--side-color);
+}
+.j_bt2{
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 44px;
+  width: 240px;
+  background-color: var(--side-color);
+  color: #fff;
+}
