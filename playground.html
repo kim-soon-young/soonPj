@@ -1,140 +1,239 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <title>내마음봄</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PLAY GROUND</title>
-    <link rel="stylesheet" href="css/playground.css" />
+    <!-- 파비콘 생성 -->
+    <!-- seo 엔진 최적화 -->
+    <title>내마음봄 : 당신의 마음에도 봄이 오면 좋겠어요.</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="내마음봄" />
+    <meta name="theme-color" content="#FF782C" />
+    <meta property="og:title" content="내마음봄: 내면의 변화를 만드는 플랫폼" />
+    <meta property="og:description" content="나답게 성장하는 사람들이 만들어가는 프로젝트" />
+    <meta property="og:image" content="https://nicetomeetme.kr/images/share/share-image.png" />
+    <!-- <meta name="naver-site-verification" content="ac83739dee8db19366947125d2910ea6f02f76a2" /> -->
+    <meta name="description" content="나답게 성장하는 사람들이 만들어가는 프로젝트" />
+    <!-- Twitter -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- 스와이퍼 css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- XEICON css -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <!-- 메인 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- html -->
+
+    <!-- Js 연동 -->
+    <script src="js/html5shiv.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <script src="js/respond.min.js"></script>
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 스와이퍼 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
-    <div class="t_container">
-      <div class="pl-header">
+    <!-- 전체 레이아웃 -->
+    <div class="t_wrap">
+      <!-- 상단 띠 -->
+      <div class="topBanner">
+        <a class="tit">프로그램 신청 중 <b>회원가입시 5000원 추가 할인</b></a>
+      </div>
+      <!-- 헤더 -->
+      <header class="header">
+        <!-- 상단 메뉴 -->
+        <div class="top-menu">
+          <!-- 로고 -->
+          <div class="top-menu-logo">
+            <a href="index.html" class="logo">
+              <img src="images/logo.png" alt="탑메뉴 로고" />
+            </a>
+          </div>
+          <!-- 네비 -->
+          <nav>
+            <a class="nav__item" href="index.html">Home</a>
+            <a class="nav__item" href="brand.html">About</a>
+            <a class="nav__item" href="program.html">Program</a>
+            <div class="nav__item" href="playground.html">
+              Playground
+              <div class="nav__item__dropdown">
+                <div>
+                  <a href="playground.html">Notice</a>
+                  <a href="playground.html">Talk</a>
+                  <a href="playground.html">Together</a>
+                </div>
+              </div>
+            </div>
+            <div class="underline"></div>
+          </nav>
+          <!-- 상단 아이콘  -->
+          <div class="top-menu-icons">
+            <a href="#" class="xi-search icon"></a>
+            <a href="login.html" class="xi-user-o icon"></a>
+            <button class="mbt">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- 모바일 메뉴 리스트 -->
+            <div class="nav-mb">
+              <ul class="nav-mb-gnb">
+                <li><a href="#index.html">Home</a></li>
+                <li><a href="#brand.html">About</a></li>
+                <li><a href="#program.html">Program</a></li>
+                <li class="menu">
+                  <a href="#playground.html">Playground<span class="material-symbols-outlined">expand_more</span></a>
+                  <ul class="hide">
+                    <li><a href="">Notice</a></li>
+                    <li><a href="">talk</a></li>
+                    <li><a href="">together</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 오버레이 -->
+        <div class="overlay"></div>
+      </header>
+    <!-- 커뮤니티 -->
+    <div class="t_pl-container">
+      <div class="t_pl-header">
         <h1>PLAY GROUND</h1>
-        <div class="pl-header-info-wrap">
-          <ul class="pl-header-info">
-            <li class="talk">수다 해요</li>
-            <li class="with">함께 해요</li>
-            <li class="notice">공지 해요</li>
+        <div class="t_pl-header-info-wrap">
+          <ul class="t_pl-header-info">
+            <li class="all"><a href="playground.html">전체 보기</a></li>
+            <li class="notice"><a href="playground-2.html">공지 해요</a></li>
+            <li class="talk"><a href="playground-3.html">수다 해요</a></li>
+            <li class="with"><a href="playground-4.html">함께 해요</a></li>
+            
           </ul>
-          <div class="pl-header-info-right">
-           
-            <button>글쓰기</button>
+          <div class="t_pl-header-info-right">
+            <button class="t_pl-button">글쓰기</button>
           </div>
         </div>
       </div>
-      <div class="pl-contents">
-          <ul class="pl-contents-info">
-            <li>번호</li>
-            <li>카테고리</li>
-            <li>제목</li>
-            <li>작성자</li>
-            <li>등록일</li>
-          </ul>
-        <div class="pl-contents-main">
-          <ul class="pl-main-info">
+      <div class="t_pl-contents">
+        <ul class="t_pl-contents-info">
+          <li>번호</li>
+          <li>카테고리</li>
+          <li>제목</li>
+          <li>작성자</li>
+          <li>등록일</li>
+        </ul>
+        <div class="t_pl-contents-main">
+          <ul class="t_pl-main-info">
             <li>1</li>
-            <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li><p>공지 해요</p></li>
+            <li>(5월) 이달의 강연 - 리플러스인간연구소 <박재연></li>
+            <li>내마음봄</li>
+            <li>2024.04.26</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
-            <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+          <ul class="t_pl-main-info">
+            <li>2</li>
+            <li><p>공지 해요</p></li>
+            <li>내마음봄 커뮤니티 가이드라인 안내</li>
+            <li>내마음봄</li>
+            <li>2024.01.01</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>3</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
+            <li>이번주도 다들 파이팅!</li>
             <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>4</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>슬슬 더워지네요</li>
+            <li>민초단</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
-            <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+          <ul class="t_pl-main-info">
+            <li>5</li>
+            <li><p>함께 해요</p></li>
+            <li>전시 정보 공유해요. 같이 가실분?</li>
+            <li>기역니은디귿</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>6</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
+            <li>이번주도 다들 파이팅!</li>
             <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>7</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>슬슬 더워지네요</li>
+            <li>민초단</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
-            <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+          <ul class="t_pl-main-info">
+            <li>8</li>
+            <li><p>함께 해요</p></li>
+            <li>전시 정보 공유해요. 같이 가실분?</li>
+            <li>기역니은디귿</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>9</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
+            <li>이번주도 다들 파이팅!</li>
             <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>10</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>슬슬 더워지네요</li>
+            <li>민초단</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
-            <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+          <ul class="t_pl-main-info">
+            <li>11</li>
+            <li><p>함께 해요</p></li>
+            <li>전시 정보 공유해요. 같이 가실분?</li>
+            <li>기역니은디귿</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>12</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
+            <li>이번주도 다들 파이팅!</li>
             <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>13</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>슬슬 더워지네요</li>
+            <li>민초단</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
-            <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
-            <li>바밤바</li>
-            <li>2024.04.15</li>
+          <ul class="t_pl-main-info">
+            <li>14</li>
+            <li><p>함께 해요</p></li>
+            <li>전시 정보 공유해요. 같이 가실분?</li>
+            <li>기역니은디귿</li>
+            <li>2024.04.30</li>
           </ul>
-          <ul class="pl-main-info">
-            <li>1</li>
+          <ul class="t_pl-main-info">
+            <li>15</li>
             <li><p>수다 해요</p></li>
-            <li>안녕하세요</li>
+            <li>이번주도 다들 파이팅!</li>
             <li>바밤바</li>
-            <li>2024.04.15</li>
+            <li>2024.04.30</li>
           </ul>
         </div>
         <div class="Page-navigation">
@@ -147,6 +246,24 @@
           </ul>
         </div>
       </div>
+    </div>
+      <!-- 풋터 -->
+      <footer>
+        <div class="inner">
+          <div class="socials">
+            <a href="#"><img src="images/soon/youtube.png" alt="유튜브" /></a>
+            <a href="#"><img src="images/soon/facebook.png" alt="페이스북" /></a>
+            <a href="#"><img src="images/soon/Instagram.png" alt="인스타그램" /></a>
+          </div>
+          <div class="text">
+            <a href="#">개인정보처리방침</a>
+            <a href="#">이용약관</a>
+            <a href="#">공지사항</a>
+            <a href="#">커뮤니티</a>
+          </div>
+          <div class="copyright">2024 all rights reserved by spring</div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

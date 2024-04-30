@@ -4,20 +4,6 @@
   {width: 50%;}  
 }
 
-@media screen and (max-width: 1250px) {
-  /* for you */
-.s_foryou_area {
-  padding: 2%;
-}  
-.s_foryou_area .s_foryou_card {
-  width: 280px;
-  max-width: 280px;
-}
-.s_foryou_area .s_foryou_card .s_foryou_card_imgBox {
-  width: 250px;
-  max-width: 250px;
-}
-}
 @media screen and (max-width: 1200px) {
   /* 헤더 */
   .header {
@@ -35,17 +21,8 @@
   .s_instagram_hide {
     display: none;
   }
-
 }
 @media screen and (max-width: 1000px) {
-  /* 첫구매 */
-  .s_foryou {
-    height: 100%;
-  }
-  .s_foryou_area {
-    gap: 50px;
-    padding-bottom: 10%;
-  }
   /* s_mentor */
   .s_Mentor_area {
    gap:1%
@@ -133,6 +110,7 @@
     text-align: center;
   }
   /* 브랜드 소개 */
+
   .s_banner_ch3_img {
     max-width: 250px;
     width: 250px;

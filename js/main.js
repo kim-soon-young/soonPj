@@ -83,6 +83,10 @@ window.onload = function () {
         spaceBetween: 10,
       },
     },
+    autoplay: {
+      delay: 5000, // 슬라이드 간의 지연 시간 (밀리초)
+      disableOnInteraction: false, // 사용자 상호 작용 후 자동 재생 비활성화 여부
+    },
   });
 }
 // s_recommend

@@ -2,6 +2,7 @@
 @import url("reset.css");
 @import url("style.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @font-face {
   font-family: "S-CoreDream-3Light";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
@@ -155,7 +156,7 @@ height: 180px;
   max-width: 540px;
   min-width: 280px;
   width: 90vw;
-  height: 750px;
+  height: 600px;
   margin: 30px auto;
   background-color: #fff;
   padding-top: 30px;
@@ -173,12 +174,13 @@ height: 180px;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 430px;
+  width: 90%;
+  max-width: 420px;
   min-width: 240px;
 }
 .t_login-logo img {
-  margin: 50px auto;
+  margin: 20px auto;
+  margin-top: 0;
 width: 200px;
 display: block;
 
@@ -192,7 +194,7 @@ display: block;
   width: 95%;
   max-width: 430px;
   min-width: 230px;
-  height: 60px;
+  height: 50px;
   margin: 0 auto;
   margin-bottom: 10px;
   font-size: 16px;
@@ -207,7 +209,7 @@ display: block;
   margin-top: 20px;
   margin-bottom: 30px;
   color: #3a3c3b;
-  font-size: 14px;
+  font-size: 12px;
 }
 #t_login-ck {
   transform: scale(1.2);
@@ -225,7 +227,7 @@ display: block;
   width: 95%;
   max-width: 430px;
   min-width: 230px;
-  height: 60px;
+  height: 50px;
   margin: 0 auto;
   font-size: 22px;
   font-weight: 700;
@@ -239,7 +241,7 @@ display: block;
   align-items: center;
   color: #3a3c3b;
   font-size: 12px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .t_login-hr-sect::before,
 .t_login-hr-sect::after {
@@ -253,14 +255,14 @@ display: block;
 }
 p {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   color: #3a3c3b;
 }
 .t_login-li-txt a {
   color: #589856;
   font-weight: 600;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
 }
 .t_login-li-txt a:hover {
   color: #447242;
@@ -270,7 +272,7 @@ p {
   cursor: pointer;
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 /* 로그인 */
 
@@ -281,7 +283,7 @@ p {
   max-width: 540px;
   min-width: 280px;
   width: 90vw;
-  height: 1020px;
+  height: 1060px;
   margin: 30px auto;
   background-color: #fff;
   padding-top: 30px;
@@ -297,7 +299,7 @@ p {
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   max-width: 430px;
   min-width: 240px;
 }
@@ -346,16 +348,17 @@ p {
   width: 90px;
   height: 25px;
   margin-top: 10px;
-  border-radius: 20px;
-  border: 0;
-  background-color: #d9d9d9;
-  color: #fff;
+  border: 2px solid var(--side-color);
+  border-radius: 3rem;
+  background-color: white;
+  color: var(--side-color);
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
 }
 .t_signup-bt:hover {
-  background-color: #b6b6b6;
+  color: #fff;
+  background-color: var(--side-color);
 }
 .t_signup-gender {
   width: 95%;
@@ -404,7 +407,7 @@ p {
   max-width: 430px;
   min-width: 230px;
   height: 60px;
-  margin: 0 auto;
+  margin: 20px auto;
   font-size: 22px;
   font-weight: 700;
 }
@@ -435,7 +438,7 @@ p {
 .t_pl-header {
   max-width: 1110px;
   min-width: 280px;
-  width: 95%;
+  width: 90%;
   height: 120px;
   /* background-color: aqua; */
   margin: 0 auto;
@@ -457,10 +460,10 @@ p {
 }
 .t_pl-header-info {
   /* margin-left: 10px; */
-  width: 360px;
+  width: 320px;
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 40px;
   text-overflow: ellipsis;
@@ -492,7 +495,7 @@ p {
 .t_pl-contents {
   max-width: 1160px;
   min-width: 280px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
 .t_pl-contents-info {
@@ -574,6 +577,84 @@ p {
   color: #ffbe98;
 }
 /* 커뮤니티 */
+
+/* 브랜드스토리 */
+.t_brand-container{
+text-align: center;
+}
+
+.t_brand-top{
+  font-weight: 500;
+  margin: 50px auto;
+}
+.t_brand-top p span{
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.t_brand-middle{
+  font-family: "UhBeeSe_hyun";
+}
+.t_brand-middle h1{
+  font-size: 50px;
+  line-height: 100px; 
+  color:  var(--side-color);
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.t_brand-symbol-title{
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  margin: 20px;
+  color:  var(--side-color);
+}
+.t_brand-symbol ul{
+  display: flex;
+      justify-content: center;
+}
+.t_brand-symbol li:nth-child(1){
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.t_brand-symbol li p{
+  margin-bottom: 40px;
+  font-weight: 500;
+  text-align: left;
+}
+.t_brand-symbol li p span{
+  color:  var(--main-color);
+  font-weight: 700;
+}
+.t_brand-symbol li h2{
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 20px;
+}
+.t_brand-symbol li img{
+  width: 300px;
+}
+.t_brand-slogan-title{
+  font-family: "Montserrat";
+  margin: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color:  var(--side-color);
+}
+.t_brand-slogan h2{
+  font-family: "Montserrat";
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 700;
+  color:  var(--side-color);
+}
+.t_brand-slogan h2 span{
+font-size: 20px;
+font-weight: 500;
+font-family: "UhBeeSe_hyun";
+}
+/* 브랜드스토리 */
 @media screen and (max-width: 1200px){
   .t_instagram img {
    
@@ -585,6 +666,14 @@ p {
     }
 } 
 @media screen and (max-width: 768px) {
+  .t_login-container {
+    height: 540px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .t_login-ul-sns{
+    margin-top: 20px;
+  }
 .t_instagram{
   height: 850px;
 }
@@ -614,6 +703,20 @@ p {
 @media screen and (max-width: 600px){
   .t_insta-img-wrap a:nth-child(n+5) {
     display: none;
+}
+.t_brand-symbol ul{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.t_brand-symbol li:nth-child(1){
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.t_brand-symbol li p{
+  text-align: center;
+}
+.t_brand-symbol li h2{
+  text-align: center;
 }
 }
 @media screen and (max-width: 400px){
