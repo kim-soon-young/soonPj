@@ -3,13 +3,13 @@ window.onload = function () {
   let prevScrollPos = window.scrollY;
   window.addEventListener("scroll", function () {
     let currScrollPos = window.scrollY;
-  
+
     if (currScrollPos > prevScrollPos) {
       navBar.style.transform = `translateY(-105%)`;
     } else {
       navBar.style.transform = `translateY(0%)`;
     }
-  
+
     prevScrollPos = currScrollPos;
   });
   //상단 스크롤 기능
@@ -29,7 +29,7 @@ window.onload = function () {
   // 상단 스크롤 기능
   const navMb = document.querySelector(".nav-mb");
   const overlay = document.querySelector(".overlay");
-  
+
   // 햄버거 버튼 클릭 이벤트
   mbt.addEventListener("click", function () {
     const state = this.classList.contains("ani");
@@ -45,11 +45,11 @@ window.onload = function () {
   });
 
   // 오버레이 클릭 시 메뉴 닫기
-  overlay.addEventListener("click", function () {
-    mbt.classList.remove("ani");
-    navMb.classList.remove("active");
-    overlay.classList.remove("active");
-  });
+  // overlay.addEventListener("click", function () {
+  //   mbt.classList.remove("ani");
+  //   navMb.classList.remove("active");
+  //   overlay.classList.remove("active");
+  // });
   // s_visual
   var swiper = new Swiper(".sw-vistual", {
     scrollbar: {
@@ -60,69 +60,36 @@ window.onload = function () {
   // s_program
   var swiper = new Swiper(".sw-program", {
     slidesPerView: 1.2,
-    spaceBetween: 0,
+    spaceBetween: 10,
+    loop: true,
     breakpoints: {
       1920: {
         slidesPerView: 5,
-        spaceBetween: 10,        
+        spaceBetween: 10,
       },
       1200: {
         slidesPerView: 4,
-        spaceBetween: 10,           
-      }   ,                 
-      1000: {
-        slidesPerView: 3.8,
         spaceBetween: 10,
+      },
+      1000: {
+        slidesPerView: 3.5,
+        spaceBetween: 20,
       },
       800: {
-        slidesPerView: 2.2,
-        spaceBetween: 10,
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
       500: {
-        slidesPerView: 2,
-        spaceBetween: 10,
+        slidesPerView: 1.5,
+        spaceBetween: 20,
       },
     },
     autoplay: {
-      delay: 5000, // 슬라이드 간의 지연 시간 (밀리초)
+      delay: 2000, // 슬라이드 간의 지연 시간 (밀리초)
       disableOnInteraction: false, // 사용자 상호 작용 후 자동 재생 비활성화 여부
     },
   });
-}
-// s_recommend
-var swiper = new Swiper(".sw-recommend", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 3,
-    slideShadows: true
-  },
-  loop: true,
-  pagination: {
-    el: ".sw-recommend-pg",
-    clickable: true
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2
-    },
-    768: {
-      slidesPerView: 1
-    },
-    1024: {
-      slidesPerView: 2
-    },
-    1560: {
-      slidesPerView: 3
-    }
-  }
-});
-
-
+};
 // 제이쿼리 ***********************************************************************************************
 $(document).ready(function () {
   $(".menu > a").click(function (event) {
@@ -132,6 +99,11 @@ $(document).ready(function () {
     submenu.slideToggle(); // 부드럽게 슬라이드 업 또는 다운
 
     // 화살표 회전 토글
-    $(this).find('.material-symbols-outlined').toggleClass('active');
+    $(this).find(".material-symbols-outlined").toggleClass("active");
+  });
+  // 하트 채움
+  $(document).on("click", ".heart", function (event) {
+    event.preventDefault();
+    $(this).toggleClass("far fas");
   });
 });

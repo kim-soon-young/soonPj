@@ -27,6 +27,9 @@ body {
 .t_wrap {
   background-color: #fff8e9;
 }
+.t_brand-wrap{
+  background-color: #fff8e9;
+}
 html {
   width: 100%;
   min-width: 320px;
@@ -442,6 +445,7 @@ p {
   height: 120px;
   /* background-color: aqua; */
   margin: 0 auto;
+  margin-top: 10px;
 
   border-bottom: 1px solid #d9d9d9;
 }
@@ -469,28 +473,41 @@ p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.t_pl-header-info li a:hover {
+  color: var(--main-color);
+}
 .all {
   color: #589856;
 }
-
+.notice{
+  color: #589856;
+}
+.talk {
+  color: #589856;
+}
+.with {
+  color: #589856;
+}
 .t_pl-header-info-right {
   /* float: right; */
   width: 100px;
 }
 .t_pl-button {
   width: 20vw;
-  max-width: 90px;
+  max-width: 70px;
   height: 40px;
   float: right;
-  margin-right: 10px;
   background-color: #589856;
   border: none;
   border-radius: 20px;
 
   color: #fff;
-  font-size: 2rem;
+  font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+}
+.t_pl-button:hover {
+  background-color: #447242;
 }
 .t_pl-contents {
   max-width: 1160px;
@@ -655,6 +672,277 @@ font-weight: 500;
 font-family: "UhBeeSe_hyun";
 }
 /* 브랜드스토리 */
+/* 상세페이지 */
+/* .t_pd_wrap{
+  padding-left: 20px;
+  padding-right: 20px;
+} */
+.t_product {
+  font-family: "S-CoreDream-3Light";
+  margin-top: 80px;
+  margin: 0 auto;
+}
+.t_product_wrap {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 400px;
+  
+}
+.t_pd_left {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+}
+.t_pd_left img {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  padding: 30px;
+}
+.t_pd_right {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+.t_pd_title {
+  margin-bottom: 20px;
+}
+.t_cate {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--side-color);
+  margin-bottom: 30px;
+}
+.t_pd_title h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.t_pd_title p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  float: left;
+}
+.t_teacher_wrap {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.t_teacher_wrap img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.t_teacher_wrap p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.t_schedule {
+  margin-bottom: 50px;
+}
+.t_date {
+  display: flex;
+  margin-bottom: 20px;
+}
+.t_date .p1 {
+  width: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  border-right: 2px solid #dadada;
+  margin-right: 20px;
+}
+.t_date .p2 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.t_bt_wrap {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-evenly; */
+  gap: 30px;
+}
+.t_bt {
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.t_bt1 {
+  line-height: 56px;
+  width: 50px;
+  border: 3px solid var(--side-color);
+}
+.t_bt1 .fas {
+  font-size: 24px;
+  color: var(--side-color);
+}
+
+.t_bt2 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 44px;
+  width: 240px;
+  border: none;
+  background-color: var(--side-color);
+  color: #fff;
+}
+.t_bt2:hover {
+  background-color: #447242;
+}
+.t_product-program{
+  width: 100%;
+  height: 100%;
+}
+.t_product-program-info{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.t_product-program-info img{
+width: 100%;
+max-width: 1200px;
+
+}
+.t_product-program-info img:nth-child(2){
+width: 100%;
+max-width: 1200px;
+display: none;
+}
+.t_inner{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.detail-pg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.menu-select {
+  display: flex;
+  gap: 10px;
+  padding-left: 20px;
+}
+.menu-select p{
+  font-size: 14px;
+}
+.detail-manu {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-right {
+
+  width: 100%;
+}
+.menu-right-info li {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  line-height: 80px;
+}
+
+.info-bt {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.info-bt button {
+  width: calc(100% / 3);
+  height: 40px;
+  border: 0;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.info-bt button:nth-child(2) {
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+}
+.review-pr {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.review-pr h1{
+  font-size: 30px;
+  font-weight: 700;
+}
+.review-bt {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  line-height: 50px;
+}
+.review-bt button {
+  width: 100px;
+  height: 40px;
+  border: 0;
+  background-color: #fff;
+}
+.review-page{
+  width: 100%;
+  height: 140px;
+  border-top: 1px solid #d9d9d9;
+  /* border-bottom: 1px solid #d9d9d9; */
+}
+.review-page p{
+text-align: center;
+  line-height: 140px;
+}
+.inquiry {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.inquiry h1{
+  font-size: 30px;
+  font-weight: 700;
+}
+.inquiry-bt {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  line-height: 50px;
+}
+.inquiry-bt button {
+  width: 100px;
+  height: 40px;
+  border: 0;
+  background-color: #fff;
+}
+.inquiry-page{
+  margin-bottom: 60px;
+  width: 100%;
+  height: 140px;
+  border-top: 1px solid #d9d9d9;
+  /* border-bottom: 1px solid #d9d9d9; */
+}
+.inquiry-page p{
+  text-align: center;
+  line-height: 140px;
+}
+
+/* 상세페이지 */
 @media screen and (max-width: 1200px){
   .t_instagram img {
    
@@ -686,6 +974,75 @@ font-family: "UhBeeSe_hyun";
     width: 200px;
     height: 200px;
   }
+  .detail-manu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .t_pd_left{
+    margin: 0 auto;
+  }
+  .t_pd_left img {
+  padding: 15px;
+  }
+  .t_pd_right{
+   margin: 0 auto;
+   padding: 20px;
+  }
+  .t_pd_title{
+    margin-bottom: 15px;
+  }
+  .t_teacher_wrap{
+    margin-bottom: 15px;
+  }
+  .t_schedule{
+    margin-bottom: 25px;
+  }
+  .t_bt_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .t_bt {
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid var(--side-color);
+    text-align: center;
+    cursor: pointer;
+  }
+  .t_bt1 {
+    line-height: 56px;
+    width: 50px;
+    min-width: 50px;
+  }
+  .t_bt1 .fas {
+    font-size: 24px;
+    color: var(--side-color);
+  }
+  .t_bt2 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 44px;
+    width: 500px;
+    background-color: var(--side-color);
+    color: #fff;
+  }
+  .info-bt{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .t_product-program-info img{
+    width: 100%;
+    max-width: 1200px;
+    display: none;
+    }
+    .t_product-program-info img:nth-child(2){
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    }
 }
 @media screen and (max-width: 630px) {
   .t_in-main-info li:nth-child(3) {
@@ -719,6 +1076,26 @@ font-family: "UhBeeSe_hyun";
   text-align: center;
 }
 }
+@media screen and (max-width: 500px){
+  .t_wrap{
+    background-color: #fff;
+  }
+  .t_signup-container {
+
+  border-radius: none;
+  box-shadow: none;
+}
+.t_login-container{
+  border-radius: none;
+  box-shadow: none;
+}
+.t_pl-container{
+  border-radius: none;
+  box-shadow: none;
+}
+
+}
+
 @media screen and (max-width: 400px){
   .t_instagram{
     height: 950px;

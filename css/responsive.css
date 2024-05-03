@@ -1,7 +1,8 @@
 @charset "utf-8";
-@media screen and (max-width : 1500px) {
-  nav
-  {width: 50%;}  
+@media screen and (max-width: 1500px) {
+  nav {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -25,22 +26,22 @@
 @media screen and (max-width: 1000px) {
   /* s_mentor */
   .s_Mentor_area {
-   gap:1%
+    gap: 1%;
   }
   .s_Mentor .inner {
     padding: 10% 5%;
   }
-  }
+}
 
 @media screen and (max-width: 900px) {
   nav {
     width: 60%;
   }
-    /* 배너 */
-    .s_banner_ch3 .inner {
-      flex-direction: column;
-      gap: 10px;
-    }
+  /* 배너 */
+  .s_banner_ch3 .inner {
+    flex-direction: column;
+    gap: 10px;
+  }
   /* 인스타그램 */
   .s_instagram_img_wrap {
     flex-wrap: wrap;
@@ -48,11 +49,10 @@
     align-items: center;
   }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .s_brandAbout_ch3_tit {
     text-align: center;
   }
-  
 }
 @media screen and (max-width: 768px) {
   /* 전체 */
@@ -61,7 +61,7 @@
   }
   /* 헤더 */
   nav {
-     display: none;
+    display: none;
   }
   .xi-search {
     display: none;
@@ -93,6 +93,10 @@
     z-index: 1;
     max-width: 200px;
   }
+  /* 배너 */
+  .s_banner_ch3 {
+    margin: 50px auto;
+  }
   /* 프로그램 */
   .s_program > .sw-program {
     min-width: 250px;
@@ -109,8 +113,14 @@
   .title {
     text-align: center;
   }
+  /* 비주얼 */
+  .s_vistual > .sw-vistual > .swiper-wrapper > .swiper-slide img {
+    display: none;
+  }
+  .s_vistual > .sw-vistual > .swiper-wrapper > .swiper-slide a .mainannerM {
+    display: block;
+  }
   /* 브랜드 소개 */
-
   .s_banner_ch3_img {
     max-width: 250px;
     width: 250px;
@@ -119,22 +129,37 @@
     font-size: 2rem;
   }
   /* 프로그램 */
-  .title-area{
+  .title-area {
     flex-direction: column;
+    padding-top: 100px;
   }
   .view-more {
-width: 100px;
-height: 40px;
-border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  /* Mentor */
+  .s_Mentor_area {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .s_Mentor_des {
+    text-align: center;
   }
 }
-@media screen and (max-width : 400px ) {
+@media screen and (max-width: 400px) {
   /* 브랜드 소개 */
+  .s_brandAbout {
+    padding: 70px 0;
+  }
+  .s_brandAbout_right img {
+    max-width: 150px;
+  }
   .s_brandAbout_left_tit {
     font-size: 3rem;
   }
   .s_brandAbout_left_txt {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -147,8 +172,7 @@ border-radius: 10px;
     text-wrap: wrap;
     text-overflow: ellipsis;
   } */
-  .s_program_bg_img img{
+  .s_program_bg_img img {
     min-height: 200px;
   }
-
 }

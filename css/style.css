@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url(soon.css);
 @import url(jiwon.css);
+@import url(jiwon-res.css);
 @import url(taehun.css);
 @import url(font.css);
 
@@ -10,7 +11,7 @@ img {border: 0;vertical-align: middle;}
 html {font-size: 10px;}
 html.active {overflow: hidden;}
 body {
-  font-family: 'S-CoreDream-3Light', "Montserrat", sans-serif;
+  font-family: 'SUITE-Regular', "Montserrat", sans-serif;
   line-height: 1;
   letter-spacing: 0;
   font-weight: 400;
@@ -32,52 +33,48 @@ body {
   --side-color: #589856;
   --bg-color: #FFF8E9;
   --font-color: #3A3C3B;
-  --main-ko-font: "S-CoreDream-3Light";
+  --bg-color-ivory: #fffcf6;
+  --main-ko-font: 'SUITE-Regular';
   --main-en-font: "Montserrat";
-  --side-ko-font:  "UhBeeSe_hyun";
+  --side-ko-font: "UhBeeSe_hyun";
+
+  /* 네비 */
+  --primary: #24ce8f;
+  --background: black;
+  --nav-background:white;
+  --nav-item-bg-hover: #79797920;
+  --navbar-height: 70px;
+  --text-gray: #252525;
+  --text-white: white;
 }
 /* 타이틀 */
 .title-area {
   font-family:  "Montserrat";
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 150px;
-  padding-bottom: 50px;
-}
-.view-more {
-  display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  background-color: var(--side-color);
-  border-radius: 50%;
-  color: white;
-  text-align: center;
-  font-size: 2rem;
-  transition: 0.3s ease;
-}
-.view-more:hover {
-  font-weight: bold;
-  border: 3px solid var(--side-color);
-  background-color: #fff;
-  color: var(--side-color);
+  padding-top: 200px;
+  padding-bottom: 50px;
 }
 .title {
   font-family:  "Montserrat";
   font-size: 4rem;
   text-transform: uppercase;
   font-weight: 600;
-  text-align: left;
+  text-align: center;
 }
 .title2 {
   font-family: 'S-CoreDream-3Light';
   font-size: 1.8rem;
   line-height: 4;
   letter-spacing: 0.1rem;
+  font-weight: 900;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 /* 버튼 */
 /* <div class="btn btn--white">view more</div> */
 .s_btn {
@@ -184,6 +181,9 @@ nav {
   position: relative;
   display: flex;
   width: 40%;
+}
+nav .nav__item a{
+  color: var(--side-color);
 }
 nav .nav__item {
   color: var(--side-color);
@@ -419,13 +419,15 @@ nav .nav__item:nth-child(4):hover ~ .underline {
   color: #fffcf6;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 0%;
   width: 100%;
   height: 100vh;
-  opacity: 1;
+  opacity: 0;
   transition: all 0.3s;
+  display: none;
 }
 .overlay.active {
+  display: block;
   left: 0%;
   opacity: 1;
 }

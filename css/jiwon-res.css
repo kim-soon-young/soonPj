@@ -1,0 +1,237 @@
+@charset "utf-8";
+@media screen and (max-width: 1630px) {
+  /* 메인 === 리뷰 */
+  .rv-wrap {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .rv-box-6 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* 메인 === 리뷰 */
+  .rv-wrap {
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+  }
+  .rv-box-6 {
+    display: block;
+  }
+  .rv-box {
+    height: 20vw;
+  }
+  .rv-body {
+    height: 70%;
+    padding: 10px 0;
+  }
+  
+}
+@media screen and (max-width: 1130px) {
+  /* 프로그램 === 소개 */
+  .j_banner_wrap {
+    height: 35vw;
+    min-height: 300px;
+  }
+  .j_banner h1 {
+    font-size: calc(3vw + 16px);
+  }
+  .j_banner p {
+    font-size: calc(0.5vw + 12px);
+  }
+  .j_banner p:nth-child(2) {
+    margin-bottom: 2vw;
+  }
+  .j_banner h1::after {
+    margin: 3vw auto;
+    margin-top: 4vw;
+  }
+  /* 프로그램 === 리스트 */
+  .j_program {
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    height: auto;
+    padding-top: 4.42vw;
+    padding: 5vw 10px;
+  }
+  .j_title {
+    width: 11vw;
+    min-width: 110px;
+    min-height: 35px;
+    font-size: calc(0.3vw + 14px);
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vw;
+  }
+  .j_left {
+    align-items: center;
+    width: 100%;
+  }
+  .j_left > p {
+    display: none;
+  }
+  .j_right {
+    /* padding: 0 0 4.42vw; */
+    width: 100%;
+  }
+  .j_right > a {
+    width: calc(100% / 3 - 5vw);
+    margin: 0 auto;
+    /* max-width: 300px; */
+    height: 100%;
+    gap: 0;
+  }
+  .j_box {
+    width: 100%;
+    height: 100%;
+  }
+  .j_box .j_top {
+    height: auto;
+  }
+  .j_top img {
+    height: 20vw;
+  }
+  .j_box .j_bottom {
+    /* height: 15%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(0.2vw + 10px);
+    padding: 5px 0;
+  }
+  .j_box .j_bottom .j_bottom_tit {
+    font-size: calc(0.3vw + 14px);
+  }
+  .j_box .j_bottom .j_bottom_sub {
+    font-size: calc(0.2vw + 12px);
+  }
+  .J_container hr {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* 프로그램 === 리뷰 */
+  .j_rv_top{
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  /* 프로그램 === 리뷰 */
+  .j_rv_bt{
+    padding: auto 10%;
+
+  }
+  .j_rv_box{
+    width: calc(100% / 3 - 2vw);
+  }
+  .j_rv_box:nth-child(3){
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* 메인 === 리뷰 */
+  .rv-wrap {
+    width: 80%;
+    display: flex;
+    overflow-x: scroll;
+  }
+  .rv-box {
+    width: 220px;
+    height: 230px;
+    min-height: auto;
+  }
+  .rv-tit{
+    font-size: 14px;
+  }
+  .rv-body {
+    font-size: 13px;
+    font-weight: normal;
+  } 
+  .rv-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* 프로그램 ==== 소개 */
+  .j_banner_wrap {
+    height: 39vw;
+    min-height: 230px;
+    padding: 7.8vw;
+  }
+  .j_banner p {
+    font-size: 15px;
+  }
+  /* 프로그램 ==== 리스트 */
+  .j_left {
+    align-items: center;
+    width: auto;
+    min-width: 100px;
+  }
+  .j_title {
+    width: 18vw;
+    font-size: 16px;
+    height: 5vw;
+  }
+  .j_right {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
+  }
+  .j_right > a {
+    width: 100%;
+  }
+  .j_box {
+    width: 52vw;
+    height: auto;
+  }
+  .j_top img {
+    width: 100%;
+    height: 52vw;
+  }
+  .j_right::-webkit-scrollbar {
+    display: none;
+  }
+  /* 프로그램 === 리뷰 */
+  .j_rv_bt{
+    width: 90%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
+    gap: 20px;
+  }
+  .j_rv_bt::-webkit-scrollbar {
+    display: none;
+  }
+  .j_rv_box:nth-child(3){
+    display: block;
+  }
+  .j_rv_box {
+    min-width: 220px;
+    height: 300px;
+  }
+  .j_rv_box_top {
+    height: 45%;
+  }
+  .j_rv_box_bt {
+    height: 55%;
+  }
+  .j_rv_box_bt p{
+    font-weight: 100;
+    font-size: 13px;
+    }
+}
+@media screen and (max-width: 590px) {
+  .j_program_1 {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+
+}
+@media screen and (max-width: 360px) {
+  /* 프로그램 === 소개 */
+  .j_banner_wrap {
+    padding: 36px;
+  }
+}

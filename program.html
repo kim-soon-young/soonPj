@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <title>내마음봄</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 파비콘 생성 -->
@@ -12,29 +13,36 @@
     <meta name="theme-color" content="#FF782C" />
     <meta property="og:title" content="내마음봄: 내면의 변화를 만드는 플랫폼" />
     <meta property="og:description" content="나답게 성장하는 사람들이 만들어가는 프로젝트" />
-    <meta property="og:image" content="https://nicetomeetme.kr/images/share/share-image.png" />
+    <meta property="og:image" content="images/share-image.png" />
     <!-- <meta name="naver-site-verification" content="ac83739dee8db19366947125d2910ea6f02f76a2" /> -->
     <meta name="description" content="나답게 성장하는 사람들이 만들어가는 프로젝트" />
     <!-- Twitter -->
     <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <!-- AOS css -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.css" />
     <!-- 스와이퍼 css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- XEICON css -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- 구글아이콘cdm -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- 메인 -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/soon.css" />
-    <!-- 소개, 게시판, 로그인, 회원가입 -->
-    <link rel="stylesheet" href="css/teahun.css" />
-    <!-- 프로그램, pg상페이지-->
-    <link rel="stylesheet" href="css/jiwon.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+
     <!-- html -->
 
     <!-- Js 연동 -->
+    <!-- aos적용 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
@@ -42,52 +50,103 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- 스와이퍼 JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
-    <!-- 상단 띠 -->
-    <div class="topBanner">
-      <a class="tit">프로그램 신청 중 <strong>회원가입시 5000원 추가 할인</strong></a>
-    </div>
-    <!-- 헤더 -->
-    <header class="header">
-      <!-- 상단 메뉴 -->
-      <div class="top-menu">
-        <!-- 로고 -->
-        <a href="index.html" class="logo"></a>
-        <!-- 네비 -->
-        <nav>
-          <a class="item">Home</a>
-          <a class="item">About</a>
-          <a class="item">Program</a>
-          <div class="item">
-            Play
-            <div class="dropdown">
-              <div>
-                <a>community</a>
-                <a>notice</a>
+    <!-- 전체 레이아웃 -->
+    <div class="wrap">
+      <!-- 상단 띠 -->
+      <div class="topBanner">
+        <a class="tit" href="login.html">프로그램 신청 중 <b>회원가입시 5000원 추가 할인</b></a>
+      </div>
+      <!-- 헤더 -->
+      <header class="header">
+        <!-- 상단 메뉴 -->
+        <div class="top-menu">
+          <!-- 로고 -->
+          <div class="top-menu-logo">
+            <a href="index.html" class="logo">
+              <img src="images/logo.png" alt="탑메뉴 로고" />
+            </a>
+          </div>
+          <!-- 네비 -->
+          <nav>
+            <a class="nav__item" href="index.html">Home</a>
+            <a class="nav__item" href="brand.html">About</a>
+            <a class="nav__item" href="program.html">Program</a>
+            <div class="nav__item" href="playground.html">
+              <a href="playground.html">Play</a>
+              <div class="nav__item__dropdown">
+                <div>
+                  <a href="playground-2.html">Notice</a>
+                  <a href="playground-3.html">Talk</a>
+                  <a href="playground-4.html">Together</a>
+                </div>
               </div>
             </div>
+            <div class="underline"></div>
+          </nav>
+          <!-- 상단 아이콘  -->
+          <div class="top-menu-icons">
+            <a href="#" class="xi-search icon"></a>
+            <a href="login.html" class="xi-user-o icon"></a>
+            <button class="mbt">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- 모바일 메뉴 리스트 -->
+            <div class="nav-mb">
+              <ul class="nav-mb-gnb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="brand.html">About</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li class="menu">
+                  <a href="playground.html">Play<span class="material-symbols-outlined">expand_more</span></a>
+                  <ul class="hide">
+                    <li><a href="playground-2.html">Notice</a></li>
+                    <li><a href="playground-3.html">talk</a></li>
+                    <li><a href="playground-4.html">Together</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="underline"></div>
-        </nav>
-        <!-- 상단 아이콘  -->
-        <div class="top-icon">
-          <a href="#" class="xi-search icon"></a>
-          <a href="#" class="xi-user-o icon"></a>
         </div>
-      </div>
-    </header>
-
+        <!-- 오버레이 -->
+        <div class="overlay"></div>
+      </header>
+      <!-- 비주얼 -->
+      <!-- <section class="s_vistual">
+        <div class="swiper sw-vistual">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#program-2.html">
+                <img src="images/soon/main1.png" alt="메인1" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#program-2.html">
+                <img src="images/soon/main2.png" alt="메인2" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#program-2.html">
+                <img src="images/soon/main3.png" alt="메인3" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </section> -->
     <!-- 프로그램-->
     <div class="j_banner_wrap">
       <div class="j_banner">
         <h1>Program</h1>
         <p>매일 10분이라도 나를 위해 토닥여주세요.</p>
-        <p>
-          내면에 있는 힘을 발견하는 첫걸음,<br />
-          함께하는 이 여정에서 건강하고 행복한 변화를 맞이하게 될 거예요.
-        </p>
+        <p>내면에 있는 힘을 발견하는 첫걸음,</p>
+        <p>함께하는 이 여정에서 건강하고 행복한 변화를 맞이하게 될 거예요.</p>
       </div>
     </div>
     <div class="J_container">
@@ -100,24 +159,66 @@
             <p>의미없는 시간이 없다는 사실을,<br />내가 충분히 살아냈다는 사실을요.</p>
           </div>
           <div class="j_right">
-            <a href="#"
-              ><div class="j_box-1 j_box">
-                <div class="j_top"><img src="images/all/thankyou.JPG" alt="프로그램" /></div>
-                <div class="j_bottom">긍정카드 필사 & 감사일기</div>
-              </div></a
-            >
-            <a href="#"
-              ><div class="j_box-2 j_box">
-                <div class="j_top"><img src="images/all/cheer.jpg" alt="프로그램" /></div>
-                <div class="j_bottom">나를 향한 응원 일지 쓰기</div>
-              </div></a
-            >
-            <a href="#"
-              ><div class="j_box-3 j_box">
-                <div class="j_top"><img src="images/all/positive.jpg" alt="프로그램" /></div>
-                <div class="j_bottom">오늘의 긍정적인 순간 수집</div>
-              </div></a
-            >
+            <a href="#">
+              <div class="j_box-1 j_box">
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/thankyou.JPG" alt="프로그램" />
+                </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                    4.5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">긍정카드 필사 & 감사일기</h2>
+                  <p class="j_bottom_sub">내 안의 긍정성을 깨우는 나</p>
+                </div>
+              </div>
+              </a>
+            <a href="#">
+              <div class="j_box-2 j_box">
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/cheer.jpg" alt="프로그램" />
+                </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">나를 향한 응원 일지 쓰기</h2>
+                  <p class="j_bottom_sub">나에 대한 의심을 멈추고 조금씩 나아가기</p>
+                </div>
+              </div>
+              </a>
+            <a href="#">
+              <div class="j_box-3 j_box">
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/positive.jpg" alt="프로그램" />
+                </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                    4.5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">오늘의 긍정적인 순간 수집</h2>
+                  <p class="j_bottom_sub">내 하루의 좋은 점 찾기</p>
+                </div>
+              </div>
+              </a>
           </div>
         </div>
         <hr />
@@ -131,20 +232,62 @@
           <div class="j_right">
             <a href="#"
               ><div class="j_box-1 j_box">
-                <div class="j_top"><img src="images/all/15min.jpg" alt="프로그램" /></div>
-                <div class="j_bottom">아침 15분 낙서하듯 그리기</div>
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/15min.jpg" alt="프로그램" />
+                  </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">아침 15분 낙서하듯 그리기</h2>
+                  <p class="j_bottom_sub">가볍게 시작하여 완벽주의를 깨는 시간</p>
+                </div>
               </div></a
             >
             <a href="program-2.html" target="_blank"
               ><div class="j_box-2 j_box">
-                <div class="j_top"><img src="images/all/color.png" alt="프로그램" /></div>
-                <div class="j_bottom">번아웃을 극복하는 컬러 명상</div>
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/color.png" alt="프로그램" />
+                  </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                    4.5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">번아웃을 극복하는 컬러 명상</h2>
+                  <p class="j_bottom_sub">지친 마음에 에너지 채우는 컬러 처방</p>
+                </div>
               </div></a
             >
             <a href="#"
               ><div class="j_box-3 j_box">
-                <div class="j_top"><img src="images/all/music.JPG" alt="프로그램" /></div>
-                <div class="j_bottom">나만의 플레이리스트 만들기</div>
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/music.JPG" alt="프로그램" />
+                  </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">나만의 플레이리스트 만들기</h2>
+                  <p class="j_bottom_sub">음악으로 나의 세계를 확장하고 싶은 나</p>
+                </div>
               </div></a
             >
           </div>
@@ -160,25 +303,67 @@
           <div class="j_right">
             <a href="#"
               ><div class="j_box-1 j_box">
-                <div class="j_top"><img src="images/all/plants.jpg" alt="프로그램" /></div>
-                <div class="j_bottom">식물산책 & 감사일기</div>
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/plants.jpg" alt="프로그램" />
+                  
+                </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                    4.5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">식물산책 & 감사일기</h2>
+                  <p class="j_bottom_sub">평가하지 않는 식물에서 위로받기</p>
+                </div>
               </div></a
             >
             <a href="#"
               ><div class="j_box-2 j_box">
-                <div class="j_top"><img src="images/all/food.JPG" alt="프로그램" /></div>
-                <div class="j_bottom">제철 음식으로 나 돌보기</div>
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/food.JPG" alt="프로그램" />
+                  </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">제철 음식으로 나 돌보기</h2>
+                  <p class="j_bottom_sub">한 끼라도 나를 위한 식사 선택하기</p>
+                </div>
               </div></a
             >
             <a href="#"
               ><div class="j_box-3 j_box">
-                <div class="j_top"><img src="images/all/myeongsang.jpg" alt="프로그램" /></div>
-                <div class="j_bottom">하루 10분 명상하기</div>
+                <div class="j_top">
+                  <i class="heart far fa-heart"></i>
+                  <img src="images/all/myeongsang.jpg" alt="프로그램" />
+                  </div>
+                <div class="j_bottom">
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                    4.5 (100+)
+                  </div>
+                  <h2 class="j_bottom_tit">하루 10분 명상하기</h2>
+                  <p class="j_bottom_sub">불안해하지 말고 오로지 나에게 집중하기</p>
+                </div>
               </div></a
             >
           </div>
         </div>
-        <hr />
       </div>
     </div>
     <!-- 참여후기 -->
@@ -186,25 +371,20 @@
       <div class="inner">
         <div class="j_rv_top">
           <div class="j_title">참여 후기</div>
-          <div class="j_plus">
-            <!-- <i class="xi-plus-thin"></i> -->
-            <!-- <i class="xi-plus"></i> -->
-            <i class="fas fa-circle-plus"></i>
-          </div>
         </div>
         <div class="j_rv_bt">
           <div class="j_rv_box">
             <div class="j_rv_box_top"><img src="images/jiwon/review1.JPG" alt="리뷰사진" /></div>
             <div class="j_rv_box_bt">
               <h3>* 아침 15분 낙서하듯 그리기 *</h3>
-              <p>오늘의 드로잉을 올리면 다들 어떤 댓글을 달아주실까 기대하는 재미도 아주 쏠쏠했어요. 우리만의 광장 같았습니다. 부담스럽지 않게 조금씩 매일 그림 그리는 습관을 길러보고싶은 분들께 이 리추얼을 추천합니다.</p>
+              <p>오늘의 드로잉을 올리면 다들 어떤 댓글을 달아주실까 기대하는 재미도 아주 쏠쏠했어요. 우리만의 광장 같았습니다. 그림 그리는 습관을 길러보고싶은 분들께 이 리추얼을 추천합니다.</p>
             </div>
           </div>
           <div class="j_rv_box">
             <div class="j_rv_box_top"><img src="images/jiwon/review2.JPG" alt="리뷰사진" /></div>
             <div class="j_rv_box_bt">
               <h3>* 나만의 플레이리스트 만들기 *</h3>
-              <p>회사에서는 당연히 말하기 어렵고, 친구에게도 대뜸 말하기 어려운 감정이나 생각.. 그냥 지나가면 잊혀지는 그런 것들을 한번 더 곱씹어볼 수 있어서 좋았어요! 모두들 솔직하게 일상과 마음을 나눠주셔서 더 용기가 났던것 같아요ㅎㅎ</p>
+              <p>회사에서는 당연히 말하기 어렵고, 친구에게도 대뜸 말하기 어려운 감정이나 생각.. 그냥 지나가면 잊혀지는 그런 것들을 한번 더 곱씹어볼 수 있어서 좋았어요! ㅎㅎ</p>
             </div>
           </div>
           <div class="j_rv_box">
@@ -213,7 +393,7 @@
             </div>
             <div class="j_rv_box_bt">
               <h3>* 하루 10분 명상하기 *</h3>
-              <p>혼자 하기 어려운 뭔가를 함께 하니 훨씬 이어가기가 수월했고, 꾸준함과 열정이 생겨 3주가 시간이 정말 빨리 흘러간 거 같아요^^ 할까말까를 고민하고 계신 분이라면, 한 번 도전해보세요! 추천합니다!!</p>
+              <p>혼자 하기 어려운 뭔가를 함께 하니 훨씬 이어가기가 수월했고, 꾸준함과 열정이 생겨 3주가 시간이 정말 빨리 흘러간 거 같아요^^ 한 번 도전해보세요! 추천합니다!!</p>
             </div>
           </div>
           <div class="j_rv_box">
@@ -226,19 +406,13 @@
         </div>
       </div>
     </div>
-    <!-- 이달의 강의 배너 -->
-    <div class="j_banner">
-      <div class="inner">
-        <img src="images/jiwon/banner.jpg" alt="이달의강의" />
-      </div>
-    </div>
     <!-- 풋터 -->
     <footer>
       <div class="inner">
         <div class="socials">
-          <a href="#"><img src="images/youtube.png" alt="유튜브" /></a>
-          <a href="#"><img src="images/facebook.png" alt="페이스북" /></a>
-          <a href="#"><img src="images/Instagram.png" alt="인스타그램" /></a>
+          <a href="#"><img src="images/soon/youtube.png" alt="유튜브" /></a>
+          <a href="#"><img src="images/soon/facebook.png" alt="페이스북" /></a>
+          <a href="#"><img src="images/soon/Instagram.png" alt="인스타그램" /></a>
         </div>
         <div class="text">
           <a href="#">개인정보처리방침</a>
