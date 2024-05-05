@@ -9,58 +9,48 @@
 <body>
 <style>
  * { list-style-type: none; margin:  0; padding: 0;}
-.wrap { width:100%; background-color: thistle;}
+d
+
+.s_cate_menu_wrap {margin: 0 auto; width: 100% ;max-width: 1200px; list-style: none;}
+.s_cate_menu_wrap .s-m-nav { background-color:beige;}
+.s_cate_menu_wrap .s-m-nav ul { display: flex; gap: 10px; margin: 0;padding: 0;list-style: none;-ms-touch-action: pan-y;touch-action: pan-y; }
 
 
-.s_cate_menu_wrap { width: 100% ;  }
-.s_cate_menu_wrap .s-m-nav ul li a  { display: block;}
-.s_cate_menu_wrap .s-m-nav ul li a p { text-align: center;}
-/* .s_cate_menu_wrap .s-m-nav ul {-ms-touch-action: pan-y;touch-action: pan-y;} */
 
-
-/* 
-.s_cate_menu_wrap.list .s-m-nav { display: flex; margin: 0 auto; }
-.s_cate_menu_wrap.list .s-m-nav ul { display: flex; gap: 10px; background-color: teal;}
+.s_cate_menu_wrap.list .s-m-nav { display: flex; margin: 0 auto; /* 가운데 정렬 */   }
 .s_cate_menu_wrap.list .s-m-nav ul li { white-space: nowrap; background-color: gainsboro;}
 .s_cate_menu_wrap.list .s-m-nav ul li a {position: relative; display: inline-block;}
 .s_cate_menu_wrap.list .s-m-nav ul li a img { width: 100px; background-color: pink; }
-.s_cate_menu_wrap.list .s-m-nav ul li a p { text-align: center; margin: 0;}  */
-
-.s_cate_menu_wrap.list .s-m-nav { max-width: 1200px; margin:  0 auto;}
-.s_cate_menu_wrap.list .s-m-nav ul { display: flex;    justify-content: space-between;  background-color: tan; }
-.s_cate_menu_wrap.list .s-m-nav ul li a img { display: block; background-color: red; width: 100%;}
-
+.s_cate_menu_wrap.list .s-m-nav ul li a p { text-align: center; margin: 0;} 
 
 .s_cate_menu_wrap.list_content {margin: 50px auto;}
-.s_cate_menu_wrap.list_content .s-m-nav  { max-width: 1200px; margin:  0 auto; }
-.s_cate_menu_wrap.list_content .s-m-nav ul  { display: flex;  justify-content: flex-start; gap: 20px;-ms-touch-action: pan-y;touch-action: pan-y; }
-
-.s_cate_menu_wrap.list_content .s-m-nav ul li ul li a img { border-radius: 30px; width: 100%; }
+.s_cate_menu_wrap.list_content .s-m-nav  { display: flex;  justify-content: flex-start; }
+.s_cate_menu_wrap.list_content .s-m-nav ul li a {border-radius: 30px;  }
+.s_cate_menu_wrap.list_content .s-m-nav ul li a p { text-align: center;}
+.s_cate_menu_wrap.list_content .s-m-nav ul li a img { width: 300px;  border-radius: 30px; }
 
 .scrollbar {margin: 12px 0 1em 0;height: 5px;background: #fff;line-height: 0}
 .scrollbar .handle {width: 50px;height: 100%;background: #e0e0e0;cursor: pointer;border-radius:20px}
-.scrollbar .handle .mousearea {position: absolute;top: -9px;left: 0 ;width: 100%;height: 10px}
+.scrollbar .handle .mousearea {position: absolute;top: -9px;left: 0;width: 100%;height: 10px}
 
-@media screen and (max-width:1200px) {
-	.s_cate_menu_wrap.list_content .s-m-nav {
-		width: 100vw;
-		padding: 0 10px;
+@media screen and (max-width : 768px) {
+	.s_cate_menu_wrap.list .s-m-nav ul li a img {
+		width: 150px;
+	}
+	.s_cate_menu_wrap.list_content .s-m-nav ul li a img {
+		max-width: 300px;
+		min-height: 250px;
 	}
 }
-@media screen and (max-width:768px) {
 
-
-	
-}
 </style>
 
 <body>
-	<a href="slygrid.html">그리드</a>
-	<div class="wrap">
     <div class="s_cate_menu_wrap list">
         <div class="s-m-nav" id="mobile_nav">
             <ul>
-                <li><a href="#" class="tab-button" data-tab-section="tab-section-1">
+                <li>
+					<a href="#" class="tab-button" data-tab-section="tab-section-1">
                     <img src="cate1.png" alt="상품01">
                     <p>1</p>
                     </a>
@@ -91,7 +81,6 @@
 
     <div class="s_cate_menu_wrap list_content">
         <div class="s-m-nav" id="mobile_nav02">
-			<!-- 리스트 컨텐츠 -->
             <ul>
                 <li id="tab-section-1" class="tab-section">
 					<ul>
@@ -266,19 +255,17 @@
 
 
             </ul>
-			<!-- 스클로바 -->
-			<div class="scrollbar">
-				<div class="handle">
-					<div class="mousearea"></div>
-				</div>
-			</div>
         </div>
-
+        <div class="scrollbar">
+            <div class="handle">
+                <div class="mousearea"></div>
+            </div>
+        </div>
     </div>
-</div>
+	<a href="slygrid.html">그리드 보러가기</a>
     <script>
         $(document).ready(function() {
-            
+
 
             var menu_start02 = "0";
             var $wrap = $('#mobile_nav02').parent();
