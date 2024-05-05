@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script>
+    <style>
+      * {
+        /* padding: 0;
+        margin: 0; */
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .menu {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+      .menu-item {
+        flex: 1;
+        cursor: pointer;
+        text-align: center;
+        padding: 10px;
+        background-color: #f0f0f0;
+      }
+      .menu-item:hover,
+      .menu-item.active {
+        background-color: #ddd;
+      }
+      .card-container {
+        width: 1200px;
+        margin: auto;
+        margin-top: 20px;
+      }
+      .card {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .card.active {
+        display: flex;
+        gap: 40px;
+      }
+      .card li {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        background-color: aliceblue;
+      }
+      .card li img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menu-item"  id="mobile_nav">메뉴 1</div>
+      <div class="menu-item"  id="mobile_nav">메뉴 2</div>
+      <div class="menu-item"  id="mobile_nav">메뉴 3</div>
+    </div>
+    <div class="card-container">
+      <!-- 카드는 js 출력 -->
+    </div>
+    <script>
+      const cardContainer = document.querySelector(".card-container");
+      function fetchData() {
+        fetch("cardData.json")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((cardData) => {
+            // console.log(cardData);
+            cardData.forEach((menu, index) => {
+              // console.log(menu);
+              // console.log(index);
+              const cardList = document.createElement("ul");
+              cardList.classList.add("card"); //클래스 추가
+              // 처음에 첫번째 메뉴만 활성화되게 설정
+              if (index === 0) {
+                cardList.classList.add("active");
+              }
+              menu.forEach((card) => {
+                const cardItem = document.createElement("li");
+                cardItem.innerHTML = `
+          <img src="${card.imageSrc}" alt="${card.description}" />
+          <h2>${card.description}</h2>
+          <p>가격: ${card.price}</p>
+          `;
+                cardList.appendChild(cardItem);
+              });
+              cardContainer.appendChild(cardList);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching card data:", error);
+          });
+      }
+      // 메뉴 아이템을 클릭 이벤트 추가
+      const menuItems = document.querySelectorAll(".menu-item");
+      menuItems.forEach((menuItem, index) => {
+        menuItem.addEventListener("click", function () {
+          showCard(index);
+        });
+      });
+      // 카드 보여주는 함수
+      function showCard(index) {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card, i) => {
+          if (i === index) {
+            card.classList.add("active");
+          } else {
+            card.classList.remove("active");
+          }
+        });
+        const menuItems = document.querySelectorAll(".menu-item");
+        menuItems.forEach((menuItenm, i) => {
+          if (i === index) {
+            menuItenm.classList.add("active");
+          } else {
+            menuItenm.classList.remove("active");
+          }
+        });
+      }
+      fetchData();
+
+
+  $(document).ready(function() {
+	var menu_start = "0";
+	$('#mobile_nav').sly({
+		horizontal: 1,
+		itemNav: 'centered',
+		smart: 1,
+		mouseDragging: 1,
+		touchDragging: 1,
+		releaseSwing: 1,
+		startAt: menu_start,
+		speed: 300,
+		elasticBounds: 1,
+		dragHandle: 1,
+		dynamicHandle: 1
+    });
+	$(window).resize(function(e) {
+		$('#mobile_nav').sly('reload');
+	});
+	
+	var menu_start02 = "0";
+	var $wrap = $('#mobile_nav02').parent();	//스크롤을 넣고 싶을 경우 삽입
+	$('#mobile_nav02').sly({
+		horizontal: 1,
+		itemNav: 'centered',
+		smart: 1,
+		mouseDragging: 1,
+		touchDragging: 1,
+		releaseSwing: 1,
+		startAt: menu_start02,
+		scrollBar: $wrap.find('.scrollbar'),	//스크롤을 넣고 싶을 경우 삽입
+		scrollBy: 1,							//스크롤을 넣고 싶을 경우 삽입
+		speed: 300,
+		elasticBounds: 1,
+		dragHandle: 1,
+		dynamicHandle: 1
+    });
+	$(window).resize(function(e) {
+		$('#mobile_nav02').sly('reload');
+	});
+});
+    </script>
+  </body>
+</html>
