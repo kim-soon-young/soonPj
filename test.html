@@ -1,0 +1,65 @@
+<script>
+    $(document).ready(function() {
+      var menu_start02 = "0";
+        var $wrap = $('#mobile_nav').parent();
+        $('#mobile_nav').sly({
+            horizontal: 1,
+            itemNav: 'centered',
+            smart: 1,
+            mouseDragging: 1,
+            touchDragging: 1,
+            releaseSwing: 1,
+            startAt: menu_start02,
+            scrollBar: $wrap.find('.scrollbar'),
+            scrollBy: 1,
+            speed: 300,
+            elasticBounds: 1,
+            dragHandle: 1,
+            dynamicHandle: 1
+        });
+        $(window).resize(function(e) {
+            $('#mobile_nav').sly('reload');
+        });
+
+        var menu_start02 = "0";
+        var $wrap = $('#mobile_nav02').parent();
+        $('#mobile_nav02').sly({
+            horizontal: 1,
+            itemNav: 'centered',
+            smart: 1,
+            mouseDragging: 1,
+            touchDragging: 1,
+            releaseSwing: 1,
+            startAt: menu_start02,
+            scrollBar: $wrap.find('.scrollbar'),
+            scrollBy: 1,
+            speed: 300,
+            elasticBounds: 1,
+            dragHandle: 1,
+            dynamicHandle: 1
+        });
+        $(window).resize(function(e) {
+            $('#mobile_nav02').sly('reload');
+        });
+
+        // 탭 버튼과 탭 섹션 요소들을 선택합니다.
+        const $tabButtons = document.querySelectorAll('.tab-button');
+        const $tabSections = document.querySelectorAll('.tab-section');
+
+        // 탭 버튼을 클릭했을 때의 이벤트를 추가합니다.
+        $tabButtons.forEach($tabButton => {
+            $tabButton.addEventListener('click', () => {
+                // 클릭한 탭 버튼의 data-tab-section 속성 값을 가져옵니다.
+                const tabSectionId = $tabButton.getAttribute('data-tab-section');
+
+                // 탭 섹션을 숨깁니다.
+                $tabSections.forEach($tabSection => {
+                    $tabSection.hidden = true;
+                });
+
+                // 클릭한 탭 버튼과 연결된 탭 섹션을 활성화합니다.
+                document.getElementById(tabSectionId).hidden = false;
+            });
+        });
+    });
+    </script>

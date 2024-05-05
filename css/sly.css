@@ -2,7 +2,7 @@
 @import url(font.css);
 .s_cate_wrap { margin: 100px auto; }
 .s_cate_menu_wrap .s-m-nav {  margin: 0 auto; width: 100% ;max-width: 1200px;     padding-bottom: 30px;}
-.s_cate_menu_wrap .s-m-nav ul { display: flex; margin: 0 10px;padding: 0;list-style: none;-ms-touch-action: pan-y;touch-action: pan-y; }
+.s_cate_menu_wrap .s-m-nav ul { display: flex; justify-content:flex-start; margin: 0 10px;padding: 0;list-style: none;-ms-touch-action: pan-y;touch-action: pan-y; }
 
 
 
