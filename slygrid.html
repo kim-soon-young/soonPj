@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=11,chrome=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script>
+</head>
+<body>
+<style>
+ * { list-style-type: none; margin:  0; padding: 0;}
+
+
+.s_cate_menu_wrap {margin: 0 auto; width: 100% ;max-width: 1200px; list-style: none;}
+.s_cate_menu_wrap .s-m-nav { background-color:beige;}
+
+.s_cate_menu_wrap.list .s-m-nav { display: flex; margin: 0 auto; /* 가운데 정렬 */  justify-content: center; }
+.s_cate_menu_wrap.list .s-m-nav ul { display: flex; margin: 0;padding: 0;list-style: none;-ms-touch-action: pan-y;touch-action: pan-y; }
+.s_cate_menu_wrap.list .s-m-nav ul li { white-space: nowrap; background-color: gainsboro;}
+.s_cate_menu_wrap.list .s-m-nav ul li a {position: relative; display: inline-block;}
+.s_cate_menu_wrap.list .s-m-nav ul li a img { width: 100px; background-color: pink; }
+.s_cate_menu_wrap.list .s-m-nav ul li a p { text-align: center; margin: 0;} 
+
+
+.s_cate_menu_wrap.list_content .s-m-nav ul li a p { text-align: center;}
+
+.scrollbar {
+	display: none;
+	margin: 12px 0 1em 0;height: 5px;background: #fff;line-height: 0}
+.scrollbar .handle {width: 50px;height: 100%;background: #e0e0e0;cursor: pointer;border-radius:20px}
+.scrollbar .handle .mousearea {position: absolute;top: -9px;left: 0;width: 100%;height: 10px}
+
+
+.grid-items {
+	margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr ;
+    gap: 20px;
+}
+
+.large-item {
+    grid-column: 1 / 2; /* 큰 사각형은 1열부터 2열까지 */
+    grid-row: span 2; /* 큰 사각형은 2행에 걸쳐 표시됩니다. */
+    background-color: lightblue;
+}
+
+.small-item1 {
+    grid-column: 2; /* 작은 사각형은 2열에 배치 */
+    grid-row: 1; /* 작은 사각형은 첫 번째 행에 배치 */
+    background-color: tan;
+}
+
+.small-item2 {
+    grid-column: 2; /* 작은 사각형은 2열에 배치 */
+    grid-row: 2; /* 작은 사각형은 두 번째 행에 배치 */
+    background-color: tan;
+}
+
+.grid-items img {
+    width: 100%; /* 이미지의 너비를 부모 요소에 맞게 설정 */
+    height: 100%; /* 이미지의 높이를 부모 요소에 맞게 설정 */
+    object-fit: cover; /* 이미지가 부모 요소에 맞게 확장되도록 설정 */
+}
+
+@media screen and (max-width:1200px) {
+	.scrollbar { display: block;}
+	.grid-items { display: grid; grid-template-columns: 1fr 1fr 1fr;}
+.large-item {
+    grid-column: 1;
+	grid-row:1;
+	grid-row: span 1; 
+}
+
+.small-item1 {
+    grid-column: 2;
+    grid-row: 1; 
+    background-color: tan;
+}
+
+.small-item2 {
+    grid-column: 3; /* 작은 사각형은 2열에 배치 */
+    grid-row: 1; /* 작은 사각형은 두 번째 행에 배치 */
+    background-color: tan;
+}
+.grid-items img {
+    width: 100%; /* 이미지의 너비를 부모 요소에 맞게 설정 */
+    height: 100%; /* 이미지의 높이를 부모 요소에 맞게 설정 */
+	width: 400px;
+
+    object-fit: cover; /* 이미지가 부모 요소에 맞게 확장되도록 설정 */
+}
+}
+</style>
+
+<body>
+    <div class="s_cate_menu_wrap list">
+        <div class="s-m-nav" id="mobile_nav">
+            <ul class="s-m-nav-list">
+                <li><a href="#" class="tab-button" data-tab-section="tab-section-1">
+                    <img src="cate1.png" alt="상품01">
+                    <p>1</p>
+                    </a>
+                </li>
+                <li><a href="#" class="tab-button" data-tab-section="tab-section-2">
+                    <img src="cate1.png" alt="상품01">
+                    <p>2</p>
+                    </a>
+                </li>
+                <li><a href="#" class="tab-button" data-tab-section="tab-section-3">
+                    <img src="cate1.png" alt="상품01">
+                    <p>3</p>
+                    </a>
+                </li>
+                <li><a href="#" class="tab-button" data-tab-section="tab-section-4">
+                    <img src="cate1.png" alt="상품01">
+                    <p>4</p>
+                    </a>
+                </li>
+                <li><a href="#" class="tab-button" data-tab-section="tab-section-5">
+                    <img src="cate1.png" alt="상품01">
+                    <p>5</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="s_cate_menu_wrap list_content">
+        <div class="s-m-nav" id="mobile_nav02">
+			<ul class="grid-container">
+				<li id="tab-section-1" class="tab-section">
+					<ul class="grid-items">
+						<li class="large-item">
+							<a href="#">
+								<img src="color.jpg" alt="큰 사각형">
+								<p>큰 사각형</p>
+							</a>
+						</li>
+						<li class="small-item1">
+							<a href="#">
+								<img src="meditation.jpg" alt="작은 사각형1">
+								<p>작은 사각형1</p>
+							</a>
+						</li>
+						<li class="small-item2">
+							<a href="#">
+								<img src="myeongsang.jpg" alt="작은 사각형2">
+								<p>작은 사각형2</p>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+        </div>
+        <div class="scrollbar">
+            <div class="handle">
+                <div class="mousearea"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        $(document).ready(function() {
+            var menu_start = "0";
+            $('#mobile_nav').sly({
+                horizontal: 1,
+                itemNav: 'centered',
+                smart: 1,
+                mouseDragging: 1,
+                touchDragging: 1,
+                releaseSwing: 1,
+                startAt: menu_start,
+                speed: 300,
+                elasticBounds: 1,
+                dragHandle: 1,
+                dynamicHandle: 1
+            });
+            $(window).resize(function(e) {
+                $('#mobile_nav').sly('reload');
+            });
+
+            var menu_start02 = "0";
+            var $wrap = $('#mobile_nav02').parent();
+            $('#mobile_nav02').sly({
+                horizontal: 1,
+                itemNav: 'centered',
+                smart: 1,
+                mouseDragging: 1,
+                touchDragging: 1,
+                releaseSwing: 1,
+                startAt: menu_start02,
+                scrollBar: $wrap.find('.scrollbar'),
+                scrollBy: 1,
+                speed: 300,
+                elasticBounds: 1,
+                dragHandle: 1,
+                dynamicHandle: 1
+            });
+            $(window).resize(function(e) {
+                $('#mobile_nav02').sly('reload');
+            });
+
+            // 탭 버튼과 탭 섹션 요소들을 선택합니다.
+            const $tabButtons = document.querySelectorAll('.tab-button');
+            const $tabSections = document.querySelectorAll('.tab-section');
+
+            // 탭 버튼을 클릭했을 때의 이벤트를 추가합니다.
+            $tabButtons.forEach($tabButton => {
+                $tabButton.addEventListener('click', () => {
+                    // 클릭한 탭 버튼의 data-tab-section 속성 값을 가져옵니다.
+                    const tabSectionId = $tabButton.getAttribute('data-tab-section');
+
+                    // 탭 섹션을 숨깁니다.
+                    $tabSections.forEach($tabSection => {
+                        $tabSection.hidden = true;
+                    });
+
+                    // 클릭한 탭 버튼과 연결된 탭 섹션을 활성화합니다.
+                    document.getElementById(tabSectionId).hidden = false;
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
