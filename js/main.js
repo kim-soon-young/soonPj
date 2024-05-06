@@ -115,14 +115,14 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    // autoplay: {
-    //   delay: 5000, // 슬라이드 간의 시간 간격 (밀리초)
-    //   disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생을 유지할지 여부
-    //   reverseDirection: false, // 슬라이드 방향 반대로
-    //   stopOnLastSlide: false, // 마지막 슬라이드에서 재생 중지
-    //   waitForTransition: true, // 다음 슬라이드로 넘어가기 전에 현재 슬라이드의 전환을 기다림
-    //   disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생 유지
-    // },
+    autoplay: {
+      delay: 5000, // 슬라이드 간의 시간 간격 (밀리초)
+      disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생을 유지할지 여부
+      reverseDirection: false, // 슬라이드 방향 반대로
+      stopOnLastSlide: false, // 마지막 슬라이드에서 재생 중지
+      waitForTransition: true, // 다음 슬라이드로 넘어가기 전에 현재 슬라이드의 전환을 기다림
+      disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생 유지
+    },
   });
 });
 // 모바일 메뉴
