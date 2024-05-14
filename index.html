@@ -1,520 +1,267 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KXN6FMPR");
-    </script>
-    <!-- End Google Tag Manager -->
-    <title>내마음봄</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 파비콘 생성 -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="images/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- seo 엔진 최적화 -->
-    <title>내마음봄 : 당신의 마음에도 봄이 오면 좋겠어요.</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width, viewport-fit=cover" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="내마음봄" />
-    <meta name="theme-color" content="#FF782C" />
-    <meta property="og:title" content="내마음봄: 내면의 변화를 만드는 플랫폼" />
-    <meta property="og:description" content="나답게 성장하는 사람들이 만들어가는 프로젝트" />
-    <meta property="og:image" content="images/share-image.png" />
-    <!-- <meta name="naver-site-verification" content="ac83739dee8db19366947125d2910ea6f02f76a2" /> -->
-    <meta name="description" content="나답게 성장하는 사람들이 만들어가는 프로젝트" />
-    <!-- Twitter -->
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style2.css" />
-    <!-- AOS css -->
+    <!-- favicon 개인 -->
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <script src="js/respond.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- waypoint -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- 스와이퍼 css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <!-- XEICON css -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-    <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <!-- 구글아이콘cdm -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <!-- 메인 -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 
-    <!-- html -->
-
-    <!-- Js 연동 -->
-    <!-- aos적용 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <!-- <script src="js/prefixfree.min.js"></script> -->
-    <script src="js/respond.min.js"></script>
-    <!-- 제이쿼리 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- 스와이퍼 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-N51KYMNPS5");
-    </script>
+    <title>Ha portfolio</title>
   </head>
   <body>
-     <!-- Google Tag Manager (noscript) -->
-     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXN6FMPR" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-     <!-- End Google Tag Manager (noscript) -->
-    <!-- 전체 레이아웃 -->
     <div class="wrap">
-      <!-- 상단 띠 -->
-      <div class="topBanner">
-        <a class="tit" href="login.html">프로그램 신청 중 <b>회원가입시 5000원 추가 할인</b></a>
-      </div>
       <!-- 헤더 -->
       <header class="header">
-        <!-- 상단 메뉴 -->
-        <div class="top-menu">
+        <div class="inner">
           <!-- 로고 -->
-          <div class="top-menu-logo">
-            <a href="index.html" class="logo">
-              <img src="images/logo.png" alt="탑메뉴 로고" />
-            </a>
-          </div>
-          <!-- 네비 -->
-          <nav>
-            <a class="nav__item" href="index.html">Home</a>
-            <a class="nav__item" href="brand.html">About</a>
-            <a class="nav__item" href="program.html">Program</a>
-            <div class="nav__item" href="playground.html">
-              <a href="playground.html">Play</a>
-              <div class="nav__item__dropdown">
-                <div>
-                  <a href="playground-2.html">Notice</a>
-                  <a href="playground-3.html">Talk</a>
-                  <a href="playground-4.html">Together</a>
-                </div>
-              </div>
+          <a href="#" class="logo">
+            <img src="" alt="개인 로고" class="zulogo" />
+          </a>
+          <!-- menu -->
+          <div class="header-right">
+            <div class="h-home" data-link="#visual">
+              <i class="home-icon fa-solid fa-house home"></i>
+              <img src="images/home.png" class="home-hover" />
             </div>
-            <div class="underline"></div>
-          </nav>
-          <!-- 상단 아이콘  -->
-          <div class="top-menu-icons">
-            <a href="#" class="xi-search icon"></a>
-            <a href="login.html" class="xi-user-o icon"></a>
-            <button class="mbt">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <!-- 모바일 메뉴 리스트 -->
-            <div class="nav-mb">
-              <ul class="nav-mb-gnb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="brand.html">About</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li class="menu">
-                  <a href="playground.html">Play<span class="material-symbols-outlined">expand_more</span></a>
-                  <ul class="hide">
-                    <li><a href="playground-2.html">Notice</a></li>
-                    <li><a href="playground-3.html">talk</a></li>
-                    <li><a href="playground-4.html">Together</a></li>
-                  </ul>
-                </li>
-              </ul>
+            <div class="h-profile" data-link="#profile">
+              <i class="fa-solid fa-circle-user"></i>
+              <img src="images/profile.png" class="profile-hover" />
+            </div>
+            <div class="h-portfolio" data-link="#portfolio">
+              <i class="home-portfolio fa-solid fa-desktop"></i>
+              <img src="images/portfolio.png" class="portfolio-hover" />
+            </div>
+            <div class="h-snt" data-link="#snt">
+              <i class="home-snt fa-solid fa-gear"></i>
+              <img src="images/snt.png" class="snt-hover" />
+            </div>
+            <div class="h-contact" data-link="#contact">
+              <i class="home-contact fa-solid fa-phone"></i>
+              <img src="images/contact.png" class="contact-hover" />
             </div>
           </div>
         </div>
-        <!-- 오버레이 -->
-        <div class="overlay"></div>
       </header>
       <!-- 비주얼 -->
-      <section class="s_vistual">
-        <div class="swiper sw-vistual">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="program-2.html">
-                <img src="images/soon/main1.png" alt="메인1" />
-                <img src="images/soon/main3-m.png" alt="메인3모바일" class="mainannerM">
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="program-2.html">
-                <img src="images/soon/main2.png" alt="메인2" />
-                <img src="images/soon/main3-m.png" alt="메인3모바일" class="mainannerM">
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="program-2.html">
-                <img src="images/soon/main3.png" alt="메인3" class="mainBanner"/>
-                <img src="images/soon/main3-m.png" alt="메인3모바일" class="mainannerM">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-scrollbar"></div>
-      </section>
-      <!-- 브랜드 소개 -->
-      <section class="s_brandAbout">
-        <div class="s_brandAbout_logodes">
-          <div class="inner">
-            <div class="s_brandAbout_left">
-              <div class="s_brandAbout_left_tit">see + spring</div>
-              <div class="s_brandAbout_left_txt">
-                프로그램을 통해 스스로의 마음을 드러내 <span>봄</span><br />
-                그 마음의 온도는 <span>봄</span>이 되었으면 좋겠습니다.
-              </div>
-            </div>
-            <div class="s_brandAbout_right">
-              <img src="images/soon/logo300.png" alt="logo" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- soon 모름 -->
-      <section class="s_soon">
-        <div class="title-area">
-          <div class="inner">
-            <div class="title" style="text-align: center">
-              Coming soon
-              <div class="title2">두근두근 6월 오픈 프로그램</div>
-            </div>
-          </div>
-        </div>
-        <div class="s_soon_area" style class="background-color:#red">
-          <div class="s_soon_card" style="--clr: #589856">
-            <div class="s_soon_card_imgBox">
-              <img src="images/soon/yoga.jpg" />
-            </div>
-            <div class="s_soon_card_textBox">
-              <h2>초보요가의 아침</h2>
-              <p>한 동작을 하기 위해 모든 정신이 몸에 집중되면서 잡생각에서 벗어나고 더불어 긍정적인 에너지도 얻을 수 있습니다!</p>
-              <a href="program-2.html">More</a>
-            </div>
-          </div>
-          <div class="s_soon_card" style="--clr: #589856">
-            <div class="s_soon_card_imgBox">
-              <img src="images/soon/meditation.jpg" />
-            </div>
-            <div class="s_soon_card_textBox">
-              <h2>내 안에 나를 찾는 시간</h2>
-              <p>‘내 평소 생각이 진짜 나로부터 나온 게 아니라 남들이 하니까 따라하려던 것일 수 있다 내가 진짜 원하는 삶을 살아가 싶다면 명상을 해보세요.</p>
-              <a href="program-2.html">More</a>
-            </div>
-          </div>
-          <div class="s_soon_card" style="--clr: #589856">
-            <div class="s_soon_card_imgBox">
-              <img src="images/soon/draw.jpg" />
-            </div>
-            <div class="s_soon_card_textBox">
-              <h2>즐겁게 드로잉 일기</h2>
-              <p>평범하게 잊힐 수 있는 일상들을 조금은 더 의미 있는 날로 만들어 줍니다. 또한 평가없이 즐겁게 그리고 싶은 분들에게 추천해요.</p>
-              <a href="program-2.html">More</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- 배너 -->
-      <section class="s_banner_ch3">
+      <section class="visual" id="visual">
         <div class="inner">
-          <div class="s_banner_ch3_img">
-            <img src="images/soon/ch3500.png" alt="캐릭터3인방" />
+          <div class="visual-left">
+            <h1><span class="hd-color">I'm</span><br />Fearless!</h1>
+            <p>
+              새로운 분야에 겁 없이 뛰어든
+              <span class="hd-name">하경미</span>입니다. <br />
+              도전하는 것에 두려움을 가지지 않고 정진하며,<br />
+              늘 열정과 온 힘을 다하는 퍼블리셔가 되겠습니다!
+            </p>
+            <img src="images/vmw.png" class="vmw" data-link="#portfolio" />
           </div>
-          <a href="program.html"><div class="s_banner_ch3_tit">내면의 변화를 일으키는 힐링 플랫폼</div></a>
-        </div>
-      </section>
-      <!-- program -->
-      <section class="s_program">
-        <div class="swiper sw-program">
-          <div class="title-area">
-            <div class="title">
-              program
-              <div class="title2">다양한 힐링 방법이 필요하다면?<span></span></div>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#program-2.html" class="s_program_bg">
-                <div class="s_program_bg_img">
-                  <img src="images/program/draw15min.jpg" alt="draw15min" />
-                </div>
-                <div class="s_program_des">
-                  <div class="s_program_tag"><span>#draw</span><span>#healing</span></div>
-                  <div class="s_program_tit">낙서하듯 그리기</div>
-                  <div class="s_program_txt">가볍게 시작하여 완벽주의를 깨는 시간</div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#program-2.html" class="s_program_bg">
-                <div class="s_program_bg_img">
-                  <img src="images/program/music.JPG" alt="music" />
-                </div>
-                <div class="s_program_des">
-                  <div class="s_program_tag"><span>#Music</span></div>
-                  <div class="s_program_tit">나만의 플레이리스트</div>
-                  <div class="s_program_txt">음악으로 나의 세계를 확장하고 싶은 나</div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#program-2.html" class="s_program_bg">
-                <div class="s_program_bg_img">
-                  <img src="images/program/myeongsang.JPG" alt="myeongsang" />
-                </div>
-                <div class="s_program_des">
-                  <div class="s_program_tag"><span>#meditation</span><span>#healing</span></div>
-                  <div class="s_program_tit">하루 10분 명상하기</div>
-                  <div class="s_program_txt">하루 한 번 오로지 나에게 집중하기</div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#program-2.html" class="s_program_bg">
-                <div class="s_program_bg_img">
-                  <img src="images/program/cheer300.jpg" alt="cheer" />
-                </div>
-                <div class="s_program_des">
-                  <div class="s_program_tag"><span>#write</span><span>#Positive</span></div>
-                  <div class="s_program_tit">긍정카드 필사&감사일기</div>
-                  <div class="s_program_txt">내 안의 긍정성을 깨우는 나</div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#program-2.html" class="s_program_bg">
-                <div class="s_program_bg_img">
-                  <img src="images/program/plants300.jpg" alt="plants" />
-                </div>
-                <div class="s_program_des">
-                  <div class="s_program_tag"><span>#plant</span><span>#thanks</span></div>
-                  <div class="s_program_tit">식물 산책&감사일기</div>
-                  <div class="s_program_txt">평가하지 않는 식물에서 위로받기</div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#program-2.html" class="s_program_bg">
-                <div class="s_program_bg_img">
-                  <img src="images/program/positive.jpg" alt="positive" />
-                </div>
-                <div class="s_program_des">
-                  <div class="s_program_tag"><span>#Positive</span></div>
-                  <div class="s_program_tit">긍정적인 순간 수집</div>
-                  <div class="s_program_txt">내 하루의 좋은 점 찾기</div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#program-2.html" class="s_program_bg">
-                <div class="s_program_bg_img">
-                  <img src="images/program/food300.jpg" alt="food" />
-                </div>
-                <div class="s_program_des">
-                  <div class="s_program_tag"><span>#food</span><span>#takecare</span></div>
-                  <div class="s_program_tit">제철 음식으로 나 돌보기</div>
-                  <div class="s_program_txt">나를 위한 정성스런 한끼 식사</div>
-                </div>
-              </a>
-            </div>
+          <div class="visual-right">
+            <img src="images/me_c.png" class="v-img" />
           </div>
         </div>
       </section>
-      <!-- 이달의 영상 -->
-      <section class="s_Mentor">
+      <!-- 프로필 -->
+      <section class="profile" id="profile">
         <div class="inner">
-          <div class="s_Mentor_area">
-            <div class="s_Mentor_area_left">
-              <div class="s_Mentor_des">
-                <div class="tit">뭘 해도 행복한 사람과<br />불만인 사람의 말버릇</div>
-                <div class="tit2">리플러스인간연구소</div>
-                <div class="name">박재연 <span>소장님</span></div>
+          <h2>ABOUT ME</h2>
+          <div class="p-top">
+            <img src="images/mezu.png" />
+            <div class="bubble">
+              <h1>Hello World!<br />웹 퍼블리셔 <b>하경미</b> 입니다!</h1>
+              <p>
+                어릴 적부터 미술에 관심이 많아 자연스럽게 디자인과로 진로로 선택하여,<br />
+                자주 접하는 웹 화면을 보며 나도 저렇게 만들어 내고 싶다는 생각을 자주 하였습니다. <br /><br />사용자가 쉽고 편하게 이용할 수 있는 디자인을 웹으로 나타내는 것에 제 목표입니다.<br />
+                겁 없이 도전한 퍼블리셔에서 더 나아가 프론트엔드 까지 도전해 나갈 것입니다. <br />항상 도전하고 열려있는 자세로 맡은 일에 최선을 다하는 사람이 되겠습니다.
+              </p>
+            </div>
+          </div>
+          <div class="p-bot">
+            <div class="p-profile">
+              <h2><i class="fa-solid fa-user"></i>Profile</h2>
+              <div class="gnb">
+                <ul class="profile-en">
+                  <li>Name</li>
+                  <li>Birth</li>
+                  <li>Location</li>
+                  <li>MBTI</li>
+                </ul>
+                <ul class="profile-kr">
+                  <li>하경미</li>
+                  <li>0000. 10. 12</li>
+                  <li>Korea, Daegu</li>
+                  <li>INFP (호기심 많은 예술가)</li>
+                </ul>
               </div>
             </div>
-            <div class="s_Mentor_area_right">
-              <img src="images//soon/park.png" alt="박재현소장" />
+            <div class="p-history">
+              <h2><i class="fa-solid fa-arrow-rotate-left"></i>History</h2>
+              <div class="gnb">
+                <ul class="history-en">
+                  <li>2023. 04</li>
+                  <li>2022. 10</li>
+                  <li>2020. 03</li>
+                </ul>
+                <ul class="history-kr">
+                  <li>그린컴퓨터학원(KDT) **과정 수료</li>
+                  <li>대구***** 수료</li>
+                  <li>*****과 졸업</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-lisence">
+              <h2><i class="fa-solid fa-address-card"></i>Lisence</h2>
+              <div class="gnb">
+                <ul class="lisence-en">
+                  <li>2020. 07</li>
+                  <!-- <li>Birth</li>
+                                    <li>Location</li>
+                                    <li>MBTI</li> -->
+                </ul>
+                <ul class="lisence-kr">
+                  <li>자동차 운전면허 1종</li>
+                  <li>ITQ 한글 엑셀 B등급</li>
+                  <li>ITQ 아래 한글 A등급</li>
+                  <li>ITQ 한글 파워포인트 A등급</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- 커뮤니티 -->
-      <div class="t_in-notice-wrap">
-        <div class="t_in-container">
-          <div class="t_in-header">
-            <div class="title-area">
-              <div class="title">NOTICE</div>
-            </div>
-          </div>
-          <div class="t_in-contents">
-            <div class="t_in-contents-main">
-              <ul class="t_in-main-info">
-                <!-- <li>1</li> -->
-                <li><p>공지 해요</p></li>
-                <li>(5월) 이달의 강연 - 리플러스인간연구소 <박재연></li>
-                <li>내마음봄</li>
-                <li>2024.04.26</li>
-              </ul>
-              <ul class="t_in-main-info">
-                <!-- <li>2</li> -->
-                <li><p>공지 해요</p></li>
-                <li>내마음봄 커뮤니티 가이드라인 안내</li>
-                <li>내마음봄</li>
-                <li>2024.01.01</li>
-              </ul>
-              <ul class="t_in-main-info">
-                <!-- <li>3</li> -->
-                <li><p>수다 해요</p></li>
-                <li>이번주도 다들 파이팅!</li>
-                <li>바밤바</li>
-                <li>2024.04.30</li>
-              </ul>
-              <ul class="t_in-main-info">
-                <!-- <li>4</li> -->
-                <li><p>수다 해요</p></li>
-                <li>슬슬 더워지네요</li>
-                <li>민초단</li>
-                <li>2024.04.30</li>
-              </ul>
-              <ul class="t_in-main-info">
-                <!-- <li>5</li> -->
-                <li><p>함께 해요</p></li>
-                <li>전시 정보 공유해요. 같이 가실분?</li>
-                <li>기역니은디귿</li>
-                <li>2024.04.30</li>
-              </ul>
-            </div>
-          </div>
-          <div class="t_in-bottom"></div>
-        </div>
-      </div>
-      <!-- 리뷰 -->
-      <section class="review">
-        <div class="title-area">
-        <div class="title">
-          Review
-          <div class="title2">한 달만 해도 변화하는 프로그램 후기</div>
-        </div></div>
-        <div class="rv-wrap">
-          <a href="#">
-            <div class="rv-box-1 rv-box">
-              <span class="rv-cate">* 낙서하듯 그리기 *</span>
-              <div class="rv-tit">
-                <p>매일매일이 기대되요</p>
-                <img src="images/jiwon/rv-1.png" alt="캐릭터" />
-              </div>
-              <hr />
-              <div class="rv-body">오늘은 다들 어떤 댓글을 달아주실까 기대하는 재미도 아주 쏠쏠했어요. 부담스럽지 않게 조금씩 매일 그림 그리는 습관을 길러보고싶은 분들께 추천합니다.</div>
-            </div></a
-          >
-          <a href="#">
-            <div class="rv-box-2 rv-box">
-              <span class="rv-cate">* 나만의 플레이리스트 만들기 *</span>
-              <div class="rv-tit">
-                <p>용기가 생겼어요</p>
-                <img src="images/jiwon/rv-2.png" alt="캐릭터" />
-              </div>
-              <hr />
-              <div class="rv-body">회사에서는 당연히 말하기 어렵고 친구에게도 대뜸 말하기 어려운 감정이나 생각.. <span class="box-2-txt">그냥 지나가면 잊혀지는 그런 것들을 한번 더 곱씹어볼 수 있어서 좋았어요!</span> 모두들 솔직하게 일상과 마음을 나눠주셔서 더 용기가 났던 것 같아요ㅎㅎ</div>
-            </div></a
-          >
-          <a href="#">
-            <div class="rv-box-3 rv-box">
-              <span class="rv-cate">* 하루 10분 명상하기 *</span>
-              <div class="rv-tit">
-                <p>고민은 신청을 늦출 뿐</p>
-                <img src="images/jiwon/rv-3.png" alt="캐릭터" />
-              </div>
-              <hr />
-              <div class="rv-body">혼자 하기 어려운 뭔가를 함께 하니 훨씬 이어가기가 수월했고, 할까말까를 고민하고 계신 분이라면, 한 번 도전해보세요! 추천합니다!!</div>
-            </div></a
-          >
-          <a href="#">
-            <div class="rv-box-4 rv-box">
-              <span class="rv-cate">* 제철 음식으로 나 돌보기 *</span>
-              <div class="rv-tit">
-                <p>즐겁고 맛있는 시간</p>
-                <img src="images/jiwon/rv-4.png" alt="캐릭터" />
-              </div>
-              <hr />
-              <div class="rv-body">다양한 봄나물에 대해 배울 수 있었고 처음으로 냉이파스타를 만들게 되었는데 즐겁고 맛있는 시간이었습니다.</div>
-            </div></a
-          >
-          <a href="#">
-            <div class="rv-box-5 rv-box">
-              <span class="rv-cate">* 식물산책&감사일기 *</span>
-              <div class="rv-tit">
-                <p>이젠 식물만 보여요</p>
-                <img src="images/jiwon/rv-5.png" alt="캐릭터" />
-              </div>
-              <hr />
-              <div class="rv-body">덕분에 가을을 무사히 보냈어요. 갖고 있는 불안을 작게 하는 방법은 내가 좋아하는 것을 하거나 관심있는 것을 찾아 집중하는 것이라는 것도 알게 되었어요.</div>
-            </div></a
-          >
-          <a href="#">
-            <div class="rv-box-6 rv-box">
-              <span class="rv-cate">* 나를 향한 응원 일지 쓰기 *</span>
-              <div class="rv-tit">
-                <p>나와 마주보는 시간</p>
-                <img src="images/jiwon/rv-6.png" alt="캐릭터" />
-              </div>
-              <hr />
-              <div class="rv-body">응원일지를 쓰면서 '해야만해'의 마음이 '하고싶어'로 바뀌었어요. 하루를 기록하며 놓쳤던 순간들을 '괜찮아. 좋아.'라고 응원하게 되었습니다.</div>
-            </div></a
-          >
-        </div>
-      </section>
-      <!-- 인스타그램 -->
-      <div class="t_instagram">
-        <div class="title-area">
-          <div class="title">INSTAGRAM</div>
-        </div>
-        <div class="t_insta-inner">
-          <div class="t_insta-img-wrap">
-            <a href="#"><img src="images/taehun/instatoon-1.png" alt="인스타그램1" /></a>
-            <a href="#"><img src="images/taehun/instatoon-2.png" alt="인스타그램2" /></a>
-            <a href="#"><img src="images/taehun/instatoon-3.png" alt="인스타그램3" /></a>
-            <a href="#"><img src="images/taehun/instatoon-4.png" alt="인스타그램4" /></a>
-            <a href="#"><img src="images/taehun/instatoon-5.png" alt="인스타그램5" /></a>
-            <a href="#"><img src="images/taehun/instatoon-6.png" alt="인스타그램6" /></a>
-          </div>
-        </div>
-      </div>
-      <!-- 풋터 -->
-      <footer>
+      <!-- 포트폴리오 -->
+      <section class="portfolio" id="portfolio">
         <div class="inner">
-          <div class="socials">
-            <a href="#"><img src="images/soon/youtube.png" alt="유튜브" /></a>
-            <a href="#"><img src="images/soon/facebook.png" alt="페이스북" /></a>
-            <a href="#"><img src="images/soon/Instagram.png" alt="인스타그램" /></a>
+          <h2>PORTFOLIO</h2>
+          <span>PERSONAL PROJECT & TEAM PROJECT</span>
+          <div class="swVisual-wrap-1" data-aos="fade-up" data-aos-duration="900" data-offset="-500">
+            <div class="swiper swVisual">
+              <div class="swiper-wrapper" id="data-visual">
+                <!-- 데이터 출력 -->
+              </div>
+            </div>
           </div>
-          <div class="text">
-            <a href="#">개인정보처리방침</a>
-            <a href="#">이용약관</a>
-            <a href="playground.html">공지사항</a>
-            <a href="playground.html">커뮤니티</a>
+          <!-- 좌우 슬라이드 이동 버튼 -->
+          <div class="sw-btn">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-          <div class="copyright">2024 all rights reserved by Jiwon & Taehun & Soon</div>
+        </div>
+      </section>
+      <!--스킬 앤 툴  -->
+      <section class="snt" id="snt">
+        <div class="inner">
+          <h2>SKILL & TOOL</h2>
+          <div class="snt-box">
+            <div class="left-box">
+              <div class="left-box-item">
+                <img src="images/skill_ps.png" />
+                <div class="animated-progress progress-ps">
+                  <span data-progress="92"></span>
+                </div>
+              </div>
+              <div class="left-box-item">
+                <img src="images/skill_ai.png" />
+                <div class="animated-progress progress-ai">
+                  <span data-progress="87"></span>
+                </div>
+              </div>
+              <div class="left-box-item">
+                <img src="images/skill_xd.png" />
+                <div class="animated-progress progress-xd">
+                  <span data-progress="70"></span>
+                </div>
+              </div>
+              <div class="left-box-item">
+                <img src="images/skill_figma.png" />
+                <div class="animated-progress progress-figma">
+                  <span data-progress="85"></span>
+                </div>
+              </div>
+              <div class="left-box-item">
+                <img src="images/skill_github.png" />
+                <div class="animated-progress progress-github">
+                  <span data-progress="85"></span>
+                </div>
+              </div>
+            </div>
+            <div class="right-box">
+              <div class="right-box-item">
+                <img src="images/skill_html.png" />
+                <div class="animated-progress progress-html">
+                  <span data-progress="92"></span>
+                </div>
+              </div>
+              <div class="right-box-item">
+                <img src="images/skill_css.png" />
+                <div class="animated-progress progress-css">
+                  <span data-progress="84"></span>
+                </div>
+              </div>
+              <div class="right-box-item">
+                <img src="images/skill_js.png" />
+                <div class="animated-progress progress-js">
+                  <span data-progress="76"></span>
+                </div>
+              </div>
+              <div class="right-box-item">
+                <img src="images/skill_sass.png" />
+                <div class="animated-progress progress-scss">
+                  <span data-progress="72"></span>
+                </div>
+              </div>
+              <div class="right-box-item">
+                <img src="images/skill_git.png" />
+                <div class="animated-progress progress-git">
+                  <span data-progress="80"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 연락 -->
+      <section class="contact" id="contact">
+        <div class="inner" data-aos="fade-up" data-aos-duration="900" data-offset="-500">
+          <h2>CONTACT</h2>
+          <div class="c-icon">
+            <a href="https://open.kakao.com/o/" target="_blank"><img src="images/katalk.png" /></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/insta.png" /></a>
+            <a href="https://github.com/"><img src="images/github.png" target="_blank" /></a>
+          </div>
+          <div class="c-txt">
+            <i class="fa-solid fa-mobile-screen-button"></i> +82 10-6525-****<br />
+            <i class="fa-regular fa-envelope"></i> haglass12@naver.com
+          </div>
+        </div>
+      </section>
+      <!-- 하단 -->
+      <footer class="footer">
+        <div class="inner">
+          <p>
+            본 페이지는 상업적 목적이 아닌 개인 포트폴리용으로 제작되었습니다.
+            <br />
+            Copyright 2023. Hakyungmi All Right Reserved.
+          </p>
         </div>
       </footer>
     </div>
